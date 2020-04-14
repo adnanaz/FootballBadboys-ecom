@@ -1,12 +1,24 @@
 # FootballBadboys-ecom
-Tech : 
+
+## Tech : 
+```
 FE
 -HTML
 -SASS/SCSS
 -Javascript
 -Bootstrap
-BE
--php Framework Laravel
+```
 
-Project Ecommerce
+### BE
+```
+-php Framework Laravel
+```
+
+### Project Ecommerce
+
+```
 --GOODLUCK!--
+```
+
+
+# FootballBadboys-ecom
