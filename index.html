@@ -5,21 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Badboys</title>
+
+    <!-- Ini udah tak downloadin local -->
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
+
+    <link rel="stylesheet" href="scss/assets/css/main.css">
     <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <header>
-    <section class="discount">
+    <!-- <section class="discount">
         <div class="discount__div">diskon section</div>
-    </section>
+    </section> -->
 
     <div class="container-fluid mobileOn" id="header-wrap">
         <div class="menu-btn">
             <span class="menu-btn__burger"></span>
         </div>
-        <a class="navbar-brand p-2 float-right" href="#">
-            <img class="rounded-circle" src="/dist/img/pp.jpg" width="40" height="40" alt="">
+        <a class="navbar-brand float-right" href="#">
+            <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
         </a>
     </div>
 
@@ -69,162 +75,174 @@
 
 <body>
     <main class="main">
-        <div class="container-fluid">
-            <section class="Head">
+        <section class="main__head">
+            <div class="main__head--text">
                 <h2>2020</h2>
                 <h1>NEW ARRIVAL</h1>
-                <h5>on the street</h5>
-                <h5>in the stadium</h5>
-            </section>
+                <h5 class="h5__left" align="left">on the street</h5>
+                <h5 align="center">in the stadium</h5>
+            </div>
+        </section>
 
-            <section class="advertisement">
+        <section class="advertisement">
+            <figure>
+                <img class="advertisement__img" src="scss/assets/img/model.svg" alt="model-svg">
+            </figure>
+        </section>
+
+        <section class="discount">
+            <div class="discount__div">
+                <img class="discount__img" src="assets/discount.svg" alt="logo discount">
+                <span class="discount__span">Jadi pembeli pertama di Footballbadboys dan dapatkan harga spesial!</span>
+            </div>
+        </section>
+
+        <section class="steps">
+            <figure class="airplane">
+                <img class="airplane__img" src="scss/assets/img/airplane2.svg" alt="icon-airplane">
+                <figcaption>
+                    <h3>Kirim ke mana aja</h3>
+                    <p>kami melayani pembelian online dimana saja kapan saja </p>
+                </figcaption>
+            </figure>
+
+            <figure class="time">
+                <img class="time__img" src="scss/assets/img/time2.svg" alt="icon-time">
+                <figcaption>
+                    <h3>Gratis Refund</h3>
+                    <p>100% gratis refund apabila pakaian rusak </p>
+                </figcaption>
+            </figure>
+
+            <figure class="support">
+                <img class="support__img" src="scss/assets/img/support2.svg" alt="support-time">
+                <figcaption>
+                    <h3>Support 24/7</h3>
+                    <p>Hubungi kami kapanpun dan dimanapun anda berada</p>
+                </figcaption>
+            </figure>
+
+            <div class="imgBanner">
                 <figure>
-                    <img src="assets/model.svg" alt="model-svg">
-                </figure>
-            </section>
-
-            <section class="discount">
-                <div class="discount__div">diskon section</div>
-            </section>
-
-            <section class="steps">
-                <figure class="airplane">
-                    <img class="airplane__img" src="assets/airplane.svg" alt="icon-airplane">
-                    <figcaption>
-                        <h3>Kirim ke mana aja</h3>
-                        <p>kami melayani pembelian online dimana saja kapan saja </p>
-                    </figcaption>
+                    <img class="imgBanner__img" src="assets/iklan1.svg" alt="gambar iklan 1">
                 </figure>
 
-                <figure class="time">
-                    <img class="time__img" src="assets/time.svg" alt="icon-time">
-                    <figcaption>
-                        <h3>Gratis Refund</h3>
-                        <p>100% gratis refund apabila pakaian rusak </p>
-                    </figcaption>
+                <figure>
+                    <img class="imgBanner__img" src="assets/iklan2.svg" alt="gambar iklan 2">
                 </figure>
+            </div>
+        </section>
 
-                <figure class="support">
-                    <img class="support__img" src="assets/support.svg" alt="support-time">
-                    <figcaption>
-                        <h3>Support 24/7</h3>
-                        <p>Hubungi kami kapanpun dan dimanapun anda berada</p>
-                    </figcaption>
-                </figure>
-
-                <div class="imgBanner">
-                    <figure>
-                        <img class="imgBanner__img" src="assets/iklan1.svg" alt="gambar iklan 1">
-                    </figure>
-
-                    <figure>
-                        <img class="imgBanner__img" src="assets/iklan2.svg" alt="gambar iklan 2">
-                    </figure>
+        <section class="product">
+            <div class="container-fluid">
+                <div class="product__text">
+                    <h1>FEATURED PRODUCT</h1>
+                    <p>FootballBadboys menawarkan produk-produk terbaik dengan harga yang terjangkau</p>
                 </div>
-            </section>
 
-            <section class="product">
-                <div class="container-fluid">
-                    <div class="product__text">
-                        <h1>FEATURED PRODUCT</h1>
-                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, et!</h4>
-                    </div>
-
-                    <div class="product__flex">
-                        <article class="product__item">
-                            <img src="assets/model.svg" alt="model 1">
-                            <span class="product__name">Maroon 3</span>
-                            <span class="product__brand">Nike Air Jordan</span>
-                            <span class="product__price">Rp. <span>120000</span> </span>
-                        </article>
-
-                        <article class="product__item">
-                            <img src="assets/model4.svg" alt="model 2">
-                            <span class="product__name">Maroon 3</span>
-                            <span class="product__brand">Nike Air Jordan</span>
-                            <span class="product__price">Rp. <span>120000</span></span>
-                        </article>
-
-                        <article class="product__item">
-                            <img src="assets/model5.svg" alt="model 3">
-                            <span class="product__name">Maroon 3</span>
-                            <span class="product__brand">Nike Air Jordan</span>
-                            <span class="product__price">Rp. <span>120000</span></span>
-                        </article>
-
-                        <article class="product__item">
-                            <img src="assets/model1.svg" alt="model 4">
-                            <span class="product__name">Maroon 3</span>
-                            <span class="product__brand">Nike Air Jordan</span>
-                            <span class="product__price">Rp. <span>120000</span></span>
-                        </article>
-
-                        <div class="product__cursor">
-                            <div class="next"></div>
-                            <div class="prev"></div>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="product__item">
+                                <img class="product__item--img" src="assets/model1.svg" alt="model 1">
+                                <span class="product__name">Maroon 3</span>
+                                <span class="product__brand">Nike Air Jordan</span>
+                                <span class="product__price">Rp. <span>120000</span> </span>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product__item">
+                                <img class="product__item--img" src="assets/model4.svg" alt="model 2">
+                                <span class="product__name">Maroon 3</span>
+                                <span class="product__brand">Nike Air Jordan</span>
+                                <span class="product__price">Rp. <span>120000</span></span>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product__item">
+                                <img class="product__item--img" src="assets/model5.svg" alt="model 3">
+                                <span class="product__name">Maroon 3</span>
+                                <span class="product__brand">Nike Air Jordan</span>
+                                <span class="product__price">Rp. <span>120000</span></span>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product__item">
+                                <img class="product__item--img" src="assets/model1.svg" alt="model 4">
+                                <span class="product__name">Maroon 3</span>
+                                <span class="product__brand">Nike Air Jordan</span>
+                                <span class="product__price">Rp. <span>120000</span></span>
+                            </article>
                         </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
+            </div>
 
 
-            </section>
+        </section>
 
-            <section class="media">
-                <div class="cotaniner-fluid">
-                    <div class="product__text">
-                        <h1>MEDIA</h1>
-                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, et!</h4>
-                    </div>
+        <section class="media">
+            <div class="cotaniner-fluid">
+                <div class="media__text">
+                    <h1>MEDIA</h1>
+                    <h4>Media Patner FootballBadboys</h4>
                 </div>
+            </div>
 
-                <div class="media__flex">
-                    <ul class="media__item">
-                        <li class="media__li">
-                            <img src="assets/logo3.svg" alt="logo-media 1">
-                        </li>
-                        <li class="media__li">
-                            <img src="assets/logo1.svg" alt="logo-media 2">
-                        </li>
-                        <li class="media__li">
-                            <img src="assets/logo2.svg" alt="logo-media 3">
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
+            <div class="media__flex">
+                <ul class="media__item">
+                    <li class="media__li">
+                        <img src="assets/logo3.svg" alt="logo-media 1">
+                    </li>
+                    <li class="media__li">
+                        <img src="assets/logo1.svg" alt="logo-media 2">
+                    </li>
+                    <li class="media__li">
+                        <img src="assets/logo2.svg" alt="logo-media 3">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
 
         <footer class="footer">
             <div class="container-fluid">
                 <div class="footer__flex">
+
                     <div class="footer__item">
                         <div class="footer__item--head">
                             <h3>ABOUT COMPANY</h3>
-                            <hr class="footer__hr">
+                            <hr class="footer__hr hr-1">
                         </div>
 
                         <div class="footer__item--body1">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut fugit blanditiis quos quo
-                                quibusdam nam?</p>
-                            <ul class="body__ul">
-                                <li class="body__li"><img class="adress__img" src="assets/address.svg"
-                                        alt="icon-alamat">
-                                    <span class="body__span">this is a lorem ipsum lorem ipsum </span>
-                                </li>
-                                <li class="body__li"><img class="phone__img" src="assets/telfon.svg" alt="icon-alamat">
-                                    <span class="body__span">+628 777 111 </span>
-                                </li>
-                                <li class="body__li"><img class="email__img" src="assets/email.svg" alt="icon-alamat">
-                                    <span class="body__span">footballbadboys@cs.com </span>
-                                </li>
+                            <p>Footballbadboys merupakan distro clothing yang berada di yogyakarta yang merupakan produk
+                                local buatan sendiri...</p>
+                            <div class="social">
+                                <img class="address__img" src="assets/address.svg" alt="icon-alamat">
+                                <span class="body__span">this is a lorem ipsum lorem ipsum </span>
+                                <br>
+                                <img class="phone__img" src="assets/telfon.svg" alt="icon-alamat">
+                                <span class="body__span">+628 777 111 </span>
+                                <br>
+                                <img class="email__img" src="assets/email.svg" alt="icon-alamat">
+                                <span class="body__span">footballbadboys@cs.com </span>
+                            </div>
 
-                            </ul>
+
                         </div>
                     </div>
 
                     <div class="footer__item">
                         <div class="footer__item--head">
                             <h3>FEATURED</h3>
-                            <hr class="footer__hr">
+                            <hr class="footer__hr hr-2">
                         </div>
 
                         <div class="footer__item--body2">
@@ -243,7 +261,7 @@
                     <div class="footer__item">
                         <div class="footer__item--head">
                             <h3>KOLEKSI</h3>
-                            <hr class="footer__hr">
+                            <hr class="footer__hr hr-3">
                         </div>
 
                         <div class="footer__item--body3">
@@ -259,62 +277,57 @@
 
                     <div class="footer__item">
                         <div class="footer__item--head">
-                            <h3>KOLEKSI</h3>
-                            <hr class="footer__hr">
+                            <h3>TRACK US ON</h3>
+                            <hr class="footer__hr hr-4">
                         </div>
+
 
                         <div class="footer__item--body4">
+                            <div class="social">
+                                <img class="fb__img" src="assets/fb.svg" alt="icon-fb">
+                                <span class="body__span">footballbadboys</span>
+                                <br>
+                                <img class="ig__img" src="assets/ig.svg" alt="icon-ig">
+                                <span class="body__span">@Footballbadboys </span>
+                                <br>
+                                <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter">
+                                <span class="body__span">footballbadboys@cs.com </span>
+                                <br>
 
-                            <div class="footer__item--head">
-                                <h3>TRACK US ON</h3>
-                                <hr class="footer__hr">
+
+                                <div class="box">
+                                    <span class="box__text">Bayar Dengan</span>
+                                    <img class="box__img" src="assets/visa.svg" alt="visa">
+                                    <img class="box__img" src="assets/paypal.svg" alt="paypal">
+                                    <img class="box__img" src="assets/mastercard.svg" alt="mastercard">
+                                </div>
+
+
                             </div>
-
-
-                            <ul class="body__ul">
-                                <li class="body__li"><img class="fb__img" src="assets/fb.svg" alt="icon-fb">
-                                    <span class="body__span">this is a lorem ipsum lorem ipsum </span>
-                                </li>
-                                <li class="body__li"><img class="ig__img" src="assets/ig.svg" alt="icon-ig">
-                                    <span class="body__span">+628 777 111 </span>
-                                </li>
-                                <li class="body__li"><img class="twitter__img" src="assets/twitter.svg"
-                                        alt="icon-twitter">
-                                    <span class="body__span">footballbadboys@cs.com </span>
-                                </li>
-
-                                <li>
-                                    <div class="box">
-                                        <span class="box__text">Bayar Dengan</span>
-                                        <img src="assets/visa.svg" alt="visa">
-                                        <img src="assets/paypal.svg" alt="paypal">
-                                        <img src="assets/mastercard.svg" alt="mastercard">
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
 
 
-                    <div class="footer__item">
-                        <div class="footer__item--flex">
-                            <ul>
-                                <li>Sitemaps </li>
-                                <li>SearchUs </li>
-                                <li>Advance </li>
-                                <li>Contact us </li>
-                                <li>Subscribe us </li>
-                            </ul>
-
-                            <span class="copy">&copy 2020 FootballBadboys | Designed and Developed By OneCode.id </span>
-                            <span class="copy">All Rights Reserved.</span>
+                        <div class="footer__item">
+                            <div class="footer__item--flex">
+                                <ul>
+                                    Sitemaps </li>
+                                    <li>SearchUs </li>
+                                    <li>Advance </li>
+                                    <li>Contact us </li>
+                                    <li>Subscribe us </li>
+                                </ul>
+                                <div class="box2">
+                                    <span class="copy">&copy 2020 FootballBadboys | Designed and Developed By OneCode.id
+                                    </span><br>
+                                    <span class="copy"> All Rights Reserved.</span>
+                                </div>
+                            </div>
                         </div>
+
+
+
                     </div>
-
-
-
                 </div>
-            </div>
         </footer>
     </main>
 
@@ -322,6 +335,11 @@
 
 
 </body>
+
+<!-- ini udah local -->
+<script src="node_modules/swiper/js/swiper.js"></script>
+<script src="node_modules/swiper/js/swiper.min.js"></script>
+
 <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -332,5 +350,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
 
 </html>
