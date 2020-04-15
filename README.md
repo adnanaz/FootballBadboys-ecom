@@ -1,8 +1,6 @@
 # FootballBadboys-ecom
 
 
-# vue-shop
-
 ## Project setup
 ```
 Project Ecommerce 
