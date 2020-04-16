@@ -1,0 +1,253 @@
+@include media-xs {
+    .main__head--text {
+        
+        padding: 5rem 2rem 2rem 2rem;
+        h2 {
+        font-size:1.5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .discount__span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .steps {
+        .airplane {
+      
+            &__img {
+              width: 15vh;
+            }
+      
+            figcaption {
+              padding-top: 1rem;;
+              color: $secondary-color;
+
+              h3 {
+                  font-size: 1.5rem;
+              }
+              
+              p {
+                padding: 0 3rem;
+               }
+      
+            }
+        }
+      
+        .time {
+            
+          &__img {
+            width: 15vh;
+          }
+      
+          figcaption {
+            padding-top: 1rem;;
+            color: $secondary-color;
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+              padding: 0 3rem;
+             }
+             
+          }
+      }
+      
+      .support {
+            
+        &__img {
+          width: 15vh;
+        }
+      
+        figcaption {
+          padding-top: 1rem;;
+          color: $secondary-color;
+          
+          h3 {
+            font-size: 1.5rem;
+            }
+
+          p {
+            padding: 0 3rem;
+           }
+           
+        }
+      }
+
+      .imgBanner {
+          &__img {
+              width: 35vh;
+          }
+      }
+      
+    }
+
+    .product {
+
+        &__text h1 {
+            font-size: 1.7rem;
+        }
+
+        &__item {
+            .product__name {
+                font-size: 1.7rem;
+            }
+        }
+
+        .product__item--img {
+            width: 30vh;
+        }
+
+        .swiper-button-next , .swiper-button-prev {
+            display: none;
+        }
+    }
+
+    .footer {
+        &__item--body4 {
+            .box {
+                width: 265px;
+
+               .box__img {
+                width: 5vh;
+               }
+            }
+        }
+    }
+}
+
+@include media-s {
+    .main__head--text {
+        
+        padding: 5rem 2rem 2rem 2rem;
+        .h5__left {
+            padding-left: 4rem;
+        }
+        
+        h2 {
+        font-size:1.5rem;
+        padding-right: 6rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+
+    .discount__span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .steps {
+        .airplane {
+      
+            &__img {
+              width: 15vh;
+            }
+      
+            figcaption {
+              padding-top: 1rem;;
+              color: $secondary-color;
+
+              h3 {
+                  font-size: 1.5rem;
+              }
+              
+              p {
+                padding: 0 3rem;
+               }
+      
+            }
+        }
+      
+        .time {
+            
+          &__img {
+            width: 15vh;
+          }
+      
+          figcaption {
+            padding-top: 1rem;;
+            color: $secondary-color;
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+              padding: 0 3rem;
+             }
+             
+          }
+      }
+      
+      .support {
+            
+        &__img {
+          width: 15vh;
+        }
+      
+        figcaption {
+          padding-top: 1rem;;
+          color: $secondary-color;
+          
+          h3 {
+            font-size: 1.5rem;
+            }
+
+          p {
+            padding: 0 3rem;
+           }
+           
+        }
+      }
+
+      .imgBanner {
+          &__img {
+              width: 35vh;
+          }
+      }
+      
+    }
+
+    .product {
+
+        &__text h1 {
+            font-size: 1.7rem;
+        }
+
+        &__item {
+            .product__name {
+                font-size: 1.7rem;
+            }
+        }
+
+        .product__item--img {
+            width: 30vh;
+        }
+
+        .swiper-button-next , .swiper-button-prev {
+            display: none;
+        }
+    }
+
+    .footer {
+        &__item--body4 {
+            .box {
+                width: 265px;
+
+               .box__img {
+                width: 5vh;
+               }
+            }
+        }
+    }
+}

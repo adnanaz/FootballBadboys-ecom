@@ -1,0 +1,74 @@
+$banner-color : #DBEDF3;
+$primary-color : #000000;
+$secondary-color :#ffffff;
+$head-color : #FFA41B;
+$banner-color : #DBEDF3;
+$discount-color : #FF0000;
+$discount-bg : #000839;
+$featured-bg :#0A1317;
+$media-bg : #150F03;
+
+
+
+
+//global style
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+ul , li {
+    list-style: none;
+}
+
+@font-face {
+    font-family: ambitBlack;
+    src: url(../../Ambit/Ambit-Black.ttf);
+ }
+
+ @font-face {
+     font-family:ambitReguler;
+     src: url(../../Ambit/Ambit-Regular.ttf);
+ }
+
+ @font-face {
+    font-family:ambitBold;
+    src: url(../../Ambit/Ambit-Bold.ttf);
+}
+
+body {
+    font-family: ambitReguler;
+    height: 100vh;
+  
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: AmbitBlack;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+}
+
+//transisiton effect
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
+
+//responsive plays
+@mixin media-xs {
+    @media screen and (min-width: 320px){
+      @content;
+    }
+  }
+
+@mixin media-s {
+    @media screen and (min-width: 460px) {
+      @content;
+    }
+  }
