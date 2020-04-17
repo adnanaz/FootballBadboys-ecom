@@ -50,10 +50,17 @@ a {
   transition: top 0.5s;
   /* Transition effect when sliding down (and up) */
   height: 65px;
+  overflow: visible;
+}
+
+#header-wrap .flex {
+  display: flex;
+  padding-left: 0rem;
+  justify-content: space-between;
 }
 
 .menu-btn {
-  position: absolute;
+  position: relative;
   z-index: 1;
   left: 1.5rem;
   top: 1.3rem;
@@ -131,30 +138,16 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vh;
+  width: 100%;
   overflow: hidden;
   background: #000000;
   list-style-type: none;
-  padding-right: 1rem;
   transform: translateY(-100%);
   transition: all 0.5s ease-in-out;
 }
 
 .nav__menu.open {
   transform: translateY(0);
-}
-
-.nav__menu__menu--item {
-  transform: translateX(100vw);
-  transition: all 0.5s ease-in-out;
-}
-
-.nav__menu__menu--item.open {
-  transform: translateX(0);
-}
-
-.nav__menu__menu--item.active > a {
-  color: #ffffff;
 }
 
 .nav__menu__menu--link {
@@ -201,33 +194,134 @@ main {
   width: 100%;
 }
 
+.dropdown-menu {
+  width: 76vh;
+  height: 70vh;
+}
+
+.dropdown-menu .dropdown-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropdown-menu .dropdown-item ul {
+  margin: 1rem 0;
+}
+
+.dropdown-menu .dropdown-item li {
+  margin: 0 1rem;
+}
+
+.dropdown-menu .dropdown-item .adv__img {
+  width: 32vh;
+}
+
+.dropdown-menu .dropdown-item .child {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  color: #000000 !important;
+}
+
 .main__head {
-  background: url("../img/bgHeader2.svg") center top;
+  background: url("../img/bgHeader2.svg") center;
   background-size: cover;
 }
 
 .main__head--text {
-  padding: 5rem;
+  padding: 7vw;
+  margin-top: 4rem;
 }
 
 .main__head--text h2 {
   color: #DBEDF3;
-  text-align: right;
-  padding-right: 2rem;
+  text-align: center;
+  padding-left: 8rem;
+  font-size: 8vw;
 }
 
 .main__head--text h1 {
   color: #DBEDF3;
   text-align: center;
+  font-size: 9vw;
 }
 
 .main__head--text .h5__left {
-  padding-left: 2rem;
+  padding-right: 7rem;
+  font-size: 6vw;
 }
 
 .main__head--text h5 {
   color: #DBEDF3;
   line-height: 1rem;
+  font-size: 6vw;
+}
+
+.main__head--text .h5__center {
+  padding-top: 2vw;
+}
+
+form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover {
+  width: 200px;
+  cursor: pointer;
+}
+
+form:hover input {
+  display: block;
+}
+
+form:hover .fa {
+  background: #07051a;
+  color: white;
 }
 
 .advertisement {
@@ -400,11 +494,7 @@ main {
   position: relative;
   z-index: 1;
   top: -7%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center !important;
+  display: block !important;
 }
 
 .media__text {
@@ -423,22 +513,34 @@ main {
   text-align: center;
 }
 
-.media ul {
+.media__item {
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.media__item ul {
   list-style: none;
+}
+
+.media__item ul li img {
+  width: 25vh;
 }
 
 .footer {
   position: relative;
   top: -7%;
   z-index: 1;
-  background: url("../img/bgFoot.svg") center top;
+  background: url("../img/bgFoot.svg") center;
   background-size: cover;
 }
 
 .footer__flex {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .footer__item {
@@ -471,6 +573,10 @@ main {
 
 .footer__item--head .hr-4 {
   width: 41%;
+}
+
+.footer__item--body1 {
+  max-width: 350px;
 }
 
 .footer__item--body1 p {
@@ -518,61 +624,113 @@ main {
 
 .footer__item--flex .box2 {
   text-align: center;
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
+.footer .special {
+  text-align: center;
+  width: 100%;
+  margin: 2rem 2rem 0 2rem;
+}
+
 @media screen and (min-width: 320px) {
+  .mobile-on {
+    visibility: visible;
+    display: block;
+  }
+  .lg-on {
+    visibility: hidden;
+    display: none;
+  }
+  .nav__menu {
+    font-size: 1.7rem;
+  }
+  .nav__menu .navbar-brand {
+    margin-right: 0;
+  }
+  .nav__menu .nav__img {
+    width: 50px;
+    height: 50px;
+  }
+  .nav__menu--item {
+    margin: 0.5rem 0;
+  }
+  .nav__menu .socmed {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.5rem;
+  }
+  .nav__menu .fb, .nav__menu .ig, .nav__menu .twitter {
+    margin: 0.5rem;
+  }
+  .nav__menu a {
+    color: #ffffff;
+  }
+  .nav__menu .active > a {
+    color: #FFA41B;
+  }
+  .nav__menu .text-light {
+    font-size: 0.8rem;
+  }
   .main__head--text {
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 7vw;
   }
   .main__head--text h2 {
-    font-size: 1.5rem;
+    font-size: 8vw;
   }
   .main__head--text h1 {
-    font-size: 1.8rem;
+    font-size: 8vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 6vw;
+  }
+  .main__head--text .h5__center {
+    padding-top: 2vw;
   }
   .discount__span {
     font-size: 13px;
     font-weight: 600;
   }
   .steps .airplane__img {
-    width: 15vh;
+    width: 12vh;
   }
   .steps .airplane figcaption {
     padding-top: 1rem;
     color: #ffffff;
   }
   .steps .airplane figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .airplane figcaption p {
     padding: 0 3rem;
   }
   .steps .time__img {
-    width: 15vh;
+    width: 12vh;
   }
   .steps .time figcaption {
     padding-top: 1rem;
     color: #ffffff;
   }
   .steps .time figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .time figcaption p {
     padding: 0 3rem;
   }
   .steps .support__img {
-    width: 15vh;
+    width: 12vh;
   }
   .steps .support figcaption {
     padding-top: 1rem;
     color: #ffffff;
   }
   .steps .support figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .support figcaption p {
     padding: 0 3rem;
@@ -591,6 +749,9 @@ main {
   }
   .product .swiper-button-next, .product .swiper-button-prev {
     display: none;
+  }
+  .media__text h4 {
+    font-size: 1.1rem;
   }
   .footer__item--body4 .box {
     width: 265px;
@@ -601,19 +762,25 @@ main {
 }
 
 @media screen and (min-width: 460px) {
-  .main__head--text {
-    padding: 5rem 2rem 2rem 2rem;
+  .mobile-on {
+    visibility: visible;
+    display: block;
   }
-  .main__head--text .h5__left {
-    padding-left: 4rem;
+  .main__head--text {
+    padding: 7vw;
   }
   .main__head--text h2 {
-    font-size: 1.5rem;
-    padding-right: 6rem;
+    font-size: 7vw;
+    padding-left: 10rem;
   }
   .main__head--text h1 {
-    font-size: 1.8rem;
-    text-align: center;
+    font-size: 8vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 6vw;
+  }
+  .main__head--text .h5__center {
+    padding-top: 2vw;
   }
   .discount__span {
     font-size: 13px;
@@ -627,7 +794,7 @@ main {
     color: #ffffff;
   }
   .steps .airplane figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .airplane figcaption p {
     padding: 0 3rem;
@@ -640,7 +807,7 @@ main {
     color: #ffffff;
   }
   .steps .time figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .time figcaption p {
     padding: 0 3rem;
@@ -653,13 +820,13 @@ main {
     color: #ffffff;
   }
   .steps .support figcaption h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .steps .support figcaption p {
     padding: 0 3rem;
   }
   .steps .imgBanner__img {
-    width: 35vh;
+    width: 42vh;
   }
   .product__text h1 {
     font-size: 1.7rem;
@@ -668,7 +835,7 @@ main {
     font-size: 1.7rem;
   }
   .product .product__item--img {
-    width: 30vh;
+    width: 42vh;
   }
   .product .swiper-button-next, .product .swiper-button-prev {
     display: none;
@@ -678,6 +845,231 @@ main {
   }
   .footer__item--body4 .box .box__img {
     width: 5vh;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .mobile-on {
+    visibility: visible;
+    display: block;
+  }
+  .main__head--text {
+    padding: 7vw;
+  }
+  .main__head--text h2 {
+    font-size: 7vw;
+    padding-left: 10rem;
+  }
+  .main__head--text h1 {
+    font-size: 7vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 5vw;
+  }
+  .main__head--text .h5__center {
+    padding-top: 3vw;
+  }
+  .discount__span {
+    font-size: 2.5vw;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .mobile-on {
+    visibility: hidden;
+    display: none;
+  }
+  .lg-on {
+    visibility: visible;
+    display: flex;
+  }
+  .main__head--text {
+    padding: 7vw;
+  }
+  .main__head--text h2 {
+    font-size: 7vw;
+    padding-left: 10rem;
+  }
+  .main__head--text h1 {
+    font-size: 7vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 5vw;
+  }
+  .main__head--text .h5__center {
+    padding-top: 3vw;
+  }
+  .discount__span {
+    font-size: 2.5vw;
+    font-weight: 600;
+  }
+  .steps .imgBanner__img {
+    width: 50vh;
+  }
+  .product .product__item--img {
+    width: 32vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-on {
+    visibility: hidden;
+    display: none;
+  }
+  .lg-on {
+    visibility: visible;
+  }
+  .main__head--text {
+    padding: 7vw;
+  }
+  .main__head--text h2 {
+    font-size: 6vw;
+    padding-left: 18rem;
+  }
+  .main__head--text h1 {
+    font-size: 7vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 4vw;
+  }
+  .main__head--text .h5__left {
+    padding-right: 20rem;
+  }
+  .main__head--text .h5__center {
+    padding-top: 3vw;
+  }
+  .discount__span {
+    font-size: 2.5vw;
+    font-weight: 600;
+  }
+  .steps .imgBanner__img {
+    width: 50vh;
+    margin: 1.5rem;
+  }
+  .product .product__item--img {
+    width: 32vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mobile-on {
+    visibility: hidden;
+    display: none;
+  }
+  .lg-on, .lg-off {
+    visibility: hidden;
+    display: none;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+  .mobileOn {
+    visibility: hidden;
+    display: none !important;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .nav__menu {
+    flex-flow: row;
+    overflow: visible;
+    justify-content: space-around;
+    transform: translateY(0);
+    height: 65px;
+    width: 100%;
+    background: #ffffff;
+    z-index: 2;
+  }
+  .nav .nav__menu--item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .nav__menu--item .d-none {
+    display: contents !important;
+  }
+  .nav .nav__menu--item .nav__img {
+    width: 40px;
+    height: 40px;
+  }
+  .nav .nav__menu--link {
+    font-size: 1rem;
+    color: #000000;
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+  .cari, .fa {
+    top: 2rem;
+  }
+  .main__head--text {
+    padding: 7vw;
+  }
+  .main__head--text h2 {
+    font-size: 5vw;
+    padding-left: 18rem;
+  }
+  .main__head--text h1 {
+    font-size: 6vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 4vw;
+  }
+  .main__head--text .h5__left {
+    padding-right: 20rem;
+  }
+  .main__head--text .h5__center {
+    padding-top: 3vw;
+  }
+  .airplane figcaption p, .time figcaption p, .support figcaption p {
+    font-size: 1.3rem;
+  }
+  .product__text p {
+    font-size: 1.3rem;
+  }
+  .media__text h4 {
+    font-size: 1.3rem;
+  }
+  .footer__item--body4 .box {
+    width: 280px;
+  }
+  .footer__item--body4 .box .box__img {
+    width: 5vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main__head--text {
+    padding: 7vw;
+  }
+  .main__head--text h2 {
+    font-size: 4vw;
+    padding-left: 18rem;
+  }
+  .main__head--text h1 {
+    font-size: 5vw;
+  }
+  .main__head--text h5, .main__head--text .h5__left {
+    font-size: 3.5vw;
+  }
+  .main__head--text .h5__left {
+    padding-right: 20rem;
+  }
+  .main__head--text .h5__center {
+    padding-top: 3vw;
+  }
+  .discount__div .discount__img {
+    padding: 1rem;
+    flex-basis: 10%;
+  }
+  .discount__div .discount__img .dc__img {
+    width: 7vh;
+  }
+  .discount__div .discount__span {
+    font-size: 2vw;
+    flex-basis: 65%;
+  }
+  .media__li {
+    margin: 0 3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

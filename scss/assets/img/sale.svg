@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206" height="206" viewBox="0 0 206 206">
+  <g id="sale" transform="translate(-1237 -521)">
+    <g id="Ellipse_106" data-name="Ellipse 106" transform="translate(1237 521)" fill="#fff" stroke="#000" stroke-width="10">
+      <circle cx="103" cy="103" r="103" stroke="none"/>
+      <circle cx="103" cy="103" r="98" fill="none"/>
+    </g>
+    <text id="SALE-2" data-name="SALE" transform="translate(1277 662)" fill="#ff1717" font-size="50" font-family="Ambit-Black, Ambit" font-weight="800"><tspan x="0" y="0">SALE</tspan></text>
+    <text id="ON" transform="translate(1277 611)" font-size="50" font-family="Ambit-Black, Ambit" font-weight="800"><tspan x="0" y="0">ON</tspan></text>
+  </g>
+</svg>

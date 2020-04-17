@@ -7,10 +7,17 @@
     width: 100%; /* Full width */
     transition: top 0.5s; /* Transition effect when sliding down (and up) */
     height: 65px;
+    overflow: visible;
+
+    .flex {
+      display: flex;
+      padding-left: 0rem;
+    justify-content: space-between;
+    }
 }
 
 .menu-btn {
-    position: absolute;
+    position: relative;
     z-index: 1;
     left: 1.5rem;
     top: 1.3rem;
@@ -88,11 +95,11 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        width: 100vh;
+        width: 100%;
         overflow: hidden;
         background: $primary-color;
         list-style-type: none;
-        padding-right: 1rem;
+        
         transform: translateY(-100%);
         @include transition-ease;
     
@@ -101,19 +108,7 @@
         transform: translateY(0);
       }
 
-    &__menu--item {
-        transform: translateX(100vw);
-        @include transition-ease;
   
-        &.open {
-         transform: translateX(0); 
-        }
-  
-        &.active > a {
-          color: $secondary-color;
-        }
-    }
-
     &__menu--link {
         display: inline-block;
         font-size: 2rem;

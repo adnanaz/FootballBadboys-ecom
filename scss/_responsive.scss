@@ -1,14 +1,118 @@
 @include media-xs {
+    .mobile-on {
+        visibility: visible;
+        display: block;
+    }
+
+    .lg-on {
+        visibility: hidden;
+        display: none;
+    }
+
+    // .dropdown-menu {
+    //     top: 13rem ;
+    //     width: auto;
+    //     height: auto;
+       
+    //     .dropdown-item {
+    //       display: flex;
+    //       flex-wrap: wrap;
+    //       ul {
+    //         margin: 1rem 0;
+    //       }
+      
+    //       li {
+    //         margin: 0 1rem;
+    //       }
+    
+    //       .adv__img {
+    //         width: 32vh;
+          
+    //       }
+    
+    //       .child {
+    //         display: flex;
+    //         // flex-direction: row wrap;
+    //         margin: 0;
+    //         flex-direction: column;
+    //       }
+    //     }
+    // }
+    
+
+    .nav__menu{
+        .navbar-brand {
+            margin-right: 0;
+        }
+
+        .nav__img {
+            width: 50px;
+            height: 50px;
+        }
+       
+        // &--item {
+        //   position: relative;
+        //   top: -1rem;
+          font-size: 1.7rem;
+        
+          &--item {
+              margin: 0.5rem 0;
+          }  
+
+          .socmed {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.5rem;
+          }
+    
+          .fb , .ig, .twitter {
+            margin: 0.5rem;
+          }
+    
+          a {
+            color: $secondary-color;
+          }
+          
+        //     transform: translateX(100vw);
+        //     @include transition-ease;
+      
+        //     &.open {
+        //      transform: translateX(0); 
+        //     }
+      
+            .active > a {
+              color: $head-color;
+            }
+
+            .text-light {
+                font-size: 0.8rem;
+            }
+        // }
+       
+        }
+
     .main__head--text {
         
-        padding: 5rem 2rem 2rem 2rem;
+        padding: 7vw;
         h2 {
-        font-size:1.5rem;
+        font-size:8vw;
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 8vw;
         }
+
+        h5 ,.h5__left {
+            font-size: 6vw;
+        }
+        
+        .h5__center {
+            padding-top: 2vw;
+        }
+
+        
+        
     }
 
     .discount__span {
@@ -20,7 +124,7 @@
         .airplane {
       
             &__img {
-              width: 15vh;
+              width: 12vh;
             }
       
             figcaption {
@@ -28,7 +132,7 @@
               color: $secondary-color;
 
               h3 {
-                  font-size: 1.5rem;
+                  font-size: 1.3rem;
               }
               
               p {
@@ -41,7 +145,7 @@
         .time {
             
           &__img {
-            width: 15vh;
+            width: 12vh;
           }
       
           figcaption {
@@ -49,7 +153,7 @@
             color: $secondary-color;
             
             h3 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             p {
@@ -62,7 +166,7 @@
       .support {
             
         &__img {
-          width: 15vh;
+          width: 12vh;
         }
       
         figcaption {
@@ -70,7 +174,7 @@
           color: $secondary-color;
           
           h3 {
-            font-size: 1.5rem;
+            font-size:1.3rem
             }
 
           p {
@@ -102,6 +206,153 @@
 
         .product__item--img {
             width: 30vh;
+        }
+
+        .swiper-button-next , .swiper-button-prev {
+            display: none;
+        }
+    }
+
+    .media {
+        &__text {
+            h4 {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .footer {
+        &__item--body4 {
+            .box {
+                width: 265px;
+
+               .box__img {
+                width: 5vh;
+               }
+            }
+        }
+    }
+}
+
+@include media-s {
+    .mobile-on {
+        visibility: visible;
+        display: block;
+    }
+
+
+    .main__head--text {
+        
+        padding: 7vw;
+        h2 {
+        font-size:7vw;
+        padding-left: 10rem;
+        }
+
+        h1 {
+            font-size: 8vw;
+        }
+
+        h5 ,.h5__left {
+            font-size: 6vw;
+        }
+        
+        .h5__center {
+            padding-top: 2vw;
+        }
+    }
+
+    .discount__span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .steps {
+        .airplane {
+      
+            &__img {
+              width: 15vh;
+            }
+      
+            figcaption {
+              padding-top: 1rem;;
+              color: $secondary-color;
+
+              h3 {
+                  font-size:1.3rem
+              }
+              
+              p {
+                padding: 0 3rem;
+               }
+      
+            }
+        }
+      
+        .time {
+            
+          &__img {
+            width: 15vh;
+          }
+      
+          figcaption {
+            padding-top: 1rem;;
+            color: $secondary-color;
+            
+            h3 {
+                font-size:1.3rem
+            }
+
+            p {
+              padding: 0 3rem;
+             }
+             
+          }
+      }
+      
+      .support {
+            
+        &__img {
+          width: 15vh;
+        }
+      
+        figcaption {
+          padding-top: 1rem;;
+          color: $secondary-color;
+          
+          h3 {
+            font-size: 1.3rem;
+            }
+
+          p {
+            padding: 0 3rem;
+           }
+           
+        }
+      }
+
+      .imgBanner {
+          &__img {
+              width: 42vh;
+          }
+      }
+      
+    }
+
+    .product {
+
+        &__text h1 {
+            font-size: 1.7rem;
+        }
+
+        &__item {
+            .product__name {
+                font-size: 1.7rem;
+            }
+        }
+
+        .product__item--img {
+            width: 42vh;
         }
 
         .swiper-button-next , .swiper-button-prev {
@@ -122,132 +373,327 @@
     }
 }
 
-@include media-s {
+@include media-md {
+
+    .mobile-on {
+        visibility: visible;
+        display: block;
+    }
+
+
     .main__head--text {
         
-        padding: 5rem 2rem 2rem 2rem;
-        .h5__left {
-            padding-left: 4rem;
-        }
-        
+        padding: 7vw;
         h2 {
-        font-size:1.5rem;
-        padding-right: 6rem;
+        font-size:7vw;
+        padding-left: 10rem;
         }
 
         h1 {
-            font-size: 1.8rem;
-            text-align: center;
+            font-size: 7vw;
+        }
+
+        h5 ,.h5__left {
+            font-size: 5vw;
+        }
+        
+        .h5__center {
+            padding-top: 3vw;
         }
     }
 
     .discount__span {
-        font-size: 13px;
+        font-size: 2.5vw;
         font-weight: 600;
     }
 
-    .steps {
-        .airplane {
-      
-            &__img {
-              width: 15vh;
-            }
-      
-            figcaption {
-              padding-top: 1rem;;
-              color: $secondary-color;
+}
 
-              h3 {
-                  font-size: 1.5rem;
-              }
-              
-              p {
-                padding: 0 3rem;
-               }
-      
-            }
+@include media-m {
+    .mobile-on {
+        visibility: hidden;
+        display: none;
+    }
+
+    .lg-on {
+        visibility: visible;
+        display: flex;
+    }
+
+    .main__head--text {
+        
+        padding: 7vw;
+        h2 {
+        font-size:7vw;
+        padding-left: 10rem;
         }
-      
-        .time {
-            
-          &__img {
-            width: 15vh;
-          }
-      
-          figcaption {
-            padding-top: 1rem;;
-            color: $secondary-color;
-            
-            h3 {
-                font-size: 1.5rem;
-            }
 
-            p {
-              padding: 0 3rem;
-             }
-             
-          }
-      }
-      
-      .support {
-            
-        &__img {
-          width: 15vh;
+        h1 {
+            font-size: 7vw;
         }
-      
-        figcaption {
-          padding-top: 1rem;;
-          color: $secondary-color;
-          
-          h3 {
-            font-size: 1.5rem;
-            }
 
-          p {
-            padding: 0 3rem;
-           }
-           
+        h5 ,.h5__left {
+            font-size: 5vw;
         }
-      }
+        
+        .h5__center {
+            padding-top: 3vw;
+        }
+    }
 
-      .imgBanner {
-          &__img {
-              width: 35vh;
-          }
-      }
-      
+    .discount__span {
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    .steps{
+        .imgBanner__img {
+            width: 50vh;
+        }
     }
 
     .product {
+        .product__item--img {
+            width: 32vh;
+        }
+    }
 
-        &__text h1 {
-            font-size: 1.7rem;
+}
+
+@include media-lg {
+    .mobile-on {
+        visibility: hidden;
+        display: none;
+    }
+
+    .lg-on {
+        visibility: visible;
+     
+    }    
+
+    .main__head--text {
+        
+        padding: 7vw;
+        h2 {
+        font-size:6vw;
+        padding-left: 18rem;
         }
 
-        &__item {
-            .product__name {
-                font-size: 1.7rem;
+        h1 {
+            font-size: 7vw;
+        }
+
+        h5 ,.h5__left {
+            font-size: 4vw;
+        }
+
+        .h5__left {
+            padding-right: 20rem;
+        }
+        
+        .h5__center {
+            padding-top: 3vw;
+        }
+    }
+
+    .discount__span {
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    .steps{
+       
+        .imgBanner__img {
+            width: 50vh;
+            margin: 1.5rem;
+        }
+    }
+
+    .product {
+        .product__item--img {
+            width: 32vh;
+        }
+    }
+}
+
+@include media-l {
+    .mobile-on {
+        visibility: hidden;
+        display: none;
+    }
+
+   
+
+    .lg-on, .lg-off {
+        visibility: hidden;
+        display: none;
+    }
+
+    .menu-btn {
+        visibility: hidden;
+      }
+    
+      .mobileOn {
+        visibility: hidden;
+        display: none !important;
+      }
+  
+      .nav {
+        visibility: visible;
+        
+        .nav__menu {
+            
+            flex-flow: row;
+            overflow: visible;
+            justify-content: space-around;
+          transform: translateY(0);
+          height: 65px;
+          width: 100%;
+          background: $secondary-color;
+          z-index: 2;
+            
+          
+          &--item {
+            .d-none {
+                display: contents !important;
+            }
+
+           
+            .nav__img {
+                width: 40px;
+                height: 40px;
+            }
+
+            display: inline;
+            padding-right: 1.5rem;
+        
+          }
+    
+          &--link {
+            font-size: 1rem;
+            color: $primary-color;
+            padding: 1rem 0;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .cari , .fa {
+          top:2rem;
+      }
+
+
+      .main__head--text {
+        
+        padding: 7vw;
+        h2 {
+        font-size:5vw;
+        padding-left: 18rem;
+        }
+
+        h1 {
+            font-size: 6vw;
+        }
+
+        h5 ,.h5__left {
+            font-size: 4vw;
+        }
+
+        .h5__left {
+            padding-right: 20rem;
+        }
+        
+        .h5__center {
+            padding-top: 3vw;
+        }
+    }
+
+    .airplane,.time, .support {
+        figcaption {
+            p {
+                font-size: 1.3rem;
             }
         }
+    }
 
-        .product__item--img {
-            width: 30vh;
-        }
+    .product__text p {
+        font-size: 1.3rem;
+    }
 
-        .swiper-button-next , .swiper-button-prev {
-            display: none;
+    .media__text {
+        h4 {
+            font-size: 1.3rem;
         }
     }
 
     .footer {
         &__item--body4 {
             .box {
-                width: 265px;
+                width: 280px;
 
                .box__img {
                 width: 5vh;
                }
             }
         }
+    }
+
+
+}
+
+@include media-xl {
+
+   
+
+    .main__head--text {
+        
+        padding: 7vw;
+        h2 {
+        font-size:4vw;
+        padding-left: 18rem;
+        }
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        h5 ,.h5__left {
+            font-size: 3.5vw;
+        }
+
+        .h5__left {
+            padding-right: 20rem;
+        }
+        
+        .h5__center {
+            padding-top: 3vw;
+        }
+    }
+
+  
+
+
+    .discount__div {
+
+        .discount__img  {
+        padding: 1rem;
+        flex-basis: 10%;
+
+        .dc__img {
+            width: 7vh;
+        }
+
+    }
+
+    .discount__span {
+        font-size: 2vw;
+        flex-basis: 65%;
+    }
+
+
+    }
+
+    .media__li {
+        margin:  0 3rem;
     }
 }

@@ -11,35 +11,143 @@ header {
     width: 100%;
   }
 
+
+  .dropdown-menu {
+ 
+    width: 76vh;
+    height: 70vh;
+   
+    .dropdown-item {
+      display: flex;
+      flex-wrap: wrap;
+      ul {
+        margin: 1rem 0;
+      }
+  
+      li {
+        margin: 0 1rem;
+      }
+
+      .adv__img {
+        width: 32vh;
+      
+      }
+
+      .child {
+        display: flex;
+        // flex-direction: row wrap;
+        margin: 0;
+        flex-direction: column;
+      }
+    }
+
+    
+
+    a {
+      color: $primary-color !important;
+    }
+    
+}
+
   .main__head {
-        background: url('../img/bgHeader2.svg') center top;
+        background: url('../img/bgHeader2.svg') center;
         background-size: cover;
 
         &--text {
-          padding:5rem;
+          padding: 7vw;
+          margin-top: 4rem;
 
           h2 {
             color: $banner-color;
-            text-align: right;
-            padding-right: 2rem;
+            text-align: center;
+            padding-left: 8rem;
+            font-size:8vw;
           }
   
           h1 {
             color: $banner-color;
             text-align: center;
+            font-size: 9vw;
           }
           
           .h5__left {
-            padding-left: 2rem;
+            padding-right: 7rem;
+            font-size: 6vw;
           }
 
           h5 {
             color: $banner-color;
             line-height: 1rem;
+            font-size: 6vw;
           }
+
+          .h5__center {
+            padding-top: 2vw;
+        }
 
         }
   }
+
+  // search
+form{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 5px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover{
+  width: 200px;
+  cursor: pointer;
+}
+
+form:hover input{
+  display: block;
+}
+
+form:hover .fa{
+  background: #07051a;
+  color: white;
+}
 
   .advertisement {
     position: relative;
@@ -230,12 +338,7 @@ header {
   position: relative;
   z-index: 1;
   top: -7%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center !important;
-  
+  display: block !important;
 
   &__text {
     text-align: center;
@@ -254,9 +357,23 @@ header {
     }
   }
 
-  ul {
-    list-style: none;
+  &__item {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    
+    ul {
+      list-style: none;
+      li {
+        img {
+          width: 25vh;
+        }
+      }
+    }
   }
+  
 
 }
 
@@ -265,13 +382,14 @@ header {
   top: -7%;
   z-index: 1;
 
-  background: url('../img/bgFoot.svg') center top;
+  background: url('../img/bgFoot.svg') center;
   background-size: cover;
 
   &__flex {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: column;
+   
   }
 
   &__item {
@@ -306,6 +424,7 @@ header {
       }
 
       &--body1 {
+        max-width: 350px;
         p {
           padding: 0 1rem;
         }
@@ -348,18 +467,21 @@ header {
       }
     }
 
+
+
     &--flex {
 
-    
      
       ul {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        
       }
 
       .box2 {
         text-align: center;
+        flex-direction: column;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -367,6 +489,12 @@ header {
       }
     }
     
+  }
+
+  .special {
+    text-align: center;
+    width: 100%;
+    margin: 2rem 2rem 0 2rem ;
   }
 
 

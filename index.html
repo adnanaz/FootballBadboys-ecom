@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
 
     <link rel="stylesheet" href="scss/assets/css/main.css">
+
     <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -21,55 +22,166 @@
     </section> -->
 
     <div class="container-fluid mobileOn" id="header-wrap">
-        <div class="menu-btn">
-            <span class="menu-btn__burger"></span>
+        <div class="flex">
+            <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+            </div>
+            <div class="search lg-on">
+                <form action="">
+                    <input type="search" placeholder="Cari sesuatu?">
+                    <img class="fa rounded-circle" src="scss/assets/img/search.png" width="40" height="40" alt="">
+                </form>
+            </div>
+            <div class="brand ">
+                <a class="navbar-brand" href="#">
+                    <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
+                </a>
+            </div>
+            <div class="cuciGudang lg-on">
+                <a class="navbar-brand" href="#">
+                    <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
+                </a>
+            </div>
+
+            <div class="cart lg-on">
+                <a class="navbar-brand" href="#">
+                    <img class="" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                </a>
+            </div>
         </div>
-        <a class="navbar-brand float-right" href="#">
-            <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
-        </a>
+
+
+
     </div>
 
     <nav class="nav" id="navbar" style=" transition: top 0.5s;
         height: 65px; position: fixed;">
         <ul class="nav__menu">
-            <li class="nav__menu--item">
-                <a class="navbar-brand p-3 float-left" href="#">
-                    <img class="rounded-circle" src="/dist/img/pp.jpg" width="40" height="40" alt="">
-                </a>
-            </li>
+
             <li class="nav__menu--item active">
                 <a href="index.html" class="nav__menu--link">
                     NEW ARRIVAL
                 </a>
             </li>
-            <li class="nav__menu--item">
-                <a href="#" class="nav__menu--link">
+            <li class="nav__menu--item custom nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle nav__menu--link a__custom" data-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="true" aria-expanded="false">
                     SHOP ONLINE
                 </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                        <ul>
+                            <li>
+                                <a href="#">Jacket</a>
+                            </li>
+                            <li>
+                                <a href="#">Jersey</a>
+                            </li>
+                            <li>
+                                <a href="#">Merchandise</a>
+                            </li>
+                            <li>
+                                <a href="#">Overshirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Polo T-shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Shortpants</a>
+                            </li>
+                            <li>
+                                <a href="#">T-Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Waistbag</a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <a href="#">Cagoule</a>
+                            </li>
+                            <li>
+                                <a href="#">Caps</a>
+                            </li>
+                            <li>
+                                <a href="#">Crewneck</a>
+                            </li>
+                            <li>
+                                <a href="#">Half Zip</a>
+                            </li>
+                            <li>
+                                <a href="#">Hoodie</a>
+                            </li>
+
+                        </ul>
+
+                        <ul class="child">
+                            <li>
+                                <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="">
+                            </li>
+                            <li>
+                                <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="">
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
             </li>
             <li class="nav__menu--item special">
-                <a href="cucigudang.html" class="nav__menu--link">
+                <form action="" class="">
+                    <input class="cari" type="search" placeholder="Cari sesuatu?">
+                    <img class=" fa nav__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                </form>
+            </li>
+
+            <li class="brand nav__menu--item">
+                <a class="navbar-brand" href="#">
+                    <img class="nav__img rounded-circle" src="scss/assets/img/logo-fbb.png" alt="">
+                </a>
+            </li>
+            <li class="nav__menu--item">
+                <a href="#" class="nav__menu--link">
                     CUCI GUDANG
                 </a>
             </li>
+            <li class="nav__menu--item ">
+                <a href="#" class="nav__menu--link">
+                    ON SALE
+                </a>
+            </li>
+
+
+            <li class="nav__menu--item ">
+                <a class="navbar-brand" href="#">
+                    <img class="nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                </a>
+                <a class="navbar-brand d-none" href="#">
+                    <img class="nav__img" src="scss/assets/img/cart.svg" alt="">
+                </a>
+            </li>
+
+
+
+
+
 
             <li class="nav__menu--item mobileOn">
-                <div class="socmed">
-                    <span>Follow us :</span>
-                    <a class="socmed__a" href="#!">
-                        <i class="fab fa-twitter fa-2x"></i>
-                    </a>
-                    <a class="socmed__a" href="#!">
-
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                    <a class="socmed__a" href="#!">
-                        <i class="fab fa-facebook fa-2x"></i>
-                    </a>
-                    <a href="#" class="text-light text-muted">&copy;2020 – OneCode. All rights reserved.</a>
+                <div class="socmed mobileOn">
+                    <div class="fb"> <img class="fb__img" src="assets/fb.svg" alt="icon-fb"></div>
+                    <div class="ig"> <img class="ig__img" src="assets/ig.svg" alt="icon-ig"></div>
+                    <div class="twitter"> <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter"></div>
                 </div>
             </li>
+
+            <li class="mobileOn text-center">
+                <span class="lg-off text-light text-muted">&copy;2020 – Footballbadboys. All rights
+                    reserved.</span>
+            </li>
         </ul>
+
+
     </nav>
 </header>
 
@@ -79,8 +191,8 @@
             <div class="main__head--text">
                 <h2>2020</h2>
                 <h1>NEW ARRIVAL</h1>
-                <h5 class="h5__left" align="left">on the street</h5>
-                <h5 align="center">in the stadium</h5>
+                <h5 class="h5__left" align="center">on the street</h5>
+                <h5 class="h5__center" align="center">in the stadium</h5>
             </div>
         </section>
 
@@ -92,7 +204,9 @@
 
         <section class="discount">
             <div class="discount__div">
-                <img class="discount__img" src="assets/discount.svg" alt="logo discount">
+                <div class="discount__img">
+                    <img class="dc__img" src="assets/discount.svg" alt="logo discount">
+                </div>
                 <span class="discount__span">Jadi pembeli pertama di Footballbadboys dan dapatkan harga spesial!</span>
             </div>
         </section>
@@ -198,13 +312,13 @@
             <div class="media__flex">
                 <ul class="media__item">
                     <li class="media__li">
-                        <img src="assets/logo3.svg" alt="logo-media 1">
+                        <img class="media__img" src="assets/logo3.svg" alt="logo-media 1">
                     </li>
                     <li class="media__li">
-                        <img src="assets/logo1.svg" alt="logo-media 2">
+                        <img class="media__img" src="assets/logo1.svg" alt="logo-media 2">
                     </li>
                     <li class="media__li">
-                        <img src="assets/logo2.svg" alt="logo-media 3">
+                        <img class="media__img" src="assets/logo2.svg" alt="logo-media 3">
                     </li>
                 </ul>
             </div>
@@ -226,7 +340,7 @@
                                 local buatan sendiri...</p>
                             <div class="social">
                                 <img class="address__img" src="assets/address.svg" alt="icon-alamat">
-                                <span class="body__span">this is a lorem ipsum lorem ipsum </span>
+                                <span class="body__span">Jl turi km 3.7 pondok idaman A2 Kadisobo trimuyo sleman </span>
                                 <br>
                                 <img class="phone__img" src="assets/telfon.svg" alt="icon-alamat">
                                 <span class="body__span">+628 777 111 </span>
@@ -305,27 +419,25 @@
 
                             </div>
                         </div>
+                    </div>
 
-
-                        <div class="footer__item">
-                            <div class="footer__item--flex">
-                                <ul>
-                                    Sitemaps </li>
-                                    <li>SearchUs </li>
-                                    <li>Advance </li>
-                                    <li>Contact us </li>
-                                    <li>Subscribe us </li>
-                                </ul>
-                                <div class="box2">
-                                    <span class="copy">&copy 2020 FootballBadboys | Designed and Developed By OneCode.id
-                                    </span><br>
-                                    <span class="copy"> All Rights Reserved.</span>
-                                </div>
+                    <div class="footer__item special">
+                        <div class="footer__item--flex">
+                            <ul class="">
+                                Sitemaps </li>
+                                <li>SearchUs </li>
+                                <li>Advance </li>
+                                <li>Contact us </li>
+                                <li>Subscribe us </li>
+                            </ul>
+                            <div class="box2">
+                                <span class="copy">2020 FootballBadboys
+                                </span>
+                                <span class="copy">Designed and Developed By OneCode.id
+                                </span>
+                                <span class="copy"> &copy All Rights Reserved.</span>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
         </footer>
@@ -352,5 +464,20 @@
     crossorigin="anonymous"></script>
 
 <script src="main.js"></script>
+<script>
+
+    function searchToggle(obj, evt) {
+        var container = $(obj).closest('.search-wrapper');
+        if (!container.hasClass('active')) {
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if (container.hasClass('active') && $(obj).closest('.input-holder').length == 0) {
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+    }
+</script>
 
 </html>

@@ -72,3 +72,35 @@ a {
       @content;
     }
   }
+
+@mixin media-md {
+    @media screen and (min-width: 568px) {
+      @content;
+    }
+}
+
+@mixin media-m {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin media-l {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+
+@mixin media-xl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}

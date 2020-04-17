@@ -18,6 +18,11 @@ const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.nav__menu');
 const navItems = document.querySelectorAll('.nav__menu--item');
 
+
+// const categoryBtn = document.querySelector('.custom');
+// const aBtn = document.querySelector('a__custom');
+
+
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
@@ -68,12 +73,25 @@ var swiper = new Swiper('.swiper-container', {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
         },
         1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1600: {
             slidesPerView: 5,
-            spaceBetween: 50,
+            spaceBetween: 20,
         },
     }
 });
