@@ -1,5 +1,29 @@
 # FootballBadboys-ecom
 
+<<<<<<< HEAD
+## Tech : 
+```
+FE
+-HTML
+-SASS/SCSS
+-Javascript
+-Bootstrap
+```
+
+### BE
+```
+-php Framework Laravel
+```
+
+### Project Ecommerce
+
+```
+--GOODLUCK!--
+```
+
+
+# FootballBadboys-ecom
+=======
 
 ## Project setup
 ```
@@ -21,3 +45,4 @@ PHP - Laravel
 ```
 
 
+>>>>>>> arfiandimas/master
