@@ -7,7 +7,7 @@ $discount-color : #FF0000;
 $discount-bg : #000839;
 $featured-bg :#0A1317;
 $media-bg : #150F03;
-
+$mainTransition : all 0.3s linear;
 
 
 
@@ -16,6 +16,7 @@ $media-bg : #150F03;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none !important;
    
 }
 
@@ -40,9 +41,8 @@ ul , li {
 }
 
 body {
-    font-family: ambitReguler;
+    font-family: ambitReguler !important;
     height: 100vh;
-  
 }
 
 h1,h2,h3,h4,h5 {
@@ -52,8 +52,10 @@ h1,h2,h3,h4,h5 {
 a {
     color: $primary-color;
     text-decoration: none;
-
 }
+
+
+
 
 //transisiton effect
 @mixin transition-ease {

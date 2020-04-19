@@ -1,4 +1,10 @@
 let prevScrollpos = window.pageYOffset;
+const menuBtn = document.querySelector('.menu-btn');
+const hamburger = document.querySelector('.menu-btn__burger');
+const nav = document.querySelector('.nav');
+const menuNav = document.querySelector('.nav__menu');
+const navItems = document.querySelectorAll('.nav__menu--item');
+
 window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -11,16 +17,6 @@ window.onscroll = () => {
     }
     prevScrollpos = currentScrollPos;
 }
-
-const menuBtn = document.querySelector('.menu-btn');
-const hamburger = document.querySelector('.menu-btn__burger');
-const nav = document.querySelector('.nav');
-const menuNav = document.querySelector('.nav__menu');
-const navItems = document.querySelectorAll('.nav__menu--item');
-
-
-// const categoryBtn = document.querySelector('.custom');
-// const aBtn = document.querySelector('a__custom');
 
 
 let showMenu = false;
@@ -44,6 +40,7 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
 
 
 var swiper = new Swiper('.swiper-container', {
@@ -95,3 +92,10 @@ var swiper = new Swiper('.swiper-container', {
         },
     }
 });
+
+
+function toggleCart() {
+    document.querySelector('.sidecart').classList.toggle('open-cart');
+}
+
+toggleCart();

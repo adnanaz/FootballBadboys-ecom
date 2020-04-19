@@ -12,10 +12,15 @@ header {
   }
 
 
+  .dropdown-menu.show {
+    display: block;
+    @include  transition-ease;
+}
+
   .dropdown-menu {
  
-    width: 76vh;
-    height: 70vh;
+    width: 100%;
+    height: auto;
    
     .dropdown-item {
       display: flex;
@@ -89,9 +94,9 @@ header {
   }
 
   // search
-form{
+.formSearch{
   position: relative;
-  top: 50%;
+  top: 1.5rem;
   left: 50%;
   transform: translate(-50%,-50%);
   transition: all 1s;
@@ -105,7 +110,7 @@ form{
   font-size: 1rem;
 }
 
-input{
+.navSearch{
   position: absolute;
   top: 0;
   left: 0;
@@ -135,16 +140,16 @@ input{
   transition: all 1s;
 }
 
-form:hover{
+.formSearch:hover{
   width: 200px;
   cursor: pointer;
 }
 
-form:hover input{
+.formSearch:hover input{
   display: block;
 }
 
-form:hover .fa{
+.formSearch:hover .fa{
   background: #07051a;
   color: white;
 }
@@ -169,21 +174,18 @@ form:hover .fa{
 
     &__div {
       display: flex;
+      padding: 0 1rem;
       justify-content: center;
       align-items: center;
       color: $secondary-color;
       font-size: 0.75em;
 
 
-      .discount__img {
-        width: 7vh;
-        padding: 1rem;
-        flex-basis: 10%;
-        
-      }
+
+    
 
       .discount__span {
-        flex-basis: 80%;
+       margin: 12px;
       }
     }
   }
@@ -296,7 +298,7 @@ form:hover .fa{
     }
   }
 
-  &__item {
+  &__item a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,7 +309,16 @@ form:hover .fa{
       margin-bottom: 1rem;;
     }
 
-    .product__name {
+
+.productDesc {
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 2rem;
+
+   
+  .product__name {
       color: $secondary-color;
       font-family: AmbitBold;
       line-height: 2rem;
@@ -329,6 +340,7 @@ form:hover .fa{
       margin-bottom: 3rem;
       line-height: 2rem;
       font-size: 1.5rem;
+      }
     }
   }
 }
@@ -439,6 +451,8 @@ form:hover .fa{
 
           .body__span {
             padding:  0 1rem;
+            color: $secondary-color;
+           
           }
         }
     }
