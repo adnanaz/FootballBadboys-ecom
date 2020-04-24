@@ -93,6 +93,12 @@ header {
         }
   }
 
+  .hvr-underline-from-center:before { 
+
+    background: #000839 !important;
+    height: 3px !important;
+  }
+
   // search
 .formSearch{
   position: relative;
@@ -282,6 +288,7 @@ header {
   top: -7%;
 
 
+
   &__text {
     text-align: center;
     padding: 1rem 0;
@@ -298,6 +305,7 @@ header {
     }
   }
 
+  
   &__item a {
     display: flex;
     flex-direction: column;
@@ -436,6 +444,7 @@ header {
       }
 
       &--body1 {
+        
         max-width: 350px;
         p {
           padding: 0 1rem;
@@ -449,6 +458,7 @@ header {
             
           }
 
+
           .body__span {
             padding:  0 1rem;
             color: $secondary-color;
@@ -459,15 +469,38 @@ header {
 
     &--body2, &--body3 {
       padding: 0 1rem;
+
+      .body__li {
+        a {
+          color: white;
+        }
+
+        a:hover {
+          color: grey;
+          @include transition-ease
+        }
+      }
     }
 
     &--body4 {
       padding: 0 1rem;
 
+
+
       .social {
+
+        a {
+          color: white;
+        }
+
+        a:hover {
+          color: grey;
+          @include transition-ease
+        }
         .fb__img,.ig__img,.twitter__img {
           width: 4vh;
           padding: 0.2rem 0;
+          
         }
 
        

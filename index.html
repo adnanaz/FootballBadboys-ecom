@@ -16,6 +16,8 @@
     <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="node_modules/hover.css/css/hover-min.css">
 </head>
 <header>
     <!-- <section class="discount">
@@ -57,13 +59,13 @@
         <ul class="nav__menu">
 
             <li class="nav__menu--item active">
-                <a href="index.html" class="nav__menu--link">
+                <a href="index.html" class="hvr-underline-from-center nav__menu--link">
                     NEW ARRIVAL
                 </a>
             </li>
             <li class="nav__menu--item custom nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle nav__menu--link a__custom" data-toggle="dropdown" href="#"
-                    role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     SHOP ONLINE
                 </a>
                 <div class="dropdown-menu" id="drop">
@@ -143,12 +145,12 @@
                 </a>
             </li>
             <li class="nav__menu--item">
-                <a href="#" class="nav__menu--link">
+                <a href="#" class="nav__menu--link hvr-underline-from-center">
                     CUCI GUDANG
                 </a>
             </li>
             <li class="nav__menu--item ">
-                <a href="#" class="nav__menu--link">
+                <a href="#" class="nav__menu--link hvr-underline-from-center">
                     ON SALE
                 </a>
             </li>
@@ -156,10 +158,10 @@
 
             <li class="nav__menu--item">
                 <a class="navbar-brand" href="#">
-                    <img class="nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                    <img class=" nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
                 </a>
-                <a class="navbar-brand d-none" href="#" onclick="toggleCart()">
-                    <img class="nav__img" src="scss/assets/img/cart.svg" alt="">
+                <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
+                    <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
                 </a>
             </li>
 
@@ -230,7 +232,7 @@
                 <li class="d-flex flex-wrap flex-row">
                     <!-- product image -->
                     <div class="col-4 p-0">
-                        <img class="img-fluid" src="scss/assets/img/produknya.svg" alt="">
+                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
                     </div>
                     <!-- end product image -->
 
@@ -293,24 +295,24 @@
         </section>
 
         <section class="steps">
-            <figure class="airplane">
-                <img class="airplane__img" src="scss/assets/img/airplane2.svg" alt="icon-airplane">
+            <figure class="airplane hvr-icon-up">
+                <img class="airplane__img hvr-icon" src="scss/assets/img/airplane2.svg" alt="icon-airplane">
                 <figcaption>
                     <h3>Kirim ke mana aja</h3>
                     <p>kami melayani pembelian online dimana saja kapan saja </p>
                 </figcaption>
             </figure>
 
-            <figure class="time">
-                <img class="time__img" src="scss/assets/img/time2.svg" alt="icon-time">
+            <figure class="time hvr-icon-up">
+                <img class="time__img hvr-icon" src="scss/assets/img/time2.svg" alt="icon-time">
                 <figcaption>
                     <h3>Gratis Refund</h3>
                     <p>100% gratis refund apabila pakaian rusak </p>
                 </figcaption>
             </figure>
 
-            <figure class="support">
-                <img class="support__img" src="scss/assets/img/support2.svg" alt="support-time">
+            <figure class="support  hvr-icon-up">
+                <img class="support__img  hvr-icon" src="scss/assets/img/support2.svg" alt="support-time">
                 <figcaption>
                     <h3>Support 24/7</h3>
                     <p>Hubungi kami kapanpun dan dimanapun anda berada</p>
@@ -319,12 +321,17 @@
 
             <div class="imgBanner">
                 <figure>
-                    <img class="imgBanner__img" src="assets/iklan1.svg" alt="gambar iklan 1">
+                    <a href="#" class="hvr-grow-shadow">
+                        <img class="imgBanner__img" src="assets/iklan1.svg" alt="gambar iklan 1">
+                    </a>
                 </figure>
+            </div>
 
-                <figure>
+            <figure>
+                <a href="#" class="hvr-grow-shadow">
                     <img class="imgBanner__img" src="assets/iklan2.svg" alt="gambar iklan 2">
-                </figure>
+                </a>
+            </figure>
             </div>
         </section>
 
@@ -340,7 +347,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover">
+                                <a href="#" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model1.svg" alt="model 1">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -352,7 +359,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover">
+                                <a href="#" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model4.svg" alt="model 2">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -364,7 +371,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover">
+                                <a href="#" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model5.svg" alt="model 3">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -377,7 +384,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover">
+                                <a href="#" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model1.svg" alt="model 4">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -410,17 +417,17 @@
             <div class="media__flex">
                 <ul class="media__item">
                     <li class="media__li">
-                        <a href="#">
+                        <a href="#" class="hvr-grow-shadow">
                             <img class="media__img" src="assets/logo3.svg" alt="logo-media 1">
                         </a>
                     </li>
                     <li class="media__li">
-                        <a href="#">
+                        <a href="#" class="hvr-grow-shadow">
                             <img class="media__img" src="assets/logo1.svg" alt="logo-media 2">
                         </a>
                     </li>
                     <li class="media__li">
-                        <a href="#">
+                        <a href="#" class="hvr-grow-shadow">
                             <img class="media__img" src="assets/logo2.svg" alt="logo-media 3">
                         </a>
                     </li>
@@ -505,13 +512,13 @@
                         <div class="footer__item--body4">
                             <div class="social">
                                 <img class="fb__img" src="assets/fb.svg" alt="icon-fb">
-                                <span class="body__span">footballbadboys</span>
+                                <a href="#"><span class="body__span">footballbadboys</span></a>
                                 <br>
                                 <img class="ig__img" src="assets/ig.svg" alt="icon-ig">
-                                <span class="body__span">@Footballbadboys </span>
+                                <a href="#"><span class="body__span">@Footballbadboys </span></a>
                                 <br>
                                 <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter">
-                                <span class="body__span">footballbadboys@cs.com </span>
+                                <a href="#"><span class="body__span">footballbadboys@cs.com </span></a>
                                 <br>
 
 

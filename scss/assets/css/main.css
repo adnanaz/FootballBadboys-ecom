@@ -269,6 +269,11 @@ main {
   padding-top: 2vw;
 }
 
+.hvr-underline-from-center:before {
+  background: #000839 !important;
+  height: 3px !important;
+}
+
 .formSearch {
   position: relative;
   top: 1.5rem;
@@ -609,8 +614,26 @@ main {
   padding: 0 1rem;
 }
 
+.footer__item--body2 .body__li a, .footer__item--body3 .body__li a {
+  color: white;
+}
+
+.footer__item--body2 .body__li a:hover, .footer__item--body3 .body__li a:hover {
+  color: grey;
+  transition: all 0.5s ease-in-out;
+}
+
 .footer__item--body4 {
   padding: 0 1rem;
+}
+
+.footer__item--body4 .social a {
+  color: white;
+}
+
+.footer__item--body4 .social a:hover {
+  color: grey;
+  transition: all 0.5s ease-in-out;
 }
 
 .footer__item--body4 .social .fb__img, .footer__item--body4 .social .ig__img, .footer__item--body4 .social .twitter__img {
@@ -647,6 +670,12 @@ main {
 }
 
 @media screen and (min-width: 320px) {
+  .admin__content {
+    width: 100vh;
+  }
+  .admin__nav {
+    visibility: visible;
+  }
   .mobile-on {
     visibility: visible;
     display: block;
@@ -800,6 +829,12 @@ main {
 }
 
 @media screen and (min-width: 460px) {
+  .admin__content {
+    width: 100vh;
+  }
+  .admin__nav {
+    visibility: visible;
+  }
   .mobile-on {
     visibility: visible;
     display: block;
@@ -896,6 +931,12 @@ main {
 }
 
 @media screen and (min-width: 568px) {
+  .admin__content {
+    width: 100vh;
+  }
+  .admin__nav {
+    visibility: visible;
+  }
   .mobile-on {
     visibility: visible;
     display: block;
@@ -923,6 +964,9 @@ main {
 }
 
 @media screen and (min-width: 640px) {
+  .admin__content {
+    width: 100vh;
+  }
   .mobile-on {
     visibility: hidden;
     display: none;
@@ -964,6 +1008,12 @@ main {
     visibility: hidden;
     display: none;
   }
+  .admin__nav {
+    visibility: visible;
+  }
+  .admin__content {
+    width: 100vh;
+  }
   .lg-on {
     visibility: visible;
   }
@@ -1000,6 +1050,9 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+  .admin__content {
+    width: 100%;
+  }
   .mobile-on {
     visibility: hidden;
     display: none;
@@ -1014,6 +1067,9 @@ main {
   .mobileOn {
     visibility: hidden;
     display: none !important;
+  }
+  .admin__nav {
+    visibility: visible;
   }
   .nav {
     visibility: visible;
@@ -1082,9 +1138,27 @@ main {
   .footer__item--body4 .box .box__img {
     width: 5vh;
   }
+  .promotion__main {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .promotion__main2 {
+    flex-flow: row wrap !important;
+  }
+  .promotion__main-change2 {
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+  }
+  .promotion__main-preview2 {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1400px) {
+  .admin__content {
+    width: 100%;
+  }
   .main__head--text {
     padding: 7vw;
   }
@@ -1132,6 +1206,10 @@ main {
   }
   .media__li {
     margin: 0 3rem;
+  }
+  .promotion__main {
+    display: flex;
+    flex-flow: row;
   }
 }
 
@@ -1332,5 +1410,246 @@ main {
   margin: auto;
   width: 100%;
   white-space: nowrap;
+}
+
+.admin__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin__container .admin__nav {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: fixed;
+  background: grey;
+  height: 100%;
+  width: 120px;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.admin__container .admin__nav .nav-link {
+  padding: .5rem 0;
+  width: 100%;
+}
+
+.admin__container .tab-content {
+  width: 100%;
+}
+
+.admin__container .boxes {
+  display: flex;
+  margin: .5rem 0;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.admin__container .boxes .boxes__img {
+  width: 5vh;
+  height: auto;
+}
+
+.admin__container .boxes span {
+  font-size: .8rem;
+  color: #ffffff;
+}
+
+.admin__container #exit {
+  position: relative;
+  left: 2rem;
+  top: -1rem;
+}
+
+.admin__container .bars #open {
+  position: relative;
+  left: -5rem;
+  top: 2rem;
+}
+
+.admin__container .bars #open:hover {
+  color: red;
+}
+
+.admin__container .admin__content {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  margin-top: 5rem;
+  background: whitesmoke;
+}
+
+.admin__container .admin__content .order__flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.admin__container .admin__content .order__flex button {
+  margin: 0 1rem;
+  height: 38px;
+}
+
+.admin__container .dashboard__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.admin__container .jdl {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.admin__container .parent {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin__container .parent .child1 {
+  margin-right: 5rem;
+}
+
+.admin__container .parent .child2 .add .add__img {
+  width: 4vh;
+}
+
+.admin__container .parent .child2 .child2__item2 {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin__container .parent .child2 .child2__item2 figure {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.admin__container .parent .child2 .child2__item2 figure a {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  align-items: center;
+  color: #000000;
+}
+
+.admin__container .parent .child2 .child2__item2 figure .properti {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  background: whitesmoke;
+  align-items: center;
+}
+
+.admin__container .parent .child2 .child2__item2 figure .properti__img {
+  width: 4vh;
+}
+
+.admin__container .size {
+  width: 100%;
+}
+
+.admin__container .size .size__ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.admin__container .size .size__ul .size__li {
+  text-align: center;
+  padding: 0.5rem;
+  margin: .1rem;
+}
+
+.admin__container .size .size__ul .size__li button {
+  width: 60px;
+}
+
+.admin__container .promotion__main-change {
+  width: 100%;
+  height: 500px;
+}
+
+.admin__container .promotion__main-preview {
+  width: 100%;
+  height: 500px;
+}
+
+.admin__container .promotion__main-preview figure {
+  text-align: center;
+}
+
+.admin__container .promotion__main-preview img {
+  width: 55vh;
+}
+
+.admin__container .promotion__main-preview2 {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin__container .promotion__main-preview2 figure {
+  margin: 1rem;
+}
+
+.admin__container .promotion__main-preview2 figure img {
+  width: 60vh;
+}
+
+.admin__container .promotion__main-change2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin__container .promotion__main-change2 .form__promotion {
+  width: 40%;
+  margin: 0 2rem;
+}
+
+.admin__container .account {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.admin__container .account .leftside {
+  flex-basis: 50%;
+}
+
+.admin__container .account .rightside {
+  flex-basis: 30%;
+}
+
+.properti {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  background: whitesmoke;
+  align-items: center;
+}
+
+.properti__img {
+  width: 4vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.dc, .price {
+  display: block;
+}
+
+.price {
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

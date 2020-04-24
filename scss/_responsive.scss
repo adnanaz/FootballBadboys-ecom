@@ -1,4 +1,11 @@
 @include media-xs {
+    .admin__content {
+        width: 100vh;
+    }
+    .admin__nav {
+        visibility: visible;
+
+    }
     .mobile-on {
         visibility: visible;
         display: block;
@@ -242,9 +249,20 @@
             }
         }
     }
+
+    // admin
+ 
+    // end admin
 }
 
 @include media-s {
+
+    .admin__content {
+        width: 100vh;
+    }
+    .admin__nav {
+        visibility: visible;
+    }
     .mobile-on {
         visibility: visible;
         display: block;
@@ -397,7 +415,13 @@
 }
 
 @include media-md {
+    .admin__content {
+        width: 100vh;
+    }
 
+    .admin__nav {
+        visibility: visible;
+    }
     .mobile-on {
         visibility: visible;
         display: block;
@@ -439,6 +463,10 @@
 }
 
 @include media-m {
+
+    .admin__content {
+        width: 100vh;
+    }
     .mobile-on {
         visibility: hidden;
         display: none;
@@ -495,6 +523,13 @@
         display: none;
     }
 
+    .admin__nav {
+        visibility: visible;
+    }
+
+    .admin__content {
+        width: 100vh;
+    }
     .lg-on {
         visibility: visible;
      
@@ -546,12 +581,14 @@
 }
 
 @include media-l {
+    .admin__content {
+        width: 100%;
+    }
+
     .mobile-on {
         visibility: hidden;
         display: none;
     }
-
-   
 
     .lg-on, .lg-off {
         visibility: hidden;
@@ -565,6 +602,11 @@
       .mobileOn {
         visibility: hidden;
         display: none !important;
+      }
+
+      .admin__nav {
+          visibility: visible;
+
       }
   
       .nav {
@@ -667,12 +709,38 @@
         }
     }
 
+    // admin
+    .promotion {
+        &__main {
+            display: flex;
+            flex-flow: column wrap;
+        }
+    }
+
+    .promotion__main2 {
+        flex-flow: row wrap !important;
+    }
+
+    .promotion__main-change2 {
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .promotion__main-preview2 {
+        justify-content: center;
+    }
+    // end admin
+
 
 }
 
 @include media-xl {
 
-   
+    .admin__content {
+        width: 100%;
+    }
+
 
     .main__head--text {
         
@@ -747,4 +815,16 @@
     .media__li {
         margin:  0 3rem;
     }
+
+     // admin
+    .promotion {
+        &__main {
+            display: flex;
+            flex-flow: row;
+        }
+    }
+
+
+    // end admin
+
 }

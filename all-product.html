@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Badboys</title>
+
+    <!-- Ini udah tak downloadin local -->
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
+
+    <link rel="stylesheet" href="scss/assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="../node_modules/hover.css/css/hover-min.css" rel="stylesheet">
+</head>
+<header>
+    <!-- <section class="discount">
+        <div class="discount__div">diskon section</div>
+    </section> -->
+
+    <div class="container-fluid mobileOn" id="header-wrap">
+        <div class="flex">
+            <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+            </div>
+            <div class="search lg-on">
+                <form action="" class="formSearch">
+                    <input class="navSearch" type="search" placeholder="Cari sesuatu?">
+                    <img class="fa rounded-circle" src="scss/assets/img/search.png" width="40" height="40" alt="">
+                </form>
+            </div>
+            <div class="brand ">
+                <a class="navbar-brand" href="#">
+                    <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
+                </a>
+            </div>
+            <div class="cuciGudang lg-on">
+                <a class="navbar-brand" href="#">
+                    <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
+                </a>
+            </div>
+
+            <div class="cart lg-on">
+                <a class="navbar-brand" href="#">
+                    <img class="" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav" id="navbar" style=" transition: top 0.5s;
+        height: 65px; position: fixed;">
+        <ul class="nav__menu">
+
+            <li class="nav__menu--item">
+                <a href="index.html" class="hvr-underline-from-center nav__menu--link">
+                    NEW ARRIVAL
+                </a>
+            </li>
+            <li class="nav__menu--item custom nav-item dropdown active">
+                <a href="#" class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    SHOP ONLINE
+                </a>
+                <div class="dropdown-menu" id="drop">
+                    <div class="dropdown-item">
+
+
+                        <ul class="">
+                            <li>
+                                <a href="#">Jacket</a>
+                            </li>
+                            <li>
+                                <a href="#">Jersey</a>
+                            </li>
+                            <li>
+                                <a href="#">Merchandise</a>
+                            </li>
+                            <li>
+                                <a href="#">Overshirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Polo T-shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Shortpants</a>
+                            </li>
+                            <li>
+                                <a href="#">T-Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Waistbag</a>
+                            </li>
+                        </ul>
+
+                        <ul class="">
+                            <li>
+                                <a href="#">Cagoule</a>
+                            </li>
+                            <li>
+                                <a href="#">Caps</a>
+                            </li>
+                            <li>
+                                <a href="#">Crewneck</a>
+                            </li>
+                            <li>
+                                <a href="#">Half Zip</a>
+                            </li>
+                            <li>
+                                <a href="#">Hoodie</a>
+                            </li>
+
+                        </ul>
+
+
+                        <ul class="child ">
+                            <li>
+                                <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="">
+                            </li>
+                            <li>
+                                <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="">
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </li>
+            <li class="nav__menu--item special">
+                <form action="" class="formSearch">
+                    <input class="navSearch" type="search" placeholder="Cari sesuatu?">
+                    <img class=" fa nav__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                </form>
+            </li>
+
+            <li class="brand nav__menu--item">
+                <a class="navbar-brand" href="#">
+                    <img class="nav__img rounded-circle" src="scss/assets/img/logo-fbb.png" alt="">
+                </a>
+            </li>
+            <li class="nav__menu--item">
+                <a href="#" class="nav__menu--link hvr-underline-from-center">
+                    CUCI GUDANG
+                </a>
+            </li>
+            <li class="nav__menu--item ">
+                <a href="#" class="nav__menu--link hvr-underline-from-center">
+                    ON SALE
+                </a>
+            </li>
+
+
+            <li class="nav__menu--item">
+                <a class="navbar-brand" href="#">
+                    <img class=" nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                </a>
+                <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
+                    <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
+                </a>
+            </li>
+
+
+
+
+
+
+            <li class="nav__menu--item mobileOn">
+                <div class="socmed mobileOn">
+                    <div class="fb"> <img class="fb__img" src="assets/fb.svg" alt="icon-fb"></div>
+                    <div class="ig"> <img class="ig__img" src="assets/ig.svg" alt="icon-ig"></div>
+                    <div class="twitter"> <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter"></div>
+                </div>
+            </li>
+
+            <li class="mobileOn text-center">
+                <span class="lg-off text-light text-muted">&copy;2020 – Footballbadboys. All rights
+                    reserved.</span>
+            </li>
+        </ul>
+
+
+    </nav>
+</header>
+
+<body>
+
+    <main class="main">
+
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="footer__flex">
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>ABOUT COMPANY</h3>
+                            <hr class="footer__hr hr-1">
+                        </div>
+
+                        <div class="footer__item--body1">
+                            <p>Footballbadboys merupakan distro clothing yang berada di yogyakarta yang merupakan produk
+                                local buatan sendiri...</p>
+                            <div class="social">
+                                <img class="address__img" src="assets/address.svg" alt="icon-alamat">
+                                <span class="body__span">Jl turi km 3.7 pondok idaman A2 Kadisobo trimuyo sleman </span>
+                                <br>
+                                <img class="phone__img" src="assets/telfon.svg" alt="icon-alamat">
+                                <span class="body__span">+628 777 111 </span>
+                                <br>
+                                <img class="email__img" src="assets/email.svg" alt="icon-alamat">
+                                <span class="body__span">footballbadboys@cs.com </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>FEATURED</h3>
+                            <hr class="footer__hr hr-2">
+                        </div>
+
+                        <div class="footer__item--body2">
+                            <ul class="body__ul">
+                                <li class="body__li"><a href="#"><span class="body__span">New Arrivals</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Spring Summer</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Weekend Offender </span></a>
+                                </li>
+                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Special Offers </span></a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>KOLEKSI</h3>
+                            <hr class="footer__hr hr-3">
+                        </div>
+
+                        <div class="footer__item--body3">
+                            <ul class="body__ul">
+                                <li class="body__li"><a href="#"><span class="body__span">Accesories</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span"> Classics</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span"> Specials </span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Outlet</span> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>TRACK US ON</h3>
+                            <hr class="footer__hr hr-4">
+                        </div>
+
+
+                        <div class="footer__item--body4">
+                            <div class="social">
+                                <img class="fb__img" src="assets/fb.svg" alt="icon-fb">
+                                <a href="#"><span class="body__span">footballbadboys</span></a>
+                                <br>
+                                <img class="ig__img" src="assets/ig.svg" alt="icon-ig">
+                                <a href="#"><span class="body__span">@Footballbadboys </span></a>
+                                <br>
+                                <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter">
+                                <a href="#"><span class="body__span">footballbadboys@cs.com </span></a>
+                                <br>
+
+
+                                <div class="box">
+                                    <span class="box__text">Bayar Dengan</span>
+                                    <img class="box__img" src="assets/visa.svg" alt="visa">
+                                    <img class="box__img" src="assets/paypal.svg" alt="paypal">
+                                    <img class="box__img" src="assets/mastercard.svg" alt="mastercard">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__item special">
+                        <div class="footer__item--flex">
+                            <ul class="">
+                                Sitemaps </li>
+                                <li>SearchUs </li>
+                                <li>Advance </li>
+                                <li>Contact us </li>
+                                <li>Subscribe us </li>
+                            </ul>
+                            <div class="box2">
+                                <span class="copy">2020 FootballBadboys
+                                </span>
+                                <span class="copy">Designed and Developed By OneCode.id
+                                </span>
+                                <span class="copy"> &copy All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </main>
+
+
+
+
+</body>
+
+<!-- ini udah local -->
+<script src="node_modules/swiper/js/swiper.js"></script>
+<script src="node_modules/swiper/js/swiper.min.js"></script>
+
+<!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+<script>
+
+    function searchToggle(obj, evt) {
+        var container = $(obj).closest('.search-wrapper');
+        if (!container.hasClass('active')) {
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if (container.hasClass('active') && $(obj).closest('.input-holder').length == 0) {
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+    }
+</script>
+
+</html>

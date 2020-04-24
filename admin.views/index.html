@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Page</title>
+    <!-- Ini udah tak downloadin local -->
+    <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../node_modules/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../scss/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../node_modules/hover.css/css/hover-min.css">
+</head>
+
+<body>
+    <div class="admin__container" id="cc">
+        <div class="bars" style="position: absolute; left: 7.5rem;">
+
+            <a href="#" id="open" onclick="openNav()">OPEN NAV</a>
+        </div>
+
+        <div class="admin__nav nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link disabled" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                aria-controls="v-pills-profile" aria-selected="true">
+                <div class="boxes" id="boxes1">
+                    <a href="#" id="exit" onclick="closeNav()"><i class="fas fa-times fa-2x"></i></a>
+                    <img class="boxes__img rounded-circle" src="../scss/assets/img/admin/logo-fbb.png"
+                        alt="profile-logo">
+                </div>
+            </a>
+
+            <a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard"
+                role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
+                <div class="boxes" id="boxes2">
+                    <img class="boxes__img" src="../scss/assets/img/admin/data.png" alt="dashboard-logo">
+                    <span>DASHBAORD</span>
+                </div>
+            </a>
+            <a class="nav-link" id="v-pills-inventory-tab" data-toggle="pill" href="#v-pills-inventory" role="tab"
+                aria-controls="v-pills-inventory" aria-selected="false">
+                <div class="boxes" id="boxes3">
+                    <img class="boxes__img" src="../scss/assets/img/admin/clothes.png" alt="dashboard-logo">
+                    <span>INVENTORY</span>
+                </div>
+            </a>
+            <a class="nav-link" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders" role="tab"
+                aria-controls="v-pills-orders" aria-selected="false">
+                <div class="boxes" id="boxes4">
+                    <img class="boxes__img" src="../scss/assets/img/admin/shopping.png" alt="dashboard-logo">
+                    <span>ORDERS</span>
+                </div>
+            </a>
+            <a class="nav-link" id="v-pills-promotion-tab" data-toggle="pill" href="#v-pills-promotion" role="tab"
+                aria-controls="v-pills-promotion" aria-selected="false">
+                <div class="boxes" id="boxes5">
+                    <img class="boxes__img" src="../scss/assets/img/admin/offer.png" alt="dashboard-logo">
+                    <span>PROMOTION</span>
+                </div>
+            </a>
+            <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab"
+                aria-controls="v-pills-account" aria-selected="false">
+                <div class="boxes" id="boxes6">
+                    <img class="boxes__img" src="../scss/assets/img/admin/account.png" alt="dashboard-logo">
+                    <span>ACCOUNT</span>
+                </div>
+            </a>
+            <a class="nav-link" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab"
+                aria-controls="v-pills-logout" aria-selected="false">
+                <div class="boxes" id="boxes7">
+                    <img class="boxes__img" src="../scss/assets/img/admin/logout.png" alt="dashboard-logo">
+                    <span>LOGOUT</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="admin__content">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- admin dashboard -->
+                <div class="tab-pane fade " id="v-pills-dashboard" role="tabpanel"
+                    aria-labelledby="v-pills-dashboard-tab">
+                    <div class="dashboard">
+                        <div class="dashboard__head">
+                            <h1>Welcome To Dashboard Admin</h1>
+                            <h2>Hai (User.admin), this is your sale today </h2>
+                        </div>
+
+                        <div class="dashboard__body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Nama Produk</th>
+                                        <th scope="col">Kategori</th>
+                                        <th scope="col">Jumlah</th>
+                                        <th scope="col">Harga</th>
+                                        <th scope="col">Alamat lengkap</th>
+                                        <th scope="col">Kota</th>
+                                        <th id="status" scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark Bean</td>
+                                        <td>Skuda T-Shirt</td>
+                                        <td>Kaos</td>
+                                        <td>2</td>
+                                        <td>150000</td>
+                                        <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                        <td>Yogyakarta</td>
+                                        <td id="choice">Belum dikirim</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Mark rob</td>
+                                        <td>Skuda T-Shirt</td>
+                                        <td>Kaos</td>
+                                        <td>2</td>
+                                        <td>150000</td>
+                                        <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                        <td>Yogyakarta</td>
+                                        <td id="choice">Sudah dikirim</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Mark jen</td>
+                                        <td>Skuda T-Shirt</td>
+                                        <td>Kaos</td>
+                                        <td>2</td>
+                                        <td>150000</td>
+                                        <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                        <td>Yogyakarta</td>
+                                        <td id="choice">Sudah dikirim</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Mark dim</td>
+                                        <td>Skuda T-Shirt</td>
+                                        <td>Kaos</td>
+                                        <td>2</td>
+                                        <td>150000</td>
+                                        <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                        <td>Yogyakarta</td>
+                                        <td id="choice">Sudah dikirim</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Mark barjono</td>
+                                        <td>Skuda T-Shirt</td>
+                                        <td>Kaos</td>
+                                        <td>2</td>
+                                        <td>150000</td>
+                                        <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                        <td>Yogyakarta</td>
+                                        <td id="choice">Sudah dikirim</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <nav aria-label="...">
+                                <ul class="pagination  justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- end admin dashboard -->
+
+                <!-- inventory dashboard -->
+                <div class="tab-pane fade" id="v-pills-inventory" role="tabpanel"
+                    aria-labelledby="v-pills-inventory-tab">
+                    <div class="parent">
+                        <div class="child1">
+                            <div class="child1__item">
+                                <span class="jdl">Kategori</span>
+                                <hr>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">All Category</th>
+                                            <th scope="col"> <input type="checkbox" class="check" id="checkAll"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Jacket</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Jersey</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Overshirt</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Merchandise</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Polo T-shirt</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Shortpants</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">T-Shirt</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Waistbag</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Cagoule</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Caps</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Crewneck</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Half Zip</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Hoodie</th>
+                                            <td>
+                                                <form action="#"> <input type="checkbox" class="check"></form>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="size">
+                                <span class="jdl">Size</span>
+                                <hr>
+                                <ul class="size__ul">
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">S</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">XL</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">XXL</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">XS</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">L</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">M</button>
+                                    </li>
+                                    <li class="size__li"><button type="button"
+                                            class="btn btn-outline-info">XXXL</button></li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">8</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">10</button>
+                                    </li>
+                                    <li class="size__li"><button type="button" class="btn btn-outline-info">12</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="child2">
+                            <div class="child2__item">
+                                <div class="add">
+                                    <a href="#">
+                                        <img class="add__img" src="../scss/assets/img/admin/add.png" alt="">
+                                        <span data-toggle="modal" data-target="#exampleModalCenter" class="">Tambah
+                                            Produk</span>
+                                    </a>
+                                    <!-- Modal -->
+                                    <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">Input Data
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+
+                                                        <div class="form-group">
+                                                            <label for="id-produk">ID Produk</label>
+                                                            <input type="text" class="form-control" id="id-produk">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inputState">Kategori</label>
+                                                            <select id="inputState" class="form-control">
+                                                                <option selected>pilih..</option>
+                                                                <option>Jacket</option>
+                                                                <option>Jersey</option>
+                                                                <option>Merchandise</option>
+                                                                <option>Overshirt</option>
+                                                                <option>Polo T-shirt</option>
+                                                                <option>Shortpants</option>
+                                                                <option>T-Shirt</option>
+                                                                <option>Waistbag</option>
+                                                                <option>Cagoule</option>
+                                                                <option>Crewneck</option>
+                                                                <option>Half zip</option>
+                                                                <option>Hoodie</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="nama-produk">Nama Produk</label>
+                                                            <input type="text" class="form-control" id="nama-produk">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="harga-produk">Harga Produk</label>
+                                                            <input type="number" class="form-control" id="harga-produk">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="gridCheck">
+                                                                <label class="form-check-label" for="gridCheck">
+                                                                    Termasuk produk diskon
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="diskon-produk">Harga Diskon</label>
+                                                            <input type="number" class="form-control" id="diskon-produk"
+                                                                placeholder="kosongkan bila bukan">
+                                                        </div>
+                                                        <div class=" form-group custom-file">
+                                                            <input type="file" class="custom-file-input"
+                                                                id="customFile">
+                                                            <label class="custom-file-label" for="customFile">Upload
+                                                                Gambar</label>
+                                                        </div>
+
+                                                        <button type="submit"
+                                                            class="btn btn-primary mt-3 mb-3 w-100 text-center">Simpan</button>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+
+                                <div class="child2__item2">
+
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <figure class="border hvr-grow-shadow">
+                                        <a href="#">
+                                            <h5>540B</h5>
+                                            <img src="../scss/assets/img/produknya.svg" alt="">
+                                            <figcaption>Jacket Man</figcaption>
+                                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
+                                            <span class="price">Rp. <span>300000</span></span>
+                                            <div class="properti hvr-bounce-to-top">
+                                                <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/invisble.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/pencil.png"
+                                                        alt="ikon lihat produk"></a>
+                                                <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                                        src="../scss/assets/img/admin/trash.png"
+                                                        alt="ikon lihat produk"></a>
+                                            </div>
+                                        </a>
+                                    </figure>
+
+
+                                </div>
+                            </div>
+
+                            </a>
+                        </div>
+
+                        <div class="child3">
+                            <form action="" class="formSearch">
+                                <input class="navSearch" type="search" placeholder="Cari sesuatu?">
+                                <img class=" fa nav__img rounded-circle" src="../scss/assets/img/admin/search.png"
+                                    alt="">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end inventory dashboard -->
+
+                <!-- order -->
+                <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+
+                    <div class="order__body">
+                        <div class="order__flex">
+                            <form action="#">
+                                <div class="form-group d-flex">
+                                    <label for="exampleFormControlSelect1">Show entries</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>10</option>
+                                        <option>30</option>
+                                        <option>50</option>
+                                        <option>100</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-outline-info">Copy</button>
+                            <button type="button" class="btn btn-outline-info">CSV</button>
+                            <button type="button" class="btn btn-outline-info">PDF</button>
+                            <button type="button" class="btn btn-outline-info">Excel</button>
+                            <button type="button" class="btn btn-outline-info">Print</button>
+
+                            <form action="" class="formSearch">
+                                <input class="navSearch" type="search" placeholder="Cari Data?">
+                                <img class=" fa nav__img rounded-circle" src="../scss/assets/img/admin/search.png"
+                                    alt="">
+                            </form>
+                        </div>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nama Produk</th>
+                                    <th scope="col">Kategori</th>
+                                    <th scope="col">Jumlah</th>
+                                    <th scope="col">Harga</th>
+                                    <th scope="col">Alamat lengkap</th>
+                                    <th scope="col">Kota</th>
+                                    <th id="status" scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark Bean</td>
+                                    <td>Skuda T-Shirt</td>
+                                    <td>Kaos</td>
+                                    <td>2</td>
+                                    <td>150000</td>
+                                    <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                    <td>Yogyakarta</td>
+                                    <td id="choice">Belum dikirim</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Mark rob</td>
+                                    <td>Skuda T-Shirt</td>
+                                    <td>Kaos</td>
+                                    <td>2</td>
+                                    <td>150000</td>
+                                    <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                    <td>Yogyakarta</td>
+                                    <td id="choice">Sudah dikirim</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Mark jen</td>
+                                    <td>Skuda T-Shirt</td>
+                                    <td>Kaos</td>
+                                    <td>2</td>
+                                    <td>150000</td>
+                                    <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                    <td>Yogyakarta</td>
+                                    <td id="choice">Sudah dikirim</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Mark dim</td>
+                                    <td>Skuda T-Shirt</td>
+                                    <td>Kaos</td>
+                                    <td>2</td>
+                                    <td>150000</td>
+                                    <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                    <td>Yogyakarta</td>
+                                    <td id="choice">Sudah dikirim</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Mark barjono</td>
+                                    <td>Skuda T-Shirt</td>
+                                    <td>Kaos</td>
+                                    <td>2</td>
+                                    <td>150000</td>
+                                    <td>Jl. turi kadisobo trimulyo sleman 01/003 Pondok idaman A2</td>
+                                    <td>Yogyakarta</td>
+                                    <td id="choice">Sudah dikirim</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="...">
+                            <div class="entries justify-content-start ">
+                                <span>Showing 1 to 10 of 1340 entries</span>
+                            </div>
+
+                            <ul class="pagination  justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- end order -->
+
+                <!-- Promotion -->
+                <div class="tab-pane fade show active" id="v-pills-promotion" role="tabpanel"
+                    aria-labelledby="v-pills-promotion-tab">
+                    <div class="promotion">
+                        <div class="promotion__main">
+
+                            <div class="promotion__main-preview">
+                                <h5 class="text-center">PREVIEW</h5>
+                                <figure><img src="../scss/assets/img/preview.png" alt="preview gambar"></figure>
+                            </div>
+                            <div class="promotion__main-change">
+                                <h5 class="text-center">CHANGE BANNER</h5>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="text-1">Teks 1</label>
+                                        <input type="text" class="form-control" id="text-1" placeholder="2020">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text-2">Teks 2</label>
+                                        <input type="text" class="form-control" id="text-2" placeholder="NEW ARRIVAL">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text-3">Teks 3</label>
+                                        <input type="text" class="form-control" id="text-3" placeholder="on the street">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text-4">Teks 4</label>
+                                        <input type="text" class="form-control" id="text-4"
+                                            placeholder="in the stadium">
+                                    </div>
+
+                                    <div class="form-group custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Gambar Model</label>
+                                    </div>
+                                    <div class="form-group custom-file mt-3 mb-3">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Gambar Background</label>
+                                    </div>
+                                    <div class="save text-center">
+                                        <button type="submit" class="btn btn-primary w-45">Simpan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="promotion__main2 mt-5">
+                            <div class="promotion__main-preview2 text-center">
+                                <figure>
+                                    <img src="../scss/assets/img/iklan1.svg" alt="preview 1">
+                                </figure>
+                                <figure>
+                                    <img src="../scss/assets/img/iklan2.svg" alt="preview 2">
+                                </figure>
+                            </div>
+
+                            <div class="promotion__main-change2">
+                                <form class="form__promotion" action="#">
+                                    <div class="form-group custom-file mt-3 mb-3">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Gambar Background 1</label>
+                                    </div>
+                                </form>
+                                <form class="form__promotion" action="#">
+                                    <div class="form-group custom-file mt-3 mb-3">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Gambar Background 2</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- end Promotions -->
+
+                <!-- ACCOUNT -->
+                <div class="tab-pane fade" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+                    <div class="account border rounded p-5">
+                        <div class="leftside">
+                            <h5>Change Your Password </h5>
+                            <form action="#" class="account__form">
+                                <div class="form-group">
+                                    <label for="old-pwd">Password Lama</label>
+                                    <input type="password" class="form-control" id="old-pwd" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-pwd">Password Baru</label>
+                                    <input type="password" class="form-control" id="new-pwd" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confim-pwd">Confirm Password Baru</label>
+                                    <input type="password" class="form-control" id="confirm-pwd" placeholder="">
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary mt-3 mb-3 w-100 text-center">Simpan</button>
+                            </form>
+                        </div>
+                        <div class="rightside">
+                            <h5>Password Must Contain : </h5>
+                            <p class="text-danger">At least 1 upper case letter (A-Z)</p>
+                            <p class="text-danger">At least 1 number (0-9)</p>
+                            <p class="text-danger">At least 8 character</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END ACCOUNT -->
+                <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
+                    LOGOUT!</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<script>
+    $("#checkAll").click(function () {
+        $(".check").prop('checked', $(this).prop('checked'));
+    });
+
+
+    function openNav() {
+        document.getElementById("v-pills-tab").style.width = "120px";
+
+        document.getElementById("boxes1").style.visibility = "visible";
+        document.getElementById("boxes2").style.visibility = "visible";
+        document.getElementById("boxes3").style.visibility = "visible";
+        document.getElementById("boxes4").style.visibility = "visible";
+        document.getElementById("boxes5").style.visibility = "visible";
+        document.getElementById("boxes6").style.visibility = "visible";
+        document.getElementById("boxes7").style.visibility = "visible";
+    }
+
+    function closeNav() {
+        document.getElementById("v-pills-tab").style.width = "0";
+
+        document.getElementById("boxes1").style.visibility = "hidden";
+        document.getElementById("boxes2").style.visibility = "hidden";
+        document.getElementById("boxes3").style.visibility = "hidden";
+        document.getElementById("boxes4").style.visibility = "hidden";
+        document.getElementById("boxes5").style.visibility = "hidden";
+        document.getElementById("boxes6").style.visibility = "hidden";
+        document.getElementById("boxes7").style.visibility = "hidden";
+    }
+
+
+</script>
+
+
+
+
+
+</html>
