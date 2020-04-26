@@ -967,6 +967,9 @@ main {
   .admin__content {
     width: 100vh;
   }
+  .cari__data {
+    margin-top: 1rem;
+  }
   .mobile-on {
     visibility: hidden;
     display: none;
@@ -1010,6 +1013,9 @@ main {
   }
   .admin__nav {
     visibility: visible;
+  }
+  .cari__data {
+    margin-top: 0;
   }
   .admin__content {
     width: 100vh;
@@ -1424,7 +1430,7 @@ main {
   flex-direction: column;
   flex-basis: 10%;
   position: fixed;
-  background: grey;
+  background: #333B4E;
   height: 100%;
   width: 120px;
   align-items: center;
@@ -1434,6 +1440,10 @@ main {
 .admin__container .admin__nav .nav-link {
   padding: .5rem 0;
   width: 100%;
+}
+
+.admin__container .cari__data {
+  display: flex;
 }
 
 .admin__container .tab-content {
@@ -1479,7 +1489,6 @@ main {
   flex-direction: row;
   padding: 2rem;
   margin-top: 5rem;
-  background: whitesmoke;
 }
 
 .admin__container .admin__content .order__flex {
@@ -1492,6 +1501,102 @@ main {
   height: 38px;
 }
 
+.admin__container .size .size__radio {
+  display: none;
+}
+
+.admin__container .size__form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.admin__container .size__form .size__li {
+  margin: 1rem;
+}
+
+.admin__container .size__form .size__li .size__radio {
+  display: none;
+}
+
+.admin__container .size__form .size__li label {
+  width: 100px;
+}
+
+.admin__container .size__form .size__li .warna {
+  width: 50px;
+  height: 50px;
+}
+
+.admin__container .size__form .size__li .red {
+  background: red;
+}
+
+.admin__container .size__form .size__li .grey {
+  background: grey;
+}
+
+.admin__container .size__form .size__li .purple {
+  background: purple;
+}
+
+.admin__container .size__form .size__li .black {
+  background: black;
+}
+
+.admin__container .size__form .size__li .yellow {
+  background: yellow;
+}
+
+.admin__container .size__form .size__li .blue {
+  background: blue;
+}
+
+.admin__container .size__form .size__li .green {
+  background: green;
+}
+
+.admin__container .size__form .size__li .pink {
+  background: pink;
+}
+
+.admin__container .add__img {
+  width: 4vh;
+}
+
+.admin__container .add__product {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem;
+}
+
+.admin__container .add__product-1 {
+  flex-basis: 40%;
+}
+
+.admin__container .add__product-2 {
+  flex-basis: 60%;
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.admin__container .add__product-2 .gallery img {
+  width: 50%;
+  margin: 1rem;
+  height: 50%;
+}
+
+.admin__container .add-kategori {
+  text-align: center;
+}
+
+.admin__container .add-kategori td button {
+  border: none;
+}
+
+.admin__container .add-kategori td .delete__icon {
+  width: 4vh;
+}
+
 .admin__container .dashboard__head {
   display: flex;
   justify-content: center;
@@ -1501,8 +1606,7 @@ main {
 }
 
 .admin__container .jdl {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
 }
 
 .admin__container .parent {
@@ -1595,7 +1699,7 @@ main {
 }
 
 .admin__container .promotion__main-preview2 figure {
-  margin: 1rem;
+  margin: 2.5rem;
 }
 
 .admin__container .promotion__main-preview2 figure img {
@@ -1627,29 +1731,96 @@ main {
   flex-basis: 30%;
 }
 
-.properti {
+.border {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  padding: 0 1rem;
+}
+
+.main__product {
   display: flex;
-  width: 100%;
-  height: 50px;
-  justify-content: center;
-  background: whitesmoke;
+  flex-flow: row wrap;
+  padding-top: 6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__product .breadcrumb {
+  background-color: transparent;
+  margin: 0;
+}
+
+.main__product .sort {
+  display: flex;
   align-items: center;
 }
 
-.properti__img {
-  width: 4vh;
+.main__product .sort span {
+  padding: 0 1rem;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
+.main__product .sort__dropdown {
+  width: 100%;
+  height: auto;
+  left: 3.5rem !important;
 }
 
-.dc, .price {
-  display: block;
+.category__product {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.price {
-  padding-bottom: 1rem;
+.category__product .category__item1 {
+  width: 20%;
+}
+
+.category__product .category__item1 h5 {
+  padding: 1rem .75rem 0;
+}
+
+.category__product .category__item1 hr {
+  padding: .5rem;
+  margin: 0;
+  border-top: 2px solid grey;
+  width: 10rem;
+  margin-left: .75rem;
+}
+
+.category__product .category__item2 {
+  padding-top: 4rem;
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.category__product .category__item2 .allP {
+  position: absolute;
+  left: 52%;
+  right: 50%;
+  top: 8rem;
+  width: 100%;
+}
+
+.category__product .category__item2 figure img {
+  width: 25vh;
+  margin-bottom: 1rem;
+}
+
+.category__product .category__item2 figure h5 {
+  font-size: 1rem;
+  margin: 0.1;
+  padding: 0;
+  text-align: center;
+}
+
+.category__product .category__item2 figure .button {
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

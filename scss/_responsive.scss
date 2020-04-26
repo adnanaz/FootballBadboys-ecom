@@ -463,10 +463,16 @@
 }
 
 @include media-m {
-
+    // admin
     .admin__content {
         width: 100vh;
     }
+
+    .cari__data {
+        margin-top: 1rem;
+    }
+
+    // end admin
     .mobile-on {
         visibility: hidden;
         display: none;
@@ -527,9 +533,15 @@
         visibility: visible;
     }
 
+    .cari__data {
+        margin-top: 0;
+    }
+
+
     .admin__content {
         width: 100vh;
     }
+
     .lg-on {
         visibility: visible;
      
