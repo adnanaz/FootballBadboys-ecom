@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Badboys</title>
+    <title>All Product - Football Badboys</title>
 
     <!-- Ini udah tak downloadin local -->
     <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
@@ -184,9 +184,8 @@
 <body>
 
     <main class="main">
-
         <!-- all product -->
-        <div class="container">
+        <div class="container-fluid">
             <section class="border">
                 <div class="main__product">
                     <!-- breadcrumb -->
@@ -223,97 +222,117 @@
 
                 <div class="category__product">
                     <div class="category__item1">
-                        <h5>Category</h5>
-                        <hr>
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col">All Category</th>
-                                    <th scope="col"> <input type="checkbox" class="check" id="checkAll">
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Jacket</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Jersey</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Overshirt</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Merchandise</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Polo T-shirt</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Shortpants</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">T-Shirt</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Waistbag</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cagoule</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Caps</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Crewneck</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Half Zip</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Hoodie</th>
-                                    <td>
-                                        <form action="#"> <input type="checkbox" class="check"></form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="hvr-underline-from-center btn btn-link" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Category
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+
+                                        <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">All Category</th>
+                                                    <th scope="col"> <input type="checkbox" class="check" id="checkAll">
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Jacket</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Jersey</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Overshirt</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Merchandise</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Polo T-shirt</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Shortpants</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">T-Shirt</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Waistbag</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Cagoule</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Caps</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Crewneck</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Half Zip</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Hoodie</th>
+                                                    <td>
+                                                        <form action="#"> <input type="checkbox" class="check"></form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
 
                     <div class="category__item2">
@@ -321,7 +340,245 @@
                             <h5>All Product</h5>
                         </div>
                         <!-- item produknya -->
+                        <figure>
+                            <a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
                         <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure><a href="#" class="hvr-grow-shadow">
+                                <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
+                                <figcaption>
+                                    <h5 class="namaProduk">Bomber</h5>
+                                    <h5 class="tipe">Red Boomb Shaker</h5>
+                                    <h5 class="harga">Rp. <span class="value">120000</span></h5>
+                                    <div class="button">
+                                        <button type="button" class="btn btn-outline-info">Detail</button>
+                                        <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                                    </div>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -423,7 +680,83 @@
 
         </div>
         </section>
+        <!-- CART SECTION -->
+        <aside class="sidecart text-center">
+            <div class="container">
+                <ul class="flex-column">
+                    <div class="d-inline coba" onclick="toggleCart()">
+                        <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
+                    </div>
+                    <div class="cart__head text-light h4 m-0 text-center">
 
+                        <a class="navbar-brand" style="margin-right: 4rem;" href="#">
+                            <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                        </a>
+
+                    </div>
+
+                    <li class="d-flex flex-wrap flex-row">
+                        <!-- ini kalo gaada produk posisinya -->
+                        <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
+                            memilih produk sama
+                            sekali</span> </div> -->
+                        <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
+                                Selamat anda menambahkan item baru </span> <img class="peace__img shake"
+                                src="scss/assets/img/peace.svg" alt="">
+                            <hr class="cart__hr">
+                        </div>
+                    </li>
+                    <!-- tinggal matiin komentarnya -->
+
+                    <li class="d-flex flex-wrap flex-row">
+                        <!-- product image -->
+                        <div class="col-4 p-0">
+                            <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
+                        </div>
+                        <!-- end product image -->
+
+                        <!-- product props -->
+                        <div class="col-8 justify-content-around d-flex flex-column">
+
+                            <div class="items">
+                                <span class="productName">Skuda T-Shirt</span>
+                                <span class="productType">White grey motive</span>
+                                <span class="size">Size : <span class="size__value">M</span> </span>
+                                <div class="operator">
+                                    <form action="">
+                                        <button class="btn__operator">-</button>
+                                        <input class="operator__input" value="1" type="text">
+                                        <button class="btn__operator">+</button>
+                                    </form>
+                                </div>
+                                <span class="total">Rp <span class="total__value">156.000</span></span>
+
+                            </div>
+                        </div>
+
+                        <!-- end product props -->
+                        <hr class="li__hr">
+
+
+                    </li>
+                    <div class="flex-end">
+                        <div class="sub">
+                            <span>Sub Total</span>
+                            <span>Total</span>
+                        </div>
+                        <div class="total__div">
+                            <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
+                            <span class="total">Rp <span class="total__value">156.000</span></span>
+                        </div>
+                    </div>
+                </ul>
+
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary btn__checkout">CHECKOUT</button>
+                </div>
+            </div>
+
+        </aside>
 
         </div>
         <!-- end all product -->
@@ -547,87 +880,6 @@
         </footer>
     </main>
 
-    <!-- CART SECTION -->
-    <aside class="sidecart text-center">
-        <div class="container">
-            <ul class="flex-column">
-                <div class="d-inline coba" onclick="toggleCart()">
-                    <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
-                </div>
-                <div class="cart__head text-light h4 m-0 text-center">
-
-                    <a class="navbar-brand" style="margin-right: 4rem;" href="#">
-                        <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
-                    </a>
-
-                </div>
-
-                <li class="d-flex flex-wrap flex-row">
-                    <!-- ini kalo gaada produk posisinya -->
-                    <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
-                            memilih produk sama
-                            sekali</span> </div> -->
-                    <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
-                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
-                            src="scss/assets/img/peace.svg" alt="">
-                        <hr class="cart__hr">
-                    </div>
-                </li>
-                <!-- tinggal matiin komentarnya -->
-
-                <li class="d-flex flex-wrap flex-row">
-                    <!-- product image -->
-                    <div class="col-4 p-0">
-                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
-                    </div>
-                    <!-- end product image -->
-
-                    <!-- product props -->
-                    <div class="col-8 justify-content-around d-flex flex-column">
-
-                        <div class="items">
-                            <span class="productName">Skuda T-Shirt</span>
-                            <span class="productType">White grey motive</span>
-                            <span class="size">Size : <span class="size__value">M</span> </span>
-                            <div class="operator">
-                                <form action="">
-                                    <button class="btn__operator">-</button>
-                                    <input class="operator__input" value="1" type="text">
-                                    <button class="btn__operator">+</button>
-                                </form>
-                            </div>
-                            <span class="total">Rp <span class="total__value">156.000</span></span>
-
-                        </div>
-                    </div>
-
-                    <!-- end product props -->
-                    <hr class="li__hr">
-
-
-                </li>
-                <div class="flex-end">
-                    <div class="sub">
-                        <span>Sub Total</span>
-                        <span>Total</span>
-                    </div>
-                    <div class="total__div">
-                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
-                        <span class="total">Rp <span class="total__value">156.000</span></span>
-                    </div>
-                </div>
-            </ul>
-
-            <div class="p-2">
-                <button type="button" class="btn btn-primary btn__checkout">CHECKOUT</button>
-            </div>
-        </div>
-
-    </aside>
-
-
-
-
 </body>
 
 <!-- ini udah local -->
@@ -647,6 +899,10 @@
 
 <script src="main.js"></script>
 <script>
+
+    $("#checkAll").click(function () {
+        $(".check").prop('checked', $(this).prop('checked'));
+    });
 
     function searchToggle(obj, evt) {
         var container = $(obj).closest('.search-wrapper');

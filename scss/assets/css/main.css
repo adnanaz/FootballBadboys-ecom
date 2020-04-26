@@ -826,6 +826,12 @@ main {
   .footer__item--body4 .box .box__img {
     width: 5vh;
   }
+  .sort {
+    padding-top: 1rem;
+  }
+  .allP {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 460px) {
@@ -928,6 +934,12 @@ main {
   .footer__item--body4 .box .box__img {
     width: 5vh;
   }
+  .sort {
+    padding-top: 1rem;
+  }
+  .allP {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 568px) {
@@ -960,6 +972,27 @@ main {
   .discount__span {
     font-size: 2.5vw;
     font-weight: 600;
+  }
+  .sort {
+    padding-top: 1rem;
+  }
+  .allP {
+    display: none;
+  }
+  .detail-wrap .description .nama-produk {
+    font-size: 1.7rem;
+  }
+  .detail-wrap .description .harga__produk {
+    font-size: 1.5rem;
+  }
+  .detail-wrap .description p, .detail-wrap .description span, .detail-wrap .description li {
+    font-size: 1.2rem;
+  }
+  .recom figure {
+    padding: 0 .3rem;
+  }
+  .recom figure img {
+    width: 18vh !important;
   }
 }
 
@@ -1003,6 +1036,9 @@ main {
   }
   .product .product__item--img {
     width: 32vh;
+  }
+  .sort {
+    padding-top: 5rem;
   }
 }
 
@@ -1052,6 +1088,12 @@ main {
   }
   .product .product__item--img {
     width: 32vh;
+  }
+  .sort {
+    padding-top: 5rem;
+  }
+  .allP {
+    display: none;
   }
 }
 
@@ -1216,6 +1258,12 @@ main {
   .promotion__main {
     display: flex;
     flex-flow: row;
+  }
+  .sort {
+    padding-top: 1rem;
+  }
+  .allP {
+    display: block !important;
   }
 }
 
@@ -1740,7 +1788,6 @@ main {
 .main__product {
   display: flex;
   flex-flow: row wrap;
-  padding-top: 6rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -1770,36 +1817,43 @@ main {
   flex-flow: row wrap;
 }
 
-.category__product .category__item1 {
-  width: 20%;
+.category__product .category__item1 .card {
+  border: none;
+  background-color: transparent;
 }
 
-.category__product .category__item1 h5 {
-  padding: 1rem .75rem 0;
+.category__product .category__item1 .card-header {
+  background-color: transparent;
+  border-bottom: none;
 }
 
-.category__product .category__item1 hr {
-  padding: .5rem;
-  margin: 0;
-  border-top: 2px solid grey;
-  width: 10rem;
-  margin-left: .75rem;
+.category__product .category__item1 .card-header .btn::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
 }
 
 .category__product .category__item2 {
   padding-top: 4rem;
   width: 80%;
   display: flex;
+  flex: 1 0 26%;
+  margin: 0 auto;
   flex-flow: row wrap;
   justify-content: center;
 }
 
 .category__product .category__item2 .allP {
   position: absolute;
-  left: 52%;
+  left: 50%;
   right: 50%;
   top: 8rem;
-  width: 100%;
+  width: max-content;
 }
 
 .category__product .category__item2 figure img {
@@ -1809,6 +1863,7 @@ main {
 
 .category__product .category__item2 figure h5 {
   font-size: 1rem;
+  color: #000000;
   margin: 0.1;
   padding: 0;
   text-align: center;
@@ -1822,5 +1877,133 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.size .size__radio {
+  display: none;
+}
+
+.size__form2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.size__form .size__li {
+  margin: 1rem;
+}
+
+.size__form .size__li .size__radio {
+  display: none;
+}
+
+.size__form .size__li label {
+  width: 100px;
+}
+
+.size__form .size__li .warna {
+  width: 40px;
+  height: 40px;
+}
+
+.size__form .size__li .red {
+  background: red;
+}
+
+.size__form .size__li .grey {
+  background: grey;
+}
+
+.size__form .size__li .purple {
+  background: purple;
+}
+
+.size__form .size__li .black {
+  background: black;
+}
+
+.size__form .size__li .yellow {
+  background: yellow;
+}
+
+.size__form .size__li .blue {
+  background: blue;
+}
+
+.size__form .size__li .green {
+  background: green;
+}
+
+.size__form .size__li .pink {
+  background: pink;
+}
+
+.child__img {
+  padding: 0 0.5rem;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.detail__flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.detail .parent__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.detail .child__img {
+  width: 10vh;
+}
+
+.recom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recom figure {
+  padding: 0 .3rem;
+}
+
+.recom figure img {
+  width: 10vh;
+}
+
+.description .nama-produk {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

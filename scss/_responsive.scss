@@ -1,3 +1,4 @@
+//320
 @include media-xs {
     .admin__content {
         width: 100vh;
@@ -249,12 +250,18 @@
             }
         }
     }
+    // all product page
+    .sort {
+        padding-top: 1rem;
+    }
 
-    // admin
- 
-    // end admin
+    .allP {
+        display: none;
+    }
+    // end all product page
 }
 
+//460
 @include media-s {
 
     .admin__content {
@@ -412,8 +419,19 @@
             }
         }
     }
+
+        // all product page
+        .sort {
+            padding-top: 1rem;
+        }
+    
+        .allP {
+            display: none;
+        }
+        // end all product page
 }
 
+//568
 @include media-md {
     .admin__content {
         width: 100vh;
@@ -449,19 +467,52 @@
         }
     }
 
-
-   
-    
-
     .discount__span {
         font-size: 2.5vw;
         font-weight: 600;
     }
+    // all product page
+    .sort {
+        padding-top: 1rem;
+    }
 
+    .allP {
+        display: none;
+    }
+    // end all product page
    
+    // detail product
+    
+.detail-wrap {
+    .description {
+        .nama-produk {
+            font-size: 1.7rem;
+        }
+
+        .harga__produk {
+            font-size: 1.5rem;
+        }
+
+        p, span, li {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.recom {
+
+    figure {
+        padding: 0 .3rem;
+        img {
+            width: 18vh !important;
+        }
+    }
+}
+    // end detail product
 
 }
 
+//640
 @include media-m {
     // admin
     .admin__content {
@@ -521,8 +572,15 @@
         }
     }
 
+        // all product page
+        .sort {
+            padding-top: 5rem;
+        }
+        // end all product page
+
 }
 
+//768
 @include media-lg {
     .mobile-on {
         visibility: hidden;
@@ -590,8 +648,21 @@
             width: 32vh;
         }
     }
+
+    // all product page
+    .sort {
+        padding-top: 5rem;
+    }
+
+    .allP {
+        display: none;
+    }
+
+    
+    // end all product page
 }
 
+// 992
 @include media-l {
     .admin__content {
         width: 100%;
@@ -745,8 +816,12 @@
     // end admin
 
 
+    // end all product
+
+
 }
 
+//1400
 @include media-xl {
 
     .admin__content {
@@ -836,7 +911,31 @@
         }
     }
 
+    .sort {
+        padding-top: 1rem;
+    }
 
-    // end admin
-
+    .allP {
+        display: block !important;
+    }
 }
+
+// // detail produk
+// .detail {
+//     &__flex {
+//         display: flex;
+//         flex-flow:column;
+//     }
+
+//     .parent__img {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//     }
+
+//     .child__img {
+//         width: 10vh;
+//     }
+// }
+// // end detail produk
