@@ -1,0 +1,128 @@
+.msg, .card-title {
+    font-size: 2rem;
+}
+
+.card-title {
+    float: none;
+    text-align: center;
+    display: block;
+}
+
+.parent {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between; 
+   
+
+
+
+.child2 {
+    padding-left: 6rem;
+    .add {
+        .add__img {
+            width: 4vh;
+        }
+    }
+
+    .child2__item2 {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        figure {
+            margin : 1rem;
+            padding: 1rem;
+            a {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: start;
+                align-items: center; 
+                color: $primary-color;
+            }
+
+            .properti {
+                display: flex;
+                width: 100%;
+                height: 50px;
+                justify-content: center;
+                background: whitesmoke;
+                align-items: center;
+      
+                &__img {
+           
+                  width: 4vh;
+                }
+              }
+            }
+        }
+    }
+ }
+
+ .btn-link,.card-header {
+     padding: .5rem 0;
+ }
+ 
+
+    .size__ul {
+        display: flex;
+        flex-flow: row wrap;
+
+     
+        .size__li {
+            text-align: center;
+            // border: 1px solid black;
+            padding: 0.5rem;
+            margin: .1rem;
+
+            button {
+                width: 60px;
+            }
+        }
+        
+    }
+
+.add__img {
+    width: 4vh;
+}
+
+.jdl {
+    padding: .5rem 0;
+}
+
+.sizes {
+    padding: 1.5rem 0;
+}
+
+// responsive style 
+@include media-xs-admin {
+
+    .child1__item {
+        width: 25vh;
+    }
+
+    .parent {
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+
+    .child2 {
+        padding-left: 0 !important;
+    }
+
+    .size__ul {
+
+        width: 30vh;
+    }
+
+    .add {
+        text-align: center;
+        height: 100px;
+    }
+
+    .form-inline {
+        margin-top: 2rem;
+    }
+
+}

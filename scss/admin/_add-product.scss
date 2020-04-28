@@ -1,0 +1,71 @@
+
+// .size__radio2  {
+// display: none;
+// }
+img.portimg {
+    display: none;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.jdl {
+    font-weight: 700;
+    display: block;
+}
+
+.size__form {
+    display: flex;
+    flex-flow: row wrap;
+
+  .size__li {
+    margin: .5rem;
+
+    .size__radio {
+      position: relative;
+      left: 2rem;
+    }
+    
+    label {
+      width: 100px;
+    }
+
+    .warna {
+      width: 50px;
+      height: 50px;
+    }
+
+    .red {
+      background: red;
+    }
+    .grey {
+      background: grey;
+    }
+    .purple {
+      background: purple;
+    }
+    .black {
+      background: black;
+    }
+
+    .yellow  {
+      background: yellow;
+    }
+
+    .blue {
+      background: blue;
+    }
+    .green {
+      background: green;
+    }
+
+    .pink {
+      background: pink;
+    }
+  }
+
+}
+
+// responsive style 
+@include media-xs-admin {
+
+}

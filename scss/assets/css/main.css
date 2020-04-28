@@ -1549,64 +1549,6 @@ main {
   height: 38px;
 }
 
-.admin__container .size .size__radio {
-  display: none;
-}
-
-.admin__container .size__form {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.admin__container .size__form .size__li {
-  margin: 1rem;
-}
-
-.admin__container .size__form .size__li .size__radio {
-  display: none;
-}
-
-.admin__container .size__form .size__li label {
-  width: 100px;
-}
-
-.admin__container .size__form .size__li .warna {
-  width: 50px;
-  height: 50px;
-}
-
-.admin__container .size__form .size__li .red {
-  background: red;
-}
-
-.admin__container .size__form .size__li .grey {
-  background: grey;
-}
-
-.admin__container .size__form .size__li .purple {
-  background: purple;
-}
-
-.admin__container .size__form .size__li .black {
-  background: black;
-}
-
-.admin__container .size__form .size__li .yellow {
-  background: yellow;
-}
-
-.admin__container .size__form .size__li .blue {
-  background: blue;
-}
-
-.admin__container .size__form .size__li .green {
-  background: green;
-}
-
-.admin__container .size__form .size__li .pink {
-  background: pink;
-}
-
 .admin__container .add__img {
   width: 4vh;
 }

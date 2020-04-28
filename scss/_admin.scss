@@ -86,62 +86,62 @@ flex-direction: row;
 
 }
 
-.size {
-    .size__radio {
-        display: none;
-      }
-}
+// .size {
+//     .size__radio {
+//         display: none;
+//       }
+// }
 
-.size__form {
-  display: flex;
-  flex-flow: row wrap;
+// .size__form {
+//   display: flex;
+//   flex-flow: row wrap;
 
-  .size__li {
-    margin: 1rem;
+//   .size__li {
+//     margin: 1rem;
 
-    .size__radio {
-      display: none;
-    }
+//     .size__radio {
+//       display: none;
+//     }
     
-    label {
-      width: 100px;
-    }
+//     label {
+//       width: 100px;
+//     }
 
-    .warna {
-      width: 50px;
-      height: 50px;
-    }
+//     .warna {
+//       width: 50px;
+//       height: 50px;
+//     }
 
-    .red {
-      background: red;
-    }
-    .grey {
-      background: grey;
-    }
-    .purple {
-      background: purple;
-    }
-    .black {
-      background: black;
-    }
+//     .red {
+//       background: red;
+//     }
+//     .grey {
+//       background: grey;
+//     }
+//     .purple {
+//       background: purple;
+//     }
+//     .black {
+//       background: black;
+//     }
 
-    .yellow  {
-      background: yellow;
-    }
+//     .yellow  {
+//       background: yellow;
+//     }
 
-    .blue {
-      background: blue;
-    }
-    .green {
-      background: green;
-    }
+//     .blue {
+//       background: blue;
+//     }
+//     .green {
+//       background: green;
+//     }
 
-    .pink {
-      background: pink;
-    }
-  }
+//     .pink {
+//       background: pink;
+//     }
+//   }
 
-}
+// }
 
 .add__img {
     width: 4vh;
