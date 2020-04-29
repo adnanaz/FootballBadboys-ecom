@@ -108,8 +108,8 @@ a {
 // }
 
 
-// @mixin media-xl {
-//   @media screen and (min-width: 1400px) {
-//     @content;
-//   }
-// }
+@mixin media-xl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
