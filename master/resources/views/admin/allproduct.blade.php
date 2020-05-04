@@ -54,62 +54,17 @@
                             <table class="table table-borderless">
                             <thead>
                                 <tr>
-                                <th scope="col"> <a href="#" class="hvr-underline-from-center">All Category</a></th>
+                                    <th scope="col"> <a href="{{ route('admin.product') }}" class="hvr-underline-from-center">All Category</a></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Jacket </a></th>
 
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Jersey </a></th>
+                                @foreach ($categories as $category)
+                                    <tr>
+                                        <th scope="row"><a href="{{ route('admin.product', ['category' => $category->id]) }}" class="hvr-underline-from-center"> {{$category->name}} </a></th>
+                                    </tr>
+                                @endforeach
 
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Overshirt </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Merchandise </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Polo T-shirt </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Shortpants </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> T-Shirt </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Waistbag </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Cagoule </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Caps </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Crewneck </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Half Zip </a></th>
-
-                                </tr>
-                                <tr>
-                                <th scope="row"><a href="#" class="hvr-underline-from-center"> Hoodie </a></th>
-
-                                </tr>
                             </tbody>
                             </table>
                         </div>
@@ -121,24 +76,10 @@
                         <span class="jdl">Size</span>
                         <hr>
                         <ul class="size__ul">
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">S</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">XL</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">XXL</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">XS</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">L</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">M</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">XXXL</button></li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">8</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">10</button>
-                        </li>
-                        <li class="size__li"><button type="button" class="btn btn-outline-info">12</button>
+                            @foreach ($sizes as $size)
+                                <li class="size__li"><a href="{{ route('admin.product', ['size' => $size->slug]) }}" class="btn btn-outline-info">{{ $size->name }}</a></li>        
+                            @endforeach
+                        
                         </li>
                         </ul>
                     </div>
@@ -149,7 +90,7 @@
                 <div class="child2 col-10">
                     <div class="child2__item">
                     <div class="add">
-                        <a href="../../add-product.html">
+                        <a href="{{ route('admin.addproduct') }}">
                         <img class="add__img" src="/scss/assets/img/admin/add.png" alt="">
                         <span data-toggle="modal" data-target="#exampleModalCenter" class="">Tambah
                             Produk</span>
@@ -170,115 +111,33 @@
 
                     <div class="child2__item2">
 
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
-                        <figure class="border hvr-grow-shadow">
-                        <a href="#">
-                            <h5>540B</h5>
-                            <img src="/scss/assets/img/produknya.svg" alt="">
-                            <figcaption>Jacket Man</figcaption>
-                            <span class="dc">Rp. <span class="strike"> 300000</span></span>
-                            <span class="price">Rp. <span>300000</span></span>
-                            <div class="properti hvr-bounce-to-top">
-                            <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/pencil.png" alt="ikon lihat produk"></a>
-                            <a href="#" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
-                                src="/scss/assets/img/admin/trash.png" alt="ikon lihat produk"></a>
-                            </div>
-                        </a>
-                        </figure>
+                        @foreach ($products as $product)
+                            <figure class="border hvr-grow-shadow">
+                                <a href="#">
+                                    <h5>{{ $product->kode_product }}</h5>
+                                    <?php $image = json_decode($product->image)[0]; ?>
+                                        <img style="max-width:130px;" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
 
+                                    <figcaption>{{ $product->name }}</figcaption>
+                                    <span class="price">Rp. <span>{{ $product->price }}</span></span>
+                                    <div class="properti hvr-bounce-to-top">
+                                    <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                        src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
+                                    <a href="{{ route('editproduct.edit', $product) }}" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                        src="/scss/assets/img/admin/pencil.png" alt="ikon edit produk"></a>
+                                    <a href="{{ route('deleteproduct.delete', $product) }}" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
+                                        src="/scss/assets/img/admin/trash.png" alt="ikon hapus produk"></a>
+                                    </div>
+                                </a>
+                            </figure>
+                        @endforeach
 
                     </div>
-                    </div>
-
-                    </a>
                 </div>
+                
+                {{ $products->links() }}
+                </a>
+            </div>
 
 
 

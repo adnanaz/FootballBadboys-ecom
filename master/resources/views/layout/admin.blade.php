@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="/css/hover-min.css">
 <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
 <title>@yield('title')</title>
 </head>
@@ -47,6 +48,11 @@
     <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
+    </ul>
+    <ul>
+        <li>
+            @include('layout.partials._alert')
+        </li>
     </ul>
 </nav>
 <!-- /.navbar -->

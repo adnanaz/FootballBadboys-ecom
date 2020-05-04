@@ -20,20 +20,14 @@ class CreateProductsTable extends Migration
             $table->string('slug');
             $table->text('description');
             $table->text('material');
+            $table->string('link_video')->nullable();
             $table->integer('price');
             $table->integer('price_discount')->nullable();
-            $table->string('picture1');
-            $table->string('picture2')->nullable();
-            $table->string('picture3')->nullable();
-            $table->string('picture4')->nullable();
-            $table->string('picture5')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
-            
-            $table->unsignedBigInteger('type_id');
-            $table->unsignedBigInteger('category_id');
 
-            $table->foreign('type_id')->references('id')->on('types');
+            $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
         });
     }
