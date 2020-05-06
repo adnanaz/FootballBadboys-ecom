@@ -189,6 +189,10 @@ header {
   width: 100%;
 }
 
+#header-wrap .flex {
+  width: 100%;
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -207,6 +211,7 @@ main {
 .dropdown-menu .dropdown-item {
   display: flex;
   flex-wrap: wrap;
+  background-color: transparent !important;
 }
 
 .dropdown-menu .dropdown-item ul {
@@ -311,7 +316,7 @@ main {
   width: 42.5px;
   height: 42.5px;
   position: absolute;
-  top: 0;
+  top: 9px;
   right: 0;
   border-radius: 50%;
   color: #07051a;
@@ -367,55 +372,55 @@ main {
 }
 
 .steps {
-  background: url("../img/bgSec2.svg") center top;
-  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: url("../img/bgSec2.svg") center top;
+  background-size: cover;
   padding: 4rem 0;
   position: relative;
   z-index: 1;
   top: -6%;
 }
 
-.steps .airplane__img {
+.steps__item .airplane__img {
   width: 17vh;
 }
 
-.steps .airplane figcaption {
+.steps__item .airplane figcaption {
   padding-top: 1rem;
   color: #ffffff;
 }
 
-.steps .airplane figcaption p {
+.steps__item .airplane figcaption p {
   padding: 0 7rem;
 }
 
-.steps .time__img {
+.steps__item .time__img {
   width: 17vh;
 }
 
-.steps .time figcaption {
+.steps__item .time figcaption {
   padding-top: 1rem;
   color: #ffffff;
 }
 
-.steps .time figcaption p {
+.steps__item .time figcaption p {
   padding: 0 7rem;
 }
 
-.steps .support__img {
+.steps__item .support__img {
   width: 17vh;
 }
 
-.steps .support figcaption {
+.steps__item .support figcaption {
   padding-top: 1rem;
   color: #ffffff;
 }
 
-.steps .support figcaption p {
+.steps__item .support figcaption p {
   padding: 0 7rem;
 }
 
@@ -444,6 +449,7 @@ main {
 }
 
 .product__text {
+  width: 100%;
   text-align: center;
   padding: 1rem 0;
 }
@@ -456,7 +462,6 @@ main {
 .product__text p {
   color: #ffffff;
   padding: 0 1rem;
-  margin-top: -1%;
   font-size: 1.1rem;
 }
 
@@ -510,6 +515,15 @@ main {
   display: block !important;
 }
 
+.media__img {
+  width: 12vh;
+}
+
+.media .latina {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.2rem;
+}
+
 .media__text {
   text-align: center;
   padding: 1rem;
@@ -552,6 +566,7 @@ main {
 
 .footer__flex {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -716,9 +731,16 @@ main {
   .nav__menu .navbar-brand {
     margin-right: 0;
   }
-  .nav__menu .nav__img {
+  .nav__menu .search__img {
+    margin-top: -6px;
     width: 42px;
     height: 42px;
+  }
+  .nav__menu .nav__img {
+    width: 16vh;
+  }
+  .nav__menu .cart__img {
+    width: 5vh;
   }
   .nav__menu--item {
     margin: 0.5rem 0;
@@ -803,7 +825,7 @@ main {
     padding: 0 3rem;
   }
   .steps .imgBanner__img {
-    width: 35vh;
+    width: 28vh;
   }
   .product__text h1 {
     font-size: 1.7rem;
@@ -1079,11 +1101,11 @@ main {
     padding-top: 3vw;
   }
   .discount__span {
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: 600;
   }
   .steps .imgBanner__img {
-    width: 50vh;
+    width: 51vh;
     margin: 1.5rem;
   }
   .product .product__item--img {
@@ -1139,8 +1161,11 @@ main {
   .nav .nav__menu--item .d-none {
     display: contents !important;
   }
+  .nav .nav__menu--item .search__img {
+    margin-top: 0;
+  }
   .nav .nav__menu--item .nav__img {
-    width: 40px;
+    width: 50px;
     height: 40px;
   }
   .nav .nav__menu--link {
@@ -1177,6 +1202,9 @@ main {
   .product__text p {
     font-size: 1.3rem;
   }
+  .media__text p {
+    padding: 0 16rem;
+  }
   .media__text h4 {
     font-size: 1.3rem;
   }
@@ -1204,6 +1232,13 @@ main {
 }
 
 @media screen and (min-width: 1400px) {
+  .nav .nav__menu--item .nav__img {
+    width: 10vh;
+  }
+  .steps .imgBanner__img {
+    width: 55vh;
+    margin: 1.5rem;
+  }
   .admin__content {
     width: 100%;
   }
@@ -1422,6 +1457,10 @@ main {
   width: 10vh;
 }
 
+.iklan img {
+  width: 27vh;
+}
+
 @media (max-width: 400px) {
   .sidecart {
     width: 100vw;
@@ -1464,261 +1503,6 @@ main {
   margin: auto;
   width: 100%;
   white-space: nowrap;
-}
-
-.admin__container {
-  display: flex;
-  flex-direction: row;
-}
-
-.admin__container .admin__nav {
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 100;
-  flex-direction: column;
-  flex-basis: 10%;
-  position: fixed;
-  background: #333B4E;
-  height: 100%;
-  width: 120px;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
-}
-
-.admin__container .admin__nav .nav-link {
-  padding: .5rem 0;
-  width: 100%;
-}
-
-.admin__container .cari__data {
-  display: flex;
-}
-
-.admin__container .tab-content {
-  width: 100%;
-}
-
-.admin__container .boxes {
-  display: flex;
-  margin: .5rem 0;
-  justify-content: center;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
-.admin__container .boxes .boxes__img {
-  width: 5vh;
-  height: auto;
-}
-
-.admin__container .boxes span {
-  font-size: .8rem;
-  color: #ffffff;
-}
-
-.admin__container #exit {
-  position: relative;
-  left: 2rem;
-  top: -1rem;
-}
-
-.admin__container .bars #open {
-  position: relative;
-  left: -5rem;
-  top: 2rem;
-}
-
-.admin__container .bars #open:hover {
-  color: red;
-}
-
-.admin__container .admin__content {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  margin-top: 5rem;
-}
-
-.admin__container .admin__content .order__flex {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.admin__container .admin__content .order__flex button {
-  margin: 0 1rem;
-  height: 38px;
-}
-
-.admin__container .add__img {
-  width: 4vh;
-}
-
-.admin__container .add__product {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 1rem;
-}
-
-.admin__container .add__product-1 {
-  flex-basis: 40%;
-}
-
-.admin__container .add__product-2 {
-  flex-basis: 60%;
-  margin-top: 2rem;
-  padding-left: 2rem;
-}
-
-.admin__container .add__product-2 .gallery img {
-  width: 50%;
-  margin: 1rem;
-  height: 50%;
-}
-
-.admin__container .add-kategori {
-  text-align: center;
-}
-
-.admin__container .add-kategori td button {
-  border: none;
-}
-
-.admin__container .add-kategori td .delete__icon {
-  width: 4vh;
-}
-
-.admin__container .dashboard__head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.admin__container .jdl {
-  font-size: 1rem;
-}
-
-.admin__container .parent {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.admin__container .parent .child1 {
-  margin-right: 5rem;
-}
-
-.admin__container .parent .child2 .add .add__img {
-  width: 4vh;
-}
-
-.admin__container .parent .child2 .child2__item2 {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.admin__container .parent .child2 .child2__item2 figure {
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.admin__container .parent .child2 .child2__item2 figure a {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: start;
-  align-items: center;
-  color: #000000;
-}
-
-.admin__container .parent .child2 .child2__item2 figure .properti {
-  display: flex;
-  width: 100%;
-  height: 50px;
-  justify-content: center;
-  background: whitesmoke;
-  align-items: center;
-}
-
-.admin__container .parent .child2 .child2__item2 figure .properti__img {
-  width: 4vh;
-}
-
-.admin__container .size {
-  width: 100%;
-}
-
-.admin__container .size .size__ul {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.admin__container .size .size__ul .size__li {
-  text-align: center;
-  padding: 0.5rem;
-  margin: .1rem;
-}
-
-.admin__container .size .size__ul .size__li button {
-  width: 60px;
-}
-
-.admin__container .promotion__main-change {
-  width: 100%;
-  height: 500px;
-}
-
-.admin__container .promotion__main-preview {
-  width: 100%;
-  height: 500px;
-}
-
-.admin__container .promotion__main-preview figure {
-  text-align: center;
-}
-
-.admin__container .promotion__main-preview img {
-  width: 55vh;
-}
-
-.admin__container .promotion__main-preview2 {
-  margin-top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.admin__container .promotion__main-preview2 figure {
-  margin: 2.5rem;
-}
-
-.admin__container .promotion__main-preview2 figure img {
-  width: 60vh;
-}
-
-.admin__container .promotion__main-change2 {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.admin__container .promotion__main-change2 .form__promotion {
-  width: 40%;
-  margin: 0 2rem;
-}
-
-.admin__container .account {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.admin__container .account .leftside {
-  flex-basis: 50%;
-}
-
-.admin__container .account .rightside {
-  flex-basis: 30%;
 }
 
 .border {
@@ -1883,9 +1667,14 @@ main {
   padding: 0 0.5rem;
 }
 
+.container-fluid {
+  display: flex !important;
+  flex-flow: row wrap;
+}
+
 .swiper-container {
   width: 100%;
-  height: 300px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1914,6 +1703,10 @@ main {
 
 .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.swiper-button-prev.swiper-button-white, .swiper-button-next.swiper-button-white {
+  --swiper-navigation-color: $diskon-color;
 }
 
 .detail__flex {
@@ -1947,5 +1740,75 @@ main {
 
 .description .nama-produk {
   font-size: 1.5rem;
+}
+
+.modal-body span {
+  font-size: 1.5rem;
+}
+
+.modal-body .text-danger {
+  font-size: 1.5rem;
+}
+
+.operator__input {
+  border: 1px solid grey;
+}
+
+@media screen and (min-width: 320px) {
+  .detail .child__img {
+    width: 5vh;
+  }
+  .product__desc {
+    padding-top: 1rem;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .detail .child__img {
+    width: 8vh;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .gallery-thumbs {
+    margin-top: 1rem;
+    position: relative;
+    top: -5%;
+  }
+  .detail .child__img {
+    width: 10vh;
+  }
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .rekomendasi__anda {
+    padding-top: 2rem;
+  }
+  .rekomendasi__anda h5 {
+    padding-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -30,7 +30,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- EXTERNAL CSS -->
-    <link rel="stylesheet" href="../scss/admin/assets/css/main.css">
+    <link rel="stylesheet" href="../scss/admin/css/mainAdmin.css">
 
 </head>
 
@@ -263,36 +263,42 @@
                     <div class="col-12">
                         <div class="container">
                             <div class="promotion">
-
-                                <div class="promotion__main2 mt-5">
+                                <div class="promotion__main2">
                                     <div class="promotion__main-preview2 text-center">
                                         <figure>
-                                            <img src="../scss/assets/img/iklan1.svg" alt="preview 1">
+                                            <img id="image-preview" src="../scss/assets/img/iklan1.svg" alt="preview 1">
                                         </figure>
                                         <figure>
-                                            <img src="../scss/assets/img/iklan2.svg" alt="preview 2">
+                                            <img id="image-preview2" src="../scss/assets/img/iklan2.svg"
+                                                alt="preview 2">
                                         </figure>
                                     </div>
 
                                     <div class="promotion__main-change2">
                                         <form class="form__promotion" action="#">
                                             <div class="form-group custom-file mt-3 mb-3">
-                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <input type="file" class="custom-file-input" id="image-source"
+                                                    onchange="previewImage();">
                                                 <label class="custom-file-label" for="customFile">Gambar Background
                                                     1</label>
+                                                <small id="imgHelp" class="form-text text-muted">Pastikan Gambar
+                                                    Background 1 dan Background 2 ukuranya sama</small>
                                             </div>
                                         </form>
                                         <form class="form__promotion" action="#">
                                             <div class="form-group custom-file mt-3 mb-3">
-                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <input type="file" class="custom-file-input" id="image-source2"
+                                                    onchange="previewImage2();">
                                                 <label class="custom-file-label" for="customFile">Gambar Background
                                                     2</label>
+                                                <small id="imgHelp" class="form-text text-muted">Pastikan Gambar
+                                                    Background 1 dan Background 2 ukuranya sama</small>
                                             </div>
                                         </form>
+                                        <button type="button" class="mt-3 btn btn-primary w-50">Simpan
+                                        </button>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                         <!-- /.col -->
@@ -374,6 +380,25 @@
                 "responsive": true,
             });
         });
+
+        function previewImage() {
+            document.getElementById("image-preview").style.display = "block";
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("image-preview").src = oFREvent.target.result;
+            };
+        };
+        function previewImage2() {
+            document.getElementById("image-preview2").style.display = "block";
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("image-source2").files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("image-preview2").src = oFREvent.target.result;
+            };
+        };
     </script>
 </body>
 
