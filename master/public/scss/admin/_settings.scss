@@ -1,0 +1,32 @@
+.account {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .leftside {
+        flex-basis: 50%;
+    }
+
+    .rightside {
+        flex-basis: 30%;
+    }
+}
+
+@include media-xs-admin {
+    .account {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .leftside {
+            flex-basis: 50%;
+        }
+    
+        .rightside {
+            flex-basis: 30%;
+        }
+    }
+}
