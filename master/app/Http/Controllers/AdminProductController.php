@@ -22,20 +22,31 @@ class AdminProductController extends Controller
     public function index()
     {
         if(request()->category){
-            $categories = Category::orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::where('category_id',request()->category)->orderBy('id', 'DESC')->paginate(12);
         } elseif (request()->size){
-            $categories = Category::orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::with('sizes')->whereHas('sizes', function ($query){
                 $query->where('slug', request()->size);
-            })->paginate(12);
+            })->whereNotIn('category_id', [10])->orderBy('id', 'DESC')->paginate(12);
         } else {
-            $categories = Category::orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
-            $products = Product::orderBy('id', 'DESC')->paginate(12);
+            $products = Product::whereNotIn('category_id', [10])->orderBy('id', 'DESC')->paginate(12);
         }
+
+        return view('admin.allproduct', compact('categories', 'sizes', 'products'));
+    }
+
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+        $categories = Category::orderBy('id', 'DESC')->get();
+        $sizes = Size::orderBy('id', 'DESC')->get();
+        $products = Product::search($cari)->orderBy('id', 'DESC')->paginate(12);
+        $products->appends($request->only('search'));
 
         return view('admin.allproduct', compact('categories', 'sizes', 'products'));
     }
@@ -208,11 +219,15 @@ class AdminProductController extends Controller
         $product->sizes()->detach();
         $product->colors()->detach();
 
-        $images = explode(",", $product->image);
-        foreach ($images as $image) {
-            Storage::delete("app/public/products/{$image}");
-            // unlink(storage_path("app/public/products/{$image}"));
-            dd($image);
+        $images = json_decode($product->image);
+        if (is_array($images) || is_object($images))
+        {
+            foreach ($images as $image) {
+                $path = storage_path("app/public/products/{$image}");
+                if (file_exists($path)) {
+                    unlink($path);
+                }
+            }
         }
 
 

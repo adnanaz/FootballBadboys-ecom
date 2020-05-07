@@ -30,6 +30,24 @@ Route::group(['prefix'=>'admin'] , function(){
         Route::get('/{id}/edit','AdminProductController@edit')->name('editproduct.edit');
         Route::post('/{id}/update','AdminProductController@update')->name('updateproduct.update');
         Route::get('/{id}/delete','AdminProductController@destroy')->name('deleteproduct.delete');
+        Route::get('/search','AdminProductController@search')->name('product.search');
+
+        Route::group(['prefix' => 'category'], function () {
+            Route::get('/','AdminCategoryController@index')->name('category.index');
+            Route::post('/add','AdminCategoryController@store')->name('addcategory.store');
+            Route::get('/{id}/delete','AdminCategoryController@destroy')->name('category.destroy');
+        });
+
+        Route::group(['prefix' => 'discount'], function () {
+            Route::get('/','AdminDiscountController@index')->name('discount.index');
+        });
+
+        Route::group(['prefix' => 'promotion'], function () {
+            Route::get('/contentpromotion','AdminPromotionController@ContentPromotion')->name('admin.contentpromotion');
+            Route::post('/contentpromotion/{id}/update','AdminPromotionController@update')->name('contentpromotion.update');
+            Route::get('/banner','AdminPromotionController@banner')->name('admin.banner');
+            Route::post('/banner/{id}/update','AdminPromotionController@bannerupdate')->name('banner.update');
+        });
     });
 
     Route::group(['prefix' => 'order'], function () {

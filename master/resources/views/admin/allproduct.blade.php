@@ -31,58 +31,51 @@
                 <div class="parent">
                 <div class="child1 col-2">
                     <div class="child1__item ">
-                    <a href="../../category.html">
-                        <div class="add__cat">
-                        <img class="add__img mr-2" src="/scss/assets/img/admin/add.png" alt="add kategori">
-                        <span class="jdl">Kategori</span>
-                        </div>
-                    </a>
-                    <hr>
-                    <div id="accordion">
-                        <div class="card"></div>
-                        <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            Category
-                            </button>
-                        </h5>
-                        </div>
+                        <div id="accordion">
+                            <div class="card"></div>
+                            <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Category
+                                </button>
+                            </h5>
+                            </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            <table class="table table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col"> <a href="{{ route('admin.product') }}" class="hvr-underline-from-center">All Category</a></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                @foreach ($categories as $category)
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                <thead>
                                     <tr>
-                                        <th scope="row"><a href="{{ route('admin.product', ['category' => $category->id]) }}" class="hvr-underline-from-center"> {{$category->name}} </a></th>
+                                        <th scope="col"> <a href="{{ route('admin.product') }}" class="hvr-underline-from-center">All Category</a></th>
                                     </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach ($categories as $category)
+                                        <tr>
+                                            <th scope="row"><a href="{{ route('admin.product', ['category' => $category->id]) }}" class="hvr-underline-from-center"> {{$category->name}} </a></th>
+                                        </tr>
+                                    @endforeach
+
+                                </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sizes">
+                            <span class="jdl">Size</span>
+                            <hr>
+                            <ul class="size__ul">
+                                @foreach ($sizes as $size)
+                                    <li class="size__li"><a href="{{ route('admin.product', ['size' => $size->slug]) }}" class="btn btn-outline-info">{{ $size->name }}</a></li>        
                                 @endforeach
-
-                            </tbody>
-                            </table>
+                            
+                            </li>
+                            </ul>
                         </div>
-                        </div>
-                    </div>
-
-
-                    <div class="sizes">
-                        <span class="jdl">Size</span>
-                        <hr>
-                        <ul class="size__ul">
-                            @foreach ($sizes as $size)
-                                <li class="size__li"><a href="{{ route('admin.product', ['size' => $size->slug]) }}" class="btn btn-outline-info">{{ $size->name }}</a></li>        
-                            @endforeach
-                        
-                        </li>
-                        </ul>
-                    </div>
                     </div>
                 </div>
 
@@ -96,14 +89,14 @@
                             Produk</span>
                         </a>
 
-                        <form class=" form-inline ml-3 float-right">
+                        <form class=" form-inline ml-3 float-right" action="{{ route('product.search') }}" method="GET">
                         <div class="input-group input-group-sm">
-                            <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                            <input class="form-control form-control-navbar" type="search" name="search" id="search" placeholder="Search"
                             aria-label="Search">
                             <div class="input-group-append">
-                            <button class="btn btn-navbar" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
                         </form>
