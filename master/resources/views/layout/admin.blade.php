@@ -85,49 +85,38 @@
         <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link active">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
-                <span class="badge badge-info right">1</span>
             </p>
             </a>
-            <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Order Penjualan</p>
-                </a>
-            </li>
-
-            </ul>
         </li>
 
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
+            <span class="badge badge-info right">3</span>
             <p>
                 Invetory
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
             </p>
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="{{ route('admin.product') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>All Product</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="category.html" class="nav-link">
+                <a href="{{ route('category.index') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Category</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="diskon.html" class="nav-link">
+                <a href="{{ route('discount.index') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Diskon</p>
                 </a>
@@ -138,20 +127,10 @@
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-shopping-cart"></i>
-            <span class="badge badge-info right">1</span>
             <p>
                 Orders
-                <i class="right fas fa-angle-left"></i>
             </p>
             </a>
-            <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="data-order.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Data Order</p>
-                </a>
-            </li>
-            </ul>
         </li>
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -164,13 +143,13 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="banner.html" class="nav-link">
+                <a href="{{ route('admin.banner') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Banner</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="content-promotion.html" class="nav-link">
+                <a href="{{ route('admin.contentpromotion') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Content Promotion</p>
                 </a>
@@ -187,7 +166,7 @@
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-edit"></i>
-            <span class="badge badge-info right">1</span>
+            <span class="badge badge-info right">2</span>
             <p>
                 Account
                 <i class="fas fa-angle-left right"></i>
@@ -200,16 +179,16 @@
                 <p>Settings</p>
                 </a>
             </li>
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Logout
+                </p>
+                </a>
+            </li>
 
             </ul>
-        </li>
-        <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-table"></i>
-            <p>
-                Logout
-            </p>
-            </a>
         </li>
 
         </ul>

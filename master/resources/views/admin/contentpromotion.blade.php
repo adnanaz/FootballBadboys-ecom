@@ -6,6 +6,15 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
@@ -30,33 +39,30 @@
                     <div class="container">
                         <div class="promotion">
 
-                            <div class="promotion__main2 mt-5">
-                                <div class="promotion__main-preview2 text-center">
-                                    <figure>
-                                        <img src="../scss/assets/img/iklan1.svg" alt="preview 1">
-                                    </figure>
-                                    <figure>
-                                        <img src="../scss/assets/img/iklan2.svg" alt="preview 2">
-                                    </figure>
-                                </div>
-
-                                <div class="promotion__main-change2">
-                                    <form class="form__promotion" action="#">
+                                
+                                <div class="promotion__main2 mt-5">
+                                    <div class="promotion__main-preview2 text-center">
+                                        <figure>
+                                            <img src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="preview 1">
+                                        </figure>
+                                        <figure>
+                                            <img src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="preview 2">
+                                        </figure>
+                                    </div>
+                                    <form action="{{ route('contentpromotion.update', $contentpromotion) }}" method="POST" enctype="multipart/form-data">
+                                    {{ csrf_field() }}
+                                    <div class="promotion__main-change2">
                                         <div class="form-group custom-file mt-3 mb-3">
-                                            <input type="file" class="custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="customFile">Gambar Background
-                                                1</label>
+                                            <input type="file"  value="Choose File" id="foto" name="image1">
                                         </div>
-                                    </form>
-                                    <form class="form__promotion" action="#">
                                         <div class="form-group custom-file mt-3 mb-3">
-                                            <input type="file" class="custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="customFile">Gambar Background
-                                                2</label>
+                                            <input type="file"  value="Choose File" id="foto" name="image2">
                                         </div>
-                                    </form>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Save</button>
+                                </form>
                                 </div>
-                            </div>
+                                
 
 
                         </div>

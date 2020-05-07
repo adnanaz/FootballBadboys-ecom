@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <div class="add">
                                     <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                        <img class="add__img" src="../scss/assets/img/admin/add.png" alt="">
+                                        <img class="add__img" src="/scss/assets/img/admin/add.png" alt="">
                                         <span class="">Tambah
                                             Kategori Baru</span>
                                     </a>
@@ -47,114 +47,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                Jacket
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>
-                                                Jersey
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>
-                                                Merchandise
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>
-                                                Overshirt
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>
-                                                Polo T-shirt
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>
-                                                Shortpants
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>
-                                                T-Shirt
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>
-                                                Waistbag
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>
-                                                Cagoule
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>
-                                                Crewneck
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>11</td>
-                                            <td>
-                                                Half zip
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>
-                                                Hoodie
-                                            </td>
-                                            <td><a href="#" data-toggle="modal" data-target="#staticBackdrop"><img
-                                                        src="../scss/assets/img/minus_red.png" width="30px"
-                                                        height="30px" alt="Delete"></a></td>
-                                        </tr>
+
+                                        @foreach ($categories as $key=>$category)
+                                            <tr>
+                                                <td>{{$key+1}}</td>
+                                                <td>
+                                                    {{$category->name}}
+                                                </td>
+                                                <td><a href="{{ route('category.destroy', $category) }}"><img
+                                                            src="/scss/assets/img/minus_red.png" width="30px"
+                                                            height="30px" alt="Delete"></a></td>
+                                            </tr>
+                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>
@@ -170,51 +75,27 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="nama_kategori">Nama Kategori</label>
-                                                    <input type="text" class="form-control" id="nama_kategori"
-                                                        aria-describedby="textHelp">
-                                                    <small id="textHelp" class="form-text text-muted">Tambah Kategori
-                                                        apabila ada jenis produk baru..</small>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary w-100">Submit</button>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
+                                        <form action="{{ route('addcategory.store') }}" method="POST">
+                                        {{ csrf_field() }}
+                                            <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="nama_kategori">Nama Kategori</label>
+                                                        <input type="text" class="form-control" name="name" id="nama_kategori"
+                                                            aria-describedby="textHelp">
+                                                        <small id="textHelp" class="form-text text-muted">Tambah Kategori
+                                                            apabila ada jenis produk baru..</small>
+                                                    </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                             <!-- end modal 1 -->
-
-                            <!-- modal 2  -->
-                            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1"
-                                role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Hapus Category</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            apakah anda yakin menghapus data kategori?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Batal</button>
-                                            <button type="button" class="btn btn-primary">Simpan</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end modal 2 -->
 
                             <!-- /.card-body -->
                         </div>
