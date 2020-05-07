@@ -1,5 +1,6 @@
 //320
 @include media-xs {
+
     .admin__content {
         width: 100vh;
     }
@@ -59,9 +60,18 @@
             margin-right: 0;
         }
 
-        .nav__img {
+        .search__img {
+            margin-top: -6px;
             width: 42px;
             height: 42px;
+        }
+
+        .nav__img {
+            width: 16vh;
+        }
+
+        .cart__img {
+            width: 5vh;
         }
        
         // &--item {
@@ -204,7 +214,7 @@
 
       .imgBanner {
           &__img {
-              width: 35vh;
+              width: 28vh;
           }
       }
       
@@ -631,14 +641,14 @@
     }
 
     .discount__span {
-        font-size: 2.5vw;
+        font-size: 2vw;
         font-weight: 600;
     }
 
     .steps{
        
         .imgBanner__img {
-            width: 50vh;
+            width: 51vh;
             margin: 1.5rem;
         }
     }
@@ -712,9 +722,13 @@
                 display: contents !important;
             }
 
+            .search__img {
+                margin-top: 0;
+            }
+
            
             .nav__img {
-                width: 40px;
+                width: 50px;
                 height: 40px;
             }
 
@@ -762,6 +776,8 @@
         }
     }
 
+
+
     .airplane,.time, .support {
         figcaption {
             p {
@@ -775,6 +791,10 @@
     }
 
     .media__text {
+        p {
+            padding: 0 16rem;
+        }
+
         h4 {
             font-size: 1.3rem;
         }
@@ -823,7 +843,20 @@
 
 //1400
 @include media-xl {
-
+   .nav{
+       .nav__menu{
+       &--item {
+        .nav__img {
+           width: 10vh;
+        }
+       }
+    }
+   }
+    
+    .steps .imgBanner__img {
+        width: 55vh;
+        margin: 1.5rem;
+    }
     .admin__content {
         width: 100%;
     }
@@ -877,7 +910,6 @@
        
     }
   
-
 
     .discount__div {
 

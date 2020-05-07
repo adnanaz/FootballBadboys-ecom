@@ -20,10 +20,6 @@
     <link href="node_modules/hover.css/css/hover-min.css" rel="stylesheet">
 </head>
 <header>
-    <!-- <section class="discount">
-        <div class="discount__div">diskon section</div>
-    </section> -->
-
     <div class="container-fluid mobileOn" id="header-wrap">
         <div class="flex">
             <div class="menu-btn">
@@ -37,18 +33,18 @@
             </div>
             <div class="brand ">
                 <a class="navbar-brand" href="#">
-                    <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
+                    <img class="" src="scss/assets/img/hh.png" width="65" height="40" alt="">
                 </a>
             </div>
             <div class="cuciGudang lg-on">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="all-product.html">
                     <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
                 </a>
             </div>
 
             <div class="cart lg-on">
                 <a class="navbar-brand" href="#">
-                    <img class="" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                    <img class="" onclick="toggleCart()" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
                 </a>
             </div>
         </div>
@@ -58,13 +54,14 @@
         height: 65px; position: fixed;">
         <ul class="nav__menu">
 
-            <li class="nav__menu--item">
+            <li class="nav__menu--item active">
                 <a href="index.html" class="hvr-underline-from-center nav__menu--link">
                     NEW ARRIVAL
                 </a>
             </li>
-            <li class="nav__menu--item custom nav-item dropdown active">
-                <a href="#" class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+            <li class="nav__menu--item custom nav-item dropdown">
+                <a href="detail-product.html"
+                    class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
                     data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     SHOP ONLINE
                 </a>
@@ -74,46 +71,46 @@
 
                         <ul class="">
                             <li>
-                                <a href="#">Jacket</a>
+                                <a href="all-product.html">Jacket</a>
                             </li>
                             <li>
-                                <a href="#">Jersey</a>
+                                <a href="all-product.html">Jersey</a>
                             </li>
                             <li>
-                                <a href="#">Merchandise</a>
+                                <a href="all-product.html">Merchandise</a>
                             </li>
                             <li>
-                                <a href="#">Overshirt</a>
+                                <a href="all-product.html">Overshirt</a>
                             </li>
                             <li>
-                                <a href="#">Polo T-shirt</a>
+                                <a href="all-product.html">Polo T-shirt</a>
                             </li>
                             <li>
-                                <a href="#">Shortpants</a>
+                                <a href="all-product.html">Shortpants</a>
                             </li>
                             <li>
-                                <a href="#">T-Shirt</a>
+                                <a href="all-product.html">T-Shirt</a>
                             </li>
                             <li>
-                                <a href="#">Waistbag</a>
+                                <a href="all-product.html">Waistbag</a>
                             </li>
                         </ul>
 
                         <ul class="">
                             <li>
-                                <a href="#">Cagoule</a>
+                                <a href="all-product.html">Cagoule</a>
                             </li>
                             <li>
-                                <a href="#">Caps</a>
+                                <a href="all-product.html">Caps</a>
                             </li>
                             <li>
-                                <a href="#">Crewneck</a>
+                                <a href="all-product.html">Crewneck</a>
                             </li>
                             <li>
-                                <a href="#">Half Zip</a>
+                                <a href="all-product.html">Half Zip</a>
                             </li>
                             <li>
-                                <a href="#">Hoodie</a>
+                                <a href="all-product.html">Hoodie</a>
                             </li>
 
                         </ul>
@@ -135,33 +132,40 @@
             <li class="nav__menu--item special">
                 <form action="" class="formSearch">
                     <input class="navSearch" type="search" placeholder="Cari sesuatu?">
-                    <img class=" fa nav__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                    <img class=" fa search__img rounded-circle" src="scss/assets/img/search.png" alt="">
                 </form>
             </li>
 
             <li class="brand nav__menu--item">
                 <a class="navbar-brand" href="#">
-                    <img class="nav__img rounded-circle" src="scss/assets/img/logo-fbb.png" alt="">
+                    <img class="nav__img" src="scss/assets/img/hh.png" alt="logo FootballBadboys">
                 </a>
             </li>
             <li class="nav__menu--item">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
-                    CUCI GUDANG
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
+                    CLEARANCE SELL
                 </a>
             </li>
             <li class="nav__menu--item ">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
                     ON SALE
                 </a>
             </li>
+
+
             <li class="nav__menu--item">
-                <a class="navbar-brand" href="#">
-                    <img class=" nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                <a class="navbar-brand" href="#" onclick="toggleCart()">
+                    <img class=" cart__img d-lg-none" src="scss/assets/img/cart.png" alt="">
                 </a>
                 <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
                     <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
                 </a>
             </li>
+
+
+
+
+
 
             <li class="nav__menu--item mobileOn">
                 <div class="socmed mobileOn">
@@ -197,25 +201,7 @@
                     </nav>
                     <!--end breadcrumb -->
 
-                    <!-- SORT -->
-                    <div class="sort">
-                        <span>Sort By</span>
 
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Urut berdasarkan
-                            </button>
-                            <div class="dropdown-menu sort__dropdown" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Terlaris</a>
-                                <a class="dropdown-item" href="#">Harga Termurah</a>
-                                <a class="dropdown-item" href="#">Produk Terbaru</a>
-                                <a class="dropdown-item" href="#">Harga Termahal</a>
-                                <a class="dropdown-item" href="#">A-Z</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END SORT -->
                 </div>
 
                 <div class="category__product">
@@ -339,7 +325,7 @@
                         </div>
                         <!-- item produknya -->
                         <figure>
-                            <a href="#" class="hvr-grow-shadow">
+                            <a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -352,7 +338,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -365,7 +351,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -378,7 +364,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -391,7 +377,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -404,7 +390,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -418,7 +404,7 @@
                             </a>
                         </figure>
                         <figure>
-                            <a href="#" class="hvr-grow-shadow">
+                            <a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -431,7 +417,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -444,7 +430,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -457,7 +443,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -470,7 +456,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -483,7 +469,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -497,7 +483,7 @@
                             </a>
                         </figure>
                         <figure>
-                            <a href="#" class="hvr-grow-shadow">
+                            <a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -510,7 +496,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -523,7 +509,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -536,7 +522,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -549,7 +535,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -562,7 +548,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -576,7 +562,7 @@
                             </a>
                         </figure>
                         <figure>
-                            <a href="#" class="hvr-grow-shadow">
+                            <a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/bomber.jpg" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -589,7 +575,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -602,7 +588,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -615,7 +601,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/cagoule2.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -628,7 +614,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/tas.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>
@@ -641,7 +627,7 @@
                                 </figcaption>
                             </a>
                         </figure>
-                        <figure><a href="#" class="hvr-grow-shadow">
+                        <figure><a href="detail-product.html" class="hvr-grow-shadow">
                                 <img src="scss/assets/img/produk/supreme.jpg" alt="foto produk tas">
                                 <figcaption>
                                     <h5 class="namaProduk">Bomber</h5>

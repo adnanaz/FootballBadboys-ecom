@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="scss/assets/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
     <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,10 +22,6 @@
     <link rel="stylesheet" href="node_modules/hover.css/css/hover-min.css">
 </head>
 <header>
-    <!-- <section class="discount">
-        <div class="discount__div">diskon section</div>
-    </section> -->
-
     <div class="container-fluid mobileOn" id="header-wrap">
         <div class="flex">
             <div class="menu-btn">
@@ -37,11 +35,11 @@
             </div>
             <div class="brand ">
                 <a class="navbar-brand" href="#">
-                    <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
+                    <img class="" src="scss/assets/img/hh.png" width="65" height="40" alt="">
                 </a>
             </div>
             <div class="cuciGudang lg-on">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="all-product.html">
                     <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
                 </a>
             </div>
@@ -64,7 +62,8 @@
                 </a>
             </li>
             <li class="nav__menu--item custom nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+                <a href="detail-product.html"
+                    class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
                     data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     SHOP ONLINE
                 </a>
@@ -74,46 +73,46 @@
 
                         <ul class="">
                             <li>
-                                <a href="#">Jacket</a>
+                                <a href="all-product.html">Jacket</a>
                             </li>
                             <li>
-                                <a href="#">Jersey</a>
+                                <a href="all-product.html">Jersey</a>
                             </li>
                             <li>
-                                <a href="#">Merchandise</a>
+                                <a href="all-product.html">Merchandise</a>
                             </li>
                             <li>
-                                <a href="#">Overshirt</a>
+                                <a href="all-product.html">Overshirt</a>
                             </li>
                             <li>
-                                <a href="#">Polo T-shirt</a>
+                                <a href="all-product.html">Polo T-shirt</a>
                             </li>
                             <li>
-                                <a href="#">Shortpants</a>
+                                <a href="all-product.html">Shortpants</a>
                             </li>
                             <li>
-                                <a href="#">T-Shirt</a>
+                                <a href="all-product.html">T-Shirt</a>
                             </li>
                             <li>
-                                <a href="#">Waistbag</a>
+                                <a href="all-product.html">Waistbag</a>
                             </li>
                         </ul>
 
                         <ul class="">
                             <li>
-                                <a href="#">Cagoule</a>
+                                <a href="all-product.html">Cagoule</a>
                             </li>
                             <li>
-                                <a href="#">Caps</a>
+                                <a href="all-product.html">Caps</a>
                             </li>
                             <li>
-                                <a href="#">Crewneck</a>
+                                <a href="all-product.html">Crewneck</a>
                             </li>
                             <li>
-                                <a href="#">Half Zip</a>
+                                <a href="all-product.html">Half Zip</a>
                             </li>
                             <li>
-                                <a href="#">Hoodie</a>
+                                <a href="all-product.html">Hoodie</a>
                             </li>
 
                         </ul>
@@ -135,22 +134,22 @@
             <li class="nav__menu--item special">
                 <form action="" class="formSearch">
                     <input class="navSearch" type="search" placeholder="Cari sesuatu?">
-                    <img class=" fa nav__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                    <img class=" fa search__img rounded-circle" src="scss/assets/img/search.png" alt="">
                 </form>
             </li>
 
             <li class="brand nav__menu--item">
                 <a class="navbar-brand" href="#">
-                    <img class="nav__img rounded-circle" src="scss/assets/img/logo-fbb.png" alt="">
+                    <img class="nav__img" src="scss/assets/img/hh.png" alt="logo FootballBadboys">
                 </a>
             </li>
             <li class="nav__menu--item">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
-                    CUCI GUDANG
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
+                    CLEARANCE SELL
                 </a>
             </li>
             <li class="nav__menu--item ">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
                     ON SALE
                 </a>
             </li>
@@ -158,7 +157,7 @@
 
             <li class="nav__menu--item">
                 <a class="navbar-brand" href="#" onclick="toggleCart()">
-                    <img class=" nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                    <img class=" cart__img d-lg-none" src="scss/assets/img/cart.png" alt="">
                 </a>
                 <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
                     <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
@@ -200,88 +199,9 @@
             </div>
         </section>
 
-
-        <!-- CART SECTION -->
-        <aside class="sidecart text-center">
-
-            <ul class="flex-column">
-                <div class="d-inline coba" onclick="toggleCart()">
-                    <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
-                </div>
-                <div class="cart__head text-light h4 m-0 text-center">
-
-                    <a class="navbar-brand" style="margin-right: 4rem;" href="#">
-                        <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
-                    </a>
-
-                </div>
-
-                <li class="d-flex flex-wrap flex-row">
-                    <!-- ini kalo gaada produk posisinya -->
-                    <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
-                            memilih produk sama
-                            sekali</span> </div> -->
-                    <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
-                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
-                            src="scss/assets/img/peace.svg" alt="">
-                        <hr class="cart__hr">
-                    </div>
-                </li>
-                <!-- tinggal matiin komentarnya -->
-
-                <li class="d-flex flex-wrap flex-row">
-                    <!-- product image -->
-                    <div class="col-4 p-0">
-                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
-                    </div>
-                    <!-- end product image -->
-
-                    <!-- product props -->
-                    <div class="col-8 justify-content-around d-flex flex-column">
-
-                        <div class="items">
-                            <span class="productName">Skuda T-Shirt</span>
-                            <span class="productType">White grey motive</span>
-                            <span class="size">Size : <span class="size__value">M</span> </span>
-                            <div class="operator">
-                                <form action="">
-                                    <button class="btn__operator">-</button>
-                                    <input class="operator__input" value="1" type="text">
-                                    <button class="btn__operator">+</button>
-                                </form>
-                            </div>
-                            <span class="total">Rp <span class="total__value">156.000</span></span>
-
-                        </div>
-                    </div>
-
-                    <!-- end product props -->
-                    <hr class="li__hr">
-
-
-                </li>
-                <div class="flex-end">
-                    <div class="sub">
-                        <span>Sub Total</span>
-                        <span>Total</span>
-                    </div>
-                    <div class="total__div">
-                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
-                        <span class="total">Rp <span class="total__value">156.000</span></span>
-                    </div>
-                </div>
-            </ul>
-
-            <div class="p-2">
-                <button type="button" class="btn btn-primary btn__checkout">CHECKOUT</button>
-            </div>
-        </aside>
-
-        <!-- END CART SECTION -->
-
         <section class="advertisement">
             <figure>
-                <img class="advertisement__img" src="scss/assets/img/model.svg" alt="model-svg">
+                <img class="advertisement__img" src="scss/assets/img/model/Model1.jpg" alt="model-svg">
             </figure>
         </section>
 
@@ -295,40 +215,42 @@
         </section>
 
         <section class="steps">
-            <figure class="airplane hvr-icon-up">
-                <img class="airplane__img hvr-icon" src="scss/assets/img/airplane2.svg" alt="icon-airplane">
-                <figcaption>
-                    <h3>Kirim ke mana aja</h3>
-                    <p>kami melayani pembelian online dimana saja kapan saja </p>
-                </figcaption>
-            </figure>
+            <div class="steps_item">
+                <figure class="airplane hvr-icon-up">
+                    <img class="airplane__img hvr-icon" src="scss/assets/img/airplane2.svg" alt="icon-airplane">
+                    <figcaption>
+                        <h3>Kirim ke mana aja</h3>
+                        <p>kami melayani pembelian online dimana saja kapan saja </p>
+                    </figcaption>
+                </figure>
 
-            <figure class="time hvr-icon-up">
-                <img class="time__img hvr-icon" src="scss/assets/img/time2.svg" alt="icon-time">
-                <figcaption>
-                    <h3>Gratis Refund</h3>
-                    <p>100% gratis refund apabila pakaian rusak </p>
-                </figcaption>
-            </figure>
+                <figure class="time hvr-icon-up">
+                    <img class="time__img hvr-icon" src="scss/assets/img/wa.svg" alt="icon-time">
+                    <figcaption>
+                        <h3>Order Mudah Via Whatsapp</h3>
+                        <p>Instant Checkout dengan Contact Form WhatsApp.</p>
+                    </figcaption>
+                </figure>
 
-            <figure class="support  hvr-icon-up">
-                <img class="support__img  hvr-icon" src="scss/assets/img/support2.svg" alt="support-time">
-                <figcaption>
-                    <h3>Support 24/7</h3>
-                    <p>Hubungi kami kapanpun dan dimanapun anda berada</p>
-                </figcaption>
-            </figure>
+                <figure class="support  hvr-icon-up">
+                    <img class="support__img  hvr-icon" src="scss/assets/img/support2.svg" alt="support-time">
+                    <figcaption>
+                        <h3>Support 24/7</h3>
+                        <p>Hubungi kami kapanpun dan dimanapun anda berada</p>
+                    </figcaption>
+                </figure>
+            </div>
 
             <div class="imgBanner">
                 <figure>
-                    <a href="#" class="hvr-grow-shadow">
+                    <a href="all-product.html" class="hvr-grow-shadow">
                         <img class="imgBanner__img" src="assets/iklan1.svg" alt="gambar iklan 1">
                     </a>
                 </figure>
             </div>
 
             <figure>
-                <a href="#" class="hvr-grow-shadow">
+                <a href="all-product.html" class="hvr-grow-shadow">
                     <img class="imgBanner__img" src="assets/iklan2.svg" alt="gambar iklan 2">
                 </a>
             </figure>
@@ -343,11 +265,11 @@
                 </div>
 
                 <!-- Swiper -->
-                <div class="swiper-container2">
+                <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover hvr-grow-shadow">
+                                <a href="all-product.html" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model1.svg" alt="model 1">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -359,7 +281,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover hvr-grow-shadow">
+                                <a href="all-product.html" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model4.svg" alt="model 2">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -371,7 +293,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover hvr-grow-shadow">
+                                <a href="all-product.html" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model5.svg" alt="model 3">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -384,7 +306,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="product__item">
-                                <a href="#" class="product__hover hvr-grow-shadow">
+                                <a href="all-product.html" class="product__hover hvr-grow-shadow">
                                     <img class="product__item--img" src="assets/model1.svg" alt="model 4">
                                     <div class="productDesc">
                                         <span class="product__name">Maroon 3</span>
@@ -409,30 +331,29 @@
         <section class="media">
             <div class="cotaniner-fluid">
                 <div class="media__text">
-                    <h1>MEDIA</h1>
-                    <h4>Media Patner FootballBadboys</h4>
+                    <h1>Filosofi </h1>
+                    <h4>Filosofi Football Badboys</h4>
+                    <p>Starting from a love of foreign and domestic football this name was born when thinking about the
+                        development of football therefore, ballboys will never be for from the scope of foreign and
+                        domestic football its own pride can give birth to you in the arena of worldy football </p>
+                    <h5>BORN ON 13th NOVEMBER 2017</h5>
+                    <span class="latina">Founder : Rachel Aditya Nosfandika</span>
+                    <br>
+                    <img src="scss/assets/img/bear4.png" alt="logo-bear" width="50px" height="30px">
+
                 </div>
             </div>
 
-            <div class="media__flex">
+            <!-- <div class="media__flex">
                 <ul class="media__item">
                     <li class="media__li">
                         <a href="#" class="hvr-grow-shadow">
-                            <img class="media__img" src="assets/logo3.svg" alt="logo-media 1">
-                        </a>
-                    </li>
-                    <li class="media__li">
-                        <a href="#" class="hvr-grow-shadow">
-                            <img class="media__img" src="assets/logo1.svg" alt="logo-media 2">
-                        </a>
-                    </li>
-                    <li class="media__li">
-                        <a href="#" class="hvr-grow-shadow">
-                            <img class="media__img" src="assets/logo2.svg" alt="logo-media 3">
+                            <img class="media__img" src="scss/assets/img/filosofi.jpg"
+                                alt="Football Badboys Philosophy">
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </section>
 
 
@@ -554,6 +475,88 @@
                     </div>
                 </div>
         </footer>
+
+        <!-- CART SECTION -->
+        <aside class="sidecart text-center">
+
+            <ul class="flex-column">
+                <div class="d-inline coba" onclick="toggleCart()">
+                    <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
+                </div>
+                <div class="cart__head text-light h4 text-center">
+
+                    <a class="navbar-brand" style="margin-right: 4rem;" href="#">
+                        <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                    </a>
+
+                </div>
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- ini kalo gaada produk posisinya -->
+                    <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
+                                    memilih produk sama
+                                    sekali</span> </div> -->
+                    <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
+                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
+                            src="scss/assets/img/peace.svg" alt="">
+                        <hr class="cart__hr">
+                    </div>
+                </li>
+                <!-- tinggal matiin komentarnya -->
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- product image -->
+                    <div class="col-4 p-0">
+                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
+                    </div>
+                    <!-- end product image -->
+
+                    <!-- product props -->
+                    <div class="col-8 justify-content-around d-flex flex-column">
+
+                        <div class="items">
+                            <span class="productName">Skuda T-Shirt</span>
+                            <span class="productType">White grey motive</span>
+                            <span class="size">Size : <span class="size__value">M</span> </span>
+                            <div class="operator">
+                                <form action="">
+                                    <button class="btn__operator">-</button>
+                                    <input class="operator__input" value="1" type="text">
+                                    <button class="btn__operator">+</button>
+                                </form>
+                            </div>
+                            <span class="total">Rp <span class="total__value">156.000</span></span>
+
+                        </div>
+                    </div>
+
+                    <!-- end product props -->
+                    <hr class="li__hr">
+                </li>
+                <div class="flex-end">
+                    <div class="sub">
+                        <span>Sub Total</span>
+                        <span>Total</span>
+                    </div>
+                    <div class="total__div">
+                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
+                        <span class="total">Rp <span class="total__value">156.000</span></span>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary btn__checkout w-50">CHECKOUT</button>
+                </div>
+                <li>
+                    <div class="iklan">
+                        <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="advertisement image 1">
+                        <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="advertisement image 2">
+                    </div>
+                </li>
+            </ul>
+
+
+        </aside>
+        <!-- END CART SECTION -->
     </main>
 
 
@@ -579,6 +582,59 @@
 <script src="main.js"></script>
 <script>
 
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // init: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        speed: 900,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+
+            disableOnInteraction: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1600: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        }
+    });
     function searchToggle(obj, evt) {
         var container = $(obj).closest('.search-wrapper');
         if (!container.hasClass('active')) {

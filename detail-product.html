@@ -20,10 +20,6 @@
     <link href="node_modules/hover.css/css/hover-min.css" rel="stylesheet">
 </head>
 <header>
-    <!-- <section class="discount">
-        <div class="discount__div">diskon section</div>
-    </section> -->
-
     <div class="container-fluid mobileOn" id="header-wrap">
         <div class="flex">
             <div class="menu-btn">
@@ -37,18 +33,18 @@
             </div>
             <div class="brand ">
                 <a class="navbar-brand" href="#">
-                    <img class="rounded-circle" src="scss/assets/img/logo-fbb.png" width="40" height="40" alt="">
+                    <img class="" src="scss/assets/img/hh.png" width="65" height="40" alt="">
                 </a>
             </div>
             <div class="cuciGudang lg-on">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="all-product.html">
                     <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
                 </a>
             </div>
 
             <div class="cart lg-on">
                 <a class="navbar-brand" href="#">
-                    <img class="" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                    <img class="" onclick="toggleCart()" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
                 </a>
             </div>
         </div>
@@ -58,13 +54,14 @@
         height: 65px; position: fixed;">
         <ul class="nav__menu">
 
-            <li class="nav__menu--item">
+            <li class="nav__menu--item active">
                 <a href="index.html" class="hvr-underline-from-center nav__menu--link">
                     NEW ARRIVAL
                 </a>
             </li>
-            <li class="nav__menu--item custom nav-item dropdown active">
-                <a href="#" class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+            <li class="nav__menu--item custom nav-item dropdown">
+                <a href="detail-product.html"
+                    class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
                     data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     SHOP ONLINE
                 </a>
@@ -74,46 +71,46 @@
 
                         <ul class="">
                             <li>
-                                <a href="#">Jacket</a>
+                                <a href="all-product.html">Jacket</a>
                             </li>
                             <li>
-                                <a href="#">Jersey</a>
+                                <a href="all-product.html">Jersey</a>
                             </li>
                             <li>
-                                <a href="#">Merchandise</a>
+                                <a href="all-product.html">Merchandise</a>
                             </li>
                             <li>
-                                <a href="#">Overshirt</a>
+                                <a href="all-product.html">Overshirt</a>
                             </li>
                             <li>
-                                <a href="#">Polo T-shirt</a>
+                                <a href="all-product.html">Polo T-shirt</a>
                             </li>
                             <li>
-                                <a href="#">Shortpants</a>
+                                <a href="all-product.html">Shortpants</a>
                             </li>
                             <li>
-                                <a href="#">T-Shirt</a>
+                                <a href="all-product.html">T-Shirt</a>
                             </li>
                             <li>
-                                <a href="#">Waistbag</a>
+                                <a href="all-product.html">Waistbag</a>
                             </li>
                         </ul>
 
                         <ul class="">
                             <li>
-                                <a href="#">Cagoule</a>
+                                <a href="all-product.html">Cagoule</a>
                             </li>
                             <li>
-                                <a href="#">Caps</a>
+                                <a href="all-product.html">Caps</a>
                             </li>
                             <li>
-                                <a href="#">Crewneck</a>
+                                <a href="all-product.html">Crewneck</a>
                             </li>
                             <li>
-                                <a href="#">Half Zip</a>
+                                <a href="all-product.html">Half Zip</a>
                             </li>
                             <li>
-                                <a href="#">Hoodie</a>
+                                <a href="all-product.html">Hoodie</a>
                             </li>
 
                         </ul>
@@ -135,33 +132,40 @@
             <li class="nav__menu--item special">
                 <form action="" class="formSearch">
                     <input class="navSearch" type="search" placeholder="Cari sesuatu?">
-                    <img class=" fa nav__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                    <img class=" fa search__img rounded-circle" src="scss/assets/img/search.png" alt="">
                 </form>
             </li>
 
             <li class="brand nav__menu--item">
                 <a class="navbar-brand" href="#">
-                    <img class="nav__img rounded-circle" src="scss/assets/img/logo-fbb.png" alt="">
+                    <img class="nav__img" src="scss/assets/img/hh.png" alt="logo FootballBadboys">
                 </a>
             </li>
             <li class="nav__menu--item">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
-                    CUCI GUDANG
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
+                    CLEARANCE SELL
                 </a>
             </li>
             <li class="nav__menu--item ">
-                <a href="#" class="nav__menu--link hvr-underline-from-center">
+                <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
                     ON SALE
                 </a>
             </li>
+
+
             <li class="nav__menu--item">
-                <a class="navbar-brand" href="#">
-                    <img class=" nav__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                <a class="navbar-brand" href="#" onclick="toggleCart()">
+                    <img class=" cart__img d-lg-none" src="scss/assets/img/cart.png" alt="">
                 </a>
                 <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
                     <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
                 </a>
             </li>
+
+
+
+
+
 
             <li class="nav__menu--item mobileOn">
                 <div class="socmed mobileOn">
@@ -185,247 +189,149 @@
 
     <main class="main">
         <!-- all product -->
-        <div class="container-fluid">
-            <section class="detail border">
-                <div class="detail__flex">
-                    <div class="product-wrap">
-
-                        <div class="swiper-container gallery-top">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+        <section class="detail border">
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-6 detail__flex">
+                        <div class="product-wrap">
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="scss/assets/img/produknya.svg" class="parent__img" alt="">
-                                </div>
-
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next swiper-button-white"></div>
+                                <div class="swiper-button-prev swiper-button-white"></div>
                             </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next swiper-button-white"></div>
-                            <div class="swiper-button-prev swiper-button-white"></div>
-                        </div>
-                        <div class="swiper-container gallery-thumbs">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
-                                </div>
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="child__img" src="scss/assets/img/produknya.svg" alt="">
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="detail-wrap">
-                    <div class="description pt-3">
-                        <h5 class="nama-produk">Skuda T-Shirt</h5>
-                        <h5 class="harga-produk">Rp. <span class="value">152000</span></h5>
-                        <span class="color">Color : Classic White Grey</span>
-                        <p>Description</p>
-                        <p class="desc">
-                            Introducing the "Skuda T-Shirt" heavily light from
-                            FootballBadboys. featuring an innovative pack into
-                            skutter design
-                        </p>
-                        <div class="size__form form-group">
-                            <span class="jdl">Pilih Warna : </span>
-                            <hr>
-                            <ul class="size__ul">
-                                <form action="#" class="size__form2">
-                                    <li class="size__li">
-                                        <input type="radio" class="size__radio" id="input1" for="red" value="red">
-                                        <label class="btn btn-outline-dark warna red" for="red">
-
-                                        </label>
-                                    </li>
-                                    <li class="size__li">
-                                        <input type="radio" class="size__radio" for="black" value="black">
-                                        <label class="btn btn-outline-dark warna black" for="black">
-
-                                        </label>
-                                    </li>
-                                    <li class="size__li">
-                                        <input type="radio" class="size__radio" for="green" value="green">
-                                        <label class="btn btn-outline-dark warna green" for="green">
-
-                                        </label>
-                                    </li>
-
-                                </form>
-
-
-                            </ul>
-
-                            <div class="size form-group">
-                                <span class="jdl">Size</span>
+                    <div class="col-lg-6 detail-wrap">
+                        <div class="description pt-3">
+                            <h5 class="nama-produk">Skuda T-Shirt</h5>
+                            <h5 class="harga-produk">Rp. <span class="value">152000</span></h5>
+                            <span class="color">Color : Classic White Grey</span>
+                            <p>Description</p>
+                            <p class="desc">
+                                Introducing the "Skuda T-Shirt" heavily light from
+                                FootballBadboys. featuring an innovative pack into
+                                skutter design
+                            </p>
+                            <div class="size__form form-group">
+                                <span class="jdl">Pilih Warna : </span>
                                 <hr>
-
-                                <ul class="size__ul ">
+                                <ul class="size__ul">
                                     <form action="#" class="size__form2">
                                         <li class="size__li">
-                                            <input type="radio" class="size__radio" for="s">
-                                            <label class="btn btn-outline-info" for="s">
-                                                S
+                                            <input type="radio" class="size__radio" id="input1" for="red" value="red">
+                                            <label class="btn btn-outline-dark warna red" for="red">
+
                                             </label>
                                         </li>
                                         <li class="size__li">
-                                            <input type="radio" class="size__radio" for="xl">
-                                            <label class="btn btn-outline-info" for="xl">
-                                                XL
+                                            <input type="radio" class="size__radio" for="black" value="black">
+                                            <label class="btn btn-outline-dark warna black" for="black">
+
                                             </label>
                                         </li>
                                         <li class="size__li">
-                                            <input type="radio" class="size__radio" for="xxl">
-                                            <label class="btn btn-outline-info" for="xxl">
-                                                XXL
+                                            <input type="radio" class="size__radio" for="green" value="green">
+                                            <label class="btn btn-outline-dark warna green" for="green">
+
                                             </label>
                                         </li>
-                                        <li class="size__li">
-                                            <input type="radio" class="size__radio" for="xs">
-                                            <label class="btn btn-outline-info" for="xs">
-                                                XS
-                                            </label>
-                                        </li>
-                                        <li class="size__li">
-                                            <input type="radio" class="size__radio" for="L">
-                                            <label class="btn btn-outline-info" for="L">
-                                                L
-                                            </label>
-                                        </li>
-                                        <li class="size__li"> <input type="radio" class="size__radio" for="M">
-                                            <label class="btn btn-outline-info" for="M">
-                                                M
-                                            </label>
-                                        </li>
-                                        <li class="size__li">
-                                            <input type="radio" class="size__radio" for="xxxl">
-                                            <label class="btn btn-outline-info" for="xxxl">
-                                                XXXL
-                                            </label>
-                                        </li>
+
                                     </form>
+
+
                                 </ul>
-                            </div>
 
-                            <span>Jumlah</span>
-                            <hr>
-                            <div class="operator">
-                                <form action="">
-                                    <button class="btn__operator">-</button>
-                                    <input class="operator__input" value="1" type="text">
-                                    <button class="btn__operator">+</button>
-                                </form>
-                            </div>
-                        </div>
-                        <button type="submit" class="w-100 btn btn-dark mb-5">Add To Cart</button>
+                                <div class="size form-group">
+                                    <span class="jdl">Size</span>
+                                    <hr>
 
-                        <h5>DESKRIPSI</h5>
-                        <p>The standout feature of this
-                            jacket is the ingenious pack into
-                            pocket design. Each lower
-                            front pocket has one side of a fine
-                            nylon zip sewn around it, when these
-                            two pockets are zipped together,
-                        </p>
-                        <p>Wearable innovation from FootballBadboys.
-                        </p>
-                        <ul>
-                            <li>- 100% Nylon</li>
-                            <li>- Pack into the pocket design</li>
-                            <li>- DWR shower resistant coating</li>
-                            <li>- Metallic silver membrane lining</li>
-                            <li>- Ergonomically shaped hood with toggle adjuster</li>
-                            <li>- Drawcord hood adjusters to the neck</li>
-                            <li>- Full front zip & branded zip pulle</li>
-                            <li>- Two front pockets with velcro fastenings</li>
-                            <li>- Branded toggle adjusters at the hem</li>
-                            <li>- Adjustable velcro cuffs</li>
-                            <li>- WO badge to the left front pocket</li>
-                            <li>- 'Too Much Too Young' inner back neck label</li>
-                        </ul>
+                                    <ul class="size__ul ">
+                                        <form action="#" class="size__form2">
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="s">
+                                                <label class="btn btn-outline-info" for="s">
+                                                    S
+                                                </label>
+                                            </li>
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="xl">
+                                                <label class="btn btn-outline-info" for="xl">
+                                                    XL
+                                                </label>
+                                            </li>
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="xxl">
+                                                <label class="btn btn-outline-info" for="xxl">
+                                                    XXL
+                                                </label>
+                                            </li>
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="xs">
+                                                <label class="btn btn-outline-info" for="xs">
+                                                    XS
+                                                </label>
+                                            </li>
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="L">
+                                                <label class="btn btn-outline-info" for="L">
+                                                    L
+                                                </label>
+                                            </li>
+                                            <li class="size__li"> <input type="radio" class="size__radio" for="M">
+                                                <label class="btn btn-outline-info" for="M">
+                                                    M
+                                                </label>
+                                            </li>
+                                            <li class="size__li">
+                                                <input type="radio" class="size__radio" for="xxxl">
+                                                <label class="btn btn-outline-info" for="xxxl">
+                                                    XXXL
+                                                </label>
+                                            </li>
+                                        </form>
+                                    </ul>
+                                </div>
 
-                        <h5>REKOMENDASI UNTUK ANDA</h5>
-                        <div class="recom">
-                            <figure>
-                                <img src="scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
-                            </figure>
-                            <figure>
-                                <img src="scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
-                            </figure>
-                            <figure>
-                                <img src="scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
-                            </figure>
-                            <figure>
-                                <img src="scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-        </section>
-        <!-- CART SECTION -->
-        <aside class="sidecart text-center">
-            <div class="container">
-                <ul class="flex-column">
-                    <div class="d-inline coba" onclick="toggleCart()">
-                        <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
-                    </div>
-                    <div class="cart__head text-light h4 m-0 text-center">
-
-                        <a class="navbar-brand" style="margin-right: 4rem;" href="#">
-                            <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
-                        </a>
-
-                    </div>
-
-                    <li class="d-flex flex-wrap flex-row">
-                        <!-- ini kalo gaada produk posisinya -->
-                        <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
-                            memilih produk sama
-                            sekali</span> </div> -->
-                        <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
-                                Selamat anda menambahkan item baru </span> <img class="peace__img shake"
-                                src="scss/assets/img/peace.svg" alt="">
-                            <hr class="cart__hr">
-                        </div>
-                    </li>
-                    <!-- tinggal matiin komentarnya -->
-
-                    <li class="d-flex flex-wrap flex-row">
-                        <!-- product image -->
-                        <div class="col-4 p-0">
-                            <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
-                        </div>
-                        <!-- end product image -->
-
-                        <!-- product props -->
-                        <div class="col-8 justify-content-around d-flex flex-column">
-
-                            <div class="items">
-                                <span class="productName">Skuda T-Shirt</span>
-                                <span class="productType">White grey motive</span>
-                                <span class="size">Size : <span class="size__value">M</span> </span>
+                                <span>Jumlah</span>
+                                <hr>
                                 <div class="operator">
                                     <form action="">
                                         <button class="btn__operator">-</button>
@@ -433,34 +339,285 @@
                                         <button class="btn__operator">+</button>
                                     </form>
                                 </div>
-                                <span class="total">Rp <span class="total__value">156.000</span></span>
-
                             </div>
-                        </div>
-
-                        <!-- end product props -->
-                        <hr class="li__hr">
+                            <button type="submit" class="w-100 btn btn-dark mb-5">Add To Cart</button>
 
 
-                    </li>
-                    <div class="flex-end">
-                        <div class="sub">
-                            <span>Sub Total</span>
-                            <span>Total</span>
-                        </div>
-                        <div class="total__div">
-                            <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
-                            <span class="total">Rp <span class="total__value">156.000</span></span>
                         </div>
                     </div>
-                </ul>
-
-                <div class="p-2">
-                    <button type="button" class="btn btn-primary btn__checkout">CHECKOUT</button>
                 </div>
+
+                <div class="row ">
+                    <!-- YOUTUBE -->
+                    <div class="col-lg-6 video__preview">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Q3qHG0FQ1zY"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- END YOUTUBE -->
+
+
+                    <div class="col-lg-6">
+                        <div class="product__desc">
+                            <h5>DESKRIPSI</h5>
+                            <p>The standout feature of this
+                                jacket is the ingenious pack into
+                                pocket design. Each lower
+                                front pocket has one side of a fine
+                                nylon zip sewn around it, when these
+                                two pockets are zipped together,
+                            </p>
+                            <p>Wearable innovation from FootballBadboys.
+                            </p>
+                            <ul>
+                                <li>- 100% Nylon</li>
+                                <li>- Pack into the pocket design</li>
+                                <li>- DWR shower resistant coating</li>
+                                <li>- Metallic silver membrane lining</li>
+                                <li>- Ergonomically shaped hood with toggle adjuster</li>
+                                <li>- Drawcord hood adjusters to the neck</li>
+                                <li>- Full front zip & branded zip pulle</li>
+                                <li>- Two front pockets with velcro fastenings</li>
+                                <li>- Branded toggle adjusters at the hem</li>
+                                <li>- Adjustable velcro cuffs</li>
+                                <li>- WO badge to the left front pocket</li>
+                                <li>- 'Too Much Too Young' inner back neck label</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row rekomendasi__anda">
+                    <div class="col-md-12">
+                        <h5>REKOMENDASI UNTUK ANDA</h5>
+                        <div class="recom">
+                            <a href="all-product.html">
+                                <figure>
+                                    <img src="scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
+                                </figure>
+                            </a>
+                            <a href="all-product.html">
+                                <figure>
+                                    <img src="scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
+                                </figure>
+                            </a>
+                            <a href="all-product.html">
+                                <figure>
+                                    <img src="scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
+                                </figure>
+                            </a>
+                            <a href="all-product.html">
+                                <figure>
+                                    <img src="scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal 2  -->
+                <!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Pemberitahuan</h5>
+                                <img src="scss/assets/img/pardon.webp" width="30px" height="30px"
+                                    alt="Sorry For Inconvinient">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <span class="lead">Mohon maaf atas ketidaknyamanan anda, karena website FootballBadboys
+                                    sedang dalam
+                                    pengembangan,</span><br><br>
+                                <span class="lead"> untuk pembelian produk harap hubungi contact Admin pada nomor
+                                    berikut :
+                                    <span class="text-danger"> 081229000151</span></span><br><br>
+                                <span class="lead">Terimakasih atas perhatianya.</span>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- end modal 2 -->
+
+                <!-- modal 2  -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="scss/assets/img/wa-cart.png" width="30px" height="30px" alt="icon Whatsapp ">
+                                <h5 class="modal-title ml-1" id="staticBackdropLabel">Beli Via Whatsapp</h5>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="data-item">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Nama Item</th>
+                                                        <td>Skuda T Shirt</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Warna</th>
+                                                        <td>Merah</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Ukuran</th>
+                                                        <td>S</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Jumlah</th>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" scope="row">Sub Total</th>
+                                                        <td>28000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img class="gmbr-produk" width="100%" src="scss/assets/img/produknya.svg"
+                                            alt="">
+                                    </div>
+                                </div>
+
+
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Nama Lengkap">
+                                        </div>
+                                        <div class="col">
+                                            <input type="number" class="form-control" placeholder="Nomor WA">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <select class="custom-select custom-select-sm">
+                                            <option selected>Metode Pembayaran</option>
+                                            <option value="1">Transfer BCA - 012345678 a/n Adnan Aziz
+                                            </option>
+                                            <option value="2">Transfer BTN - 012345678 a/n Adnan Aziz
+                                            </option>
+                                            <option value="3">Transfer BRI - 012345678 a/n Adnan Aziz
+                                            </option>
+                                            <option value="4">Transfer Mandiri - 012345678 a/n Adnan Aziz
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Catatan Tambahan"
+                                            aria-label="With textarea"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary w-100">Kirim</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal 2 -->
             </div>
+        </section>
+        <!-- CART SECTION -->
+        <aside class="sidecart text-center">
+
+            <ul class="flex-column">
+                <div class="d-inline coba" onclick="toggleCart()">
+                    <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
+                </div>
+                <div class="cart__head text-light h4 text-center">
+
+                    <a class="navbar-brand" style="margin-right: 4rem;" href="#">
+                        <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                    </a>
+
+                </div>
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- ini kalo gaada produk posisinya -->
+                    <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
+                                        memilih produk sama
+                                        sekali</span> </div> -->
+                    <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
+                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
+                            src="scss/assets/img/peace.svg" alt="">
+                        <hr class="cart__hr">
+                    </div>
+                </li>
+                <!-- tinggal matiin komentarnya -->
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- product image -->
+                    <div class="col-4 p-0">
+                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="">
+                    </div>
+                    <!-- end product image -->
+
+                    <!-- product props -->
+                    <div class="col-8 justify-content-around d-flex flex-column">
+
+                        <div class="items">
+                            <span class="productName">Skuda T-Shirt</span>
+                            <span class="productType">White grey motive</span>
+                            <span class="size">Size : <span class="size__value">M</span> </span>
+                            <div class="operator">
+                                <form action="">
+                                    <button class="btn__operator">-</button>
+                                    <input class="operator__input" value="1" type="text">
+                                    <button class="btn__operator">+</button>
+                                </form>
+                            </div>
+                            <span class="total">Rp <span class="total__value">156.000</span></span>
+
+                        </div>
+                    </div>
+
+                    <!-- end product props -->
+                    <hr class="li__hr">
+                </li>
+                <div class="flex-end">
+                    <div class="sub">
+                        <span>Sub Total</span>
+                        <span>Total</span>
+                    </div>
+                    <div class="total__div">
+                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
+                        <span class="total">Rp <span class="total__value">156.000</span></span>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary btn__checkout w-50" data-toggle="modal"
+                        data-target="#staticBackdrop">CHECKOUT</button>
+                </div>
+                <li>
+                    <div class="iklan">
+                        <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="advertisement image 1">
+                        <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="advertisement image 2">
+                    </div>
+                </li>
+            </ul>
+
 
         </aside>
+        <!-- END CART SECTION -->
 
         </div>
         <!-- end all product -->
@@ -621,11 +778,28 @@
         }
     }
 
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        speed: 900,
+        freeMode: false,
+        loopedSlides: 1, //looped slides should be the same
 
-    // function toggleCart() {
-    //     document.querySelector('.sidecart').classList.toggle('open-cart');
-    // }
-    // toggleCart();
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        freeMode: false,
+        speed: 900,
+        loopedSlides: 1, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
 
 </script>
 
