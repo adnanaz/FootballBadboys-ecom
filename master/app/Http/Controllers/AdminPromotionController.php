@@ -38,10 +38,9 @@ class AdminPromotionController extends Controller
                 if (File::exists($usersImage)) { // unlink or remove previous image from folder
                     unlink($usersImage);
                 }
+                $destinationPath = storage_path('app/public/banner'); // upload path
+                $files->move($destinationPath, $nama_file1);
             }
-
-        $destinationPath = storage_path('app/public/banner'); // upload path
-        $files->move($destinationPath, $nama_file1);
 
         $banners->year = $request->year?$request->year : $banners->year;
         $banners->text1 = $request->text1?$request->text1 : $banners->text1;
