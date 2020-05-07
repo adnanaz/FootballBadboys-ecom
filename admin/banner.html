@@ -30,11 +30,11 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- EXTERNAL CSS -->
-    <link rel="stylesheet" href="../scss/admin/css/mainAdmin.css">
+    <link rel="stylesheet" href="../scss/admin/assets/css/mainAdmin.css">
 
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class=" hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -175,7 +175,7 @@
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-rss-square"></i>
-                                <span class="badge badge-info right">3</span>
+                                <span class="badge badge-info right">2</span>
                                 <p>
                                     Promotion
                                     <i class="fas fa-angle-left right"></i>
@@ -194,12 +194,7 @@
                                         <p>Content Promotion</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="media-patner.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Media Patner</p>
-                                    </a>
-                                </li>
+
 
                             </ul>
                         </li>
@@ -260,18 +255,26 @@
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 bg">
                         <div class="container">
                             <div class="promotion">
                                 <div class="promotion__main">
 
                                     <div class="promotion__main-preview">
                                         <h5 class="text-center">PREVIEW</h5>
-                                        <figure><img src="../scss/assets/img/preview.png" alt="preview gambar"></figure>
+                                        <div class="preview__text text-center">
+                                            <h2>2020</h2>
+                                            <h1>NEW ARRIVAL</h1>
+                                            <h5 class="h5__left">on the street</h5>
+                                            <h5 class="h5__center">in the stadium</h5>
+                                        </div>
                                     </div>
 
                                     <div class="promotion__main-change">
                                         <h5 class="text-center">CHANGE BANNER</h5>
+                                        <div class="preview-banner text-center">
+                                            <img id="thumbnil" style="width:80%; margin: 0 auto;" src="" alt="image" />
+                                        </div>
                                         <form>
                                             <div class="form-group">
                                                 <label for="text-1">Teks 1</label>
@@ -294,7 +297,9 @@
                                             </div>
 
                                             <div class="form-group custom-file mt-3 mb-3">
-                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <input type="file" class="custom-file-input" id="customFile"
+                                                    accept="image/*" onchange="showMyImage(this)" />
+
                                                 <label class="custom-file-label" for="customFile">Gambar
                                                 </label>
                                             </div>
@@ -388,6 +393,26 @@
                 "responsive": true,
             });
         });
+
+        function showMyImage(fileInput) {
+            var files = fileInput.files;
+            for (var i = 0;i < files.length;i++) {
+                var file = files[i];
+                var imageType = /image.*/;
+                if (!file.type.match(imageType)) {
+                    continue;
+                }
+                var img = document.getElementById("thumbnil");
+                img.file = file;
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                })(img);
+                reader.readAsDataURL(file);
+            }
+        }
     </script>
 </body>
 

@@ -92,9 +92,22 @@
 }
 }
 
-// YOUTUBE PREVIEW
+// MODAL BELI
+.modal {
+  z-index: 99999 !important;
+}
 
-//END YOUTUBE PREVIEW
+.data-list {
+  display: flex;
+  flex-flow: row wrap;
+
+  li{
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+// END MODAL BELI
 
 
 @include media-xs {

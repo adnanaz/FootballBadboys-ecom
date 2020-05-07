@@ -1754,6 +1754,19 @@ main {
   border: 1px solid grey;
 }
 
+.modal {
+  z-index: 99999 !important;
+}
+
+.data-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.data-list li span {
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 320px) {
   .detail .child__img {
     width: 5vh;
