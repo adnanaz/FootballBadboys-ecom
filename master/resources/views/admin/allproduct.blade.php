@@ -129,7 +129,6 @@
                 </div>
                 
                 {{ $products->links() }}
-                </a>
             </div>
 
 

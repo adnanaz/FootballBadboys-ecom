@@ -15,7 +15,7 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::whereNotIn('name', ['Uncategorized', 'Discount'])->orderBy('id', 'DESC')->get();
+        $categories = Category::whereNotIn('name', ['Uncategorized', 'Discount', 'Clearance Sell'])->orderBy('id', 'DESC')->get();
 
         return view('admin.category', compact('categories'));
     }
