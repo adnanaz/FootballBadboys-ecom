@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout - Football Badboys</title>
+
+        <!-- Ini udah tak downloadin local -->
+        <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+        <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
+
+        <link rel="stylesheet" href="scss/assets/css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
+        <!-- JANGAN LUPA DIBUATIN OFFLINENYA DIM BIAR ENTENG DOWNLOADKE YA -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="node_modules/hover.css/css/hover-min.css">
+    </head>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid mobileOn" id="header-wrap">
+            <div class="flex">
+                <div class="menu-btn">
+                    <span class="menu-btn__burger"></span>
+                </div>
+                <div class="search lg-on">
+                    <form action="" class="formSearch">
+                        <input class="navSearch" type="search" placeholder="Cari sesuatu?">
+                        <img class="fa rounded-circle" src="scss/assets/img/search.png" width="40" height="40" alt="">
+                    </form>
+                </div>
+                <div class="brand ">
+                    <a class="navbar-brand" href="#">
+                        <img class="" src="scss/assets/img/hh.png" width="65" height="40" alt="">
+                    </a>
+                </div>
+                <div class="cuciGudang lg-on">
+                    <a class="navbar-brand" href="all-product.html">
+                        <img class="" src="scss/assets/img/sale.svg" width="40" height="40" alt="">
+                    </a>
+                </div>
+
+                <div class="cart lg-on">
+                    <a class="navbar-brand" href="#">
+                        <img class="" onclick="toggleCart()" src="scss/assets/img/cart.svg" width="40" height="40"
+                            alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav" id="navbar" style=" transition: top 0.5s;
+            height: 65px; position: fixed;">
+            <ul class="nav__menu">
+
+                <li class="nav__menu--item active">
+                    <a href="index.html" class="hvr-underline-from-center nav__menu--link">
+                        NEW ARRIVAL
+                    </a>
+                </li>
+                <li class="nav__menu--item custom nav-item dropdown">
+                    <a href="detail-product.html"
+                        class="nav-link dropdown-toggle hvr-underline-from-center nav__menu--link a__custom"
+                        data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        SHOP ONLINE
+                    </a>
+                    <div class="dropdown-menu" id="drop">
+                        <div class="dropdown-item">
+
+
+                            <ul class="">
+                                <li>
+                                    <a href="all-product.html">Jacket</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Jersey</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Merchandise</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Overshirt</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Polo T-shirt</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Shortpants</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">T-Shirt</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Waistbag</a>
+                                </li>
+                            </ul>
+
+                            <ul class="">
+                                <li>
+                                    <a href="all-product.html">Cagoule</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Caps</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Crewneck</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Half Zip</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">Hoodie</a>
+                                </li>
+                                <li>
+                                    <a href="all-product.html">adnan</a>
+                                </li>
+
+                            </ul>
+
+
+                            <ul class="child ">
+                                <li>
+                                    <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="">
+                                </li>
+                                <li>
+                                    <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="">
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nav__menu--item special">
+                    <form action="" class="formSearch">
+                        <input class="navSearch" type="search" placeholder="Cari sesuatu?">
+                        <img class=" fa search__img rounded-circle" src="scss/assets/img/search.png" alt="">
+                    </form>
+                </li>
+
+                <li class="brand nav__menu--item">
+                    <a class="navbar-brand" href="#">
+                        <img class="nav__img" src="scss/assets/img/hh.png" alt="logo FootballBadboys">
+                    </a>
+                </li>
+                <li class="nav__menu--item">
+                    <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
+                        CLEARANCE SELL
+                    </a>
+                </li>
+                <li class="nav__menu--item ">
+                    <a href="all-product.html" class="nav__menu--link hvr-underline-from-center">
+                        ON SALE
+                    </a>
+                </li>
+
+
+                <li class="nav__menu--item">
+                    <a class="navbar-brand" href="#" onclick="toggleCart()">
+                        <img class=" cart__img d-lg-none" src="scss/assets/img/cart.png" alt="">
+                    </a>
+                    <a class="navbar-brand d-none hvr-icon-up" href="#" onclick="toggleCart()">
+                        <img class="nav__img hvr-icon" src="scss/assets/img/cart.svg" alt="">
+                    </a>
+                </li>
+
+
+
+
+
+
+                <li class="nav__menu--item mobileOn">
+                    <div class="socmed mobileOn">
+                        <div class="fb"> <img class="fb__img" src="assets/fb.svg" alt="icon-fb"></div>
+                        <div class="ig"> <img class="ig__img" src="assets/ig.svg" alt="icon-ig"></div>
+                        <div class="twitter"> <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mobileOn text-center">
+                    <span class="lg-off text-light text-muted">&copy;2020 – Footballbadboys. All rights
+                        reserved.</span>
+                </li>
+            </ul>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="checkout">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Checkout</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Payment</li>
+                    </ol>
+                </nav>
+                <!--END Breadcrumb -->
+                <h4>FORM PEMBAYARAN</h4>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="border shadow payment__forms">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputName">Nama Lengkap</label>
+                                    <input type="email" class="form-control" id="exampleInputName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Alamat</label>
+                                    <textarea class="form-control" id="address"
+                                        aria-describedby="addressHelp"></textarea>
+                                    <small id="addressHelp" class="form-text text-muted">Tuliskan dengan lengkap
+                                        digunakan sebagai pengiriman paket anda.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="noWa">No WhatsApp</label>
+                                    <input type="number" class="form-control" id="noWa" aria-describedby="numberHelp">
+                                    <small id="numberHelp" class="form-text text-muted">Tuliskan dengan lengkap
+                                        Digunakan untuk konfirmasi pembayaran</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Metode Pembayaran</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Transfer BCA - 012345678 a/n Adnan Aziz</option>
+                                        <option>Transfer BTN - 012345678 a/n Adnan Aziz</option>
+                                        <option>Transfer BRI - 012345678 a/n Adnan Aziz</option>
+                                        <option>Transfer Mandiri - 012345678 a/n Adnan Aziz</option>
+                                        <option>Transfer Bank DIY - 012345678 a/n Adnan Aziz</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-check ">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1" required>Dengan ini saya
+                                        menyetujui <a href="#"> syarat</a> dan <a href="#">ketentuan</a>
+                                        FootballBadboys</label>
+                                </div>
+                                <button type="button" class="btn btn-primary bg-dark w-100" data-toggle="modal"
+                                    data-target="#staticBackdrop">SUBMIT FORM</button>
+                            </form>
+                        </div>
+
+                        <div class="info border shadow">
+                            <h4 class="col-xlor">INFORMASI</h4>
+                            <ul>
+                                <li>
+                                    <p>- Sistem pembayaran dilakukan melalui via WhatsApp
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>-Harga tersebut belum termasuk harga ongkos kirim</p>
+                                </li>
+                                <li>
+                                    <p>- Detail ongkos kirim akan dikirim melalui via WhatsApp dan
+                                        dapat dicek langsung melalui website penyedia layanan jasa pengiriman
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>- Informasi lebih lanjut hubungi <a href="#"> customer Service</a> Football
+                                        Badboys
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 ">
+                        <aside class="preorder border shadow">
+                            <div class="preorder__first">
+                                <span><span class="number__value"> 3 </span> Item</span>
+                                <span><a href="#">Edit</a> </span>
+                            </div>
+
+                            <div class="preorder__product-preview">
+                                <div class="row space">
+                                    <div class="col-xl-4 preorder__parent">
+                                        <img class="preorder__img" src="scss/assets/img/produknya.svg"
+                                            alt="product preview image">
+                                    </div>
+                                    <div class="col-xl-8 product__text-payment">
+                                        <span>Skuda T-Shirt</span>
+                                        <span>Warna : Putih</span>
+                                        <span>Size : M</span>
+                                        <span>Jumlah : 1</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row space">
+                                    <div class="col-xl-4 preorder__parent">
+                                        <img class="preorder__img" src="scss/assets/img/produk/cagoule.jpg"
+                                            alt="product preview image">
+                                    </div>
+                                    <div class="col-xl-8 product__text-payment">
+                                        <span>Cagoule De Pram</span>
+                                        <span>Warna : Putih</span>
+                                        <span>Size : M</span>
+                                        <span>Jumlah : 1</span>
+                                    </div>
+
+                                </div>
+                                <div class="row space">
+                                    <div class="col-xl-4 preorder__parent">
+                                        <img class="preorder__img" src="scss/assets/img/produk/bomber.jpg"
+                                            alt="product preview image">
+                                    </div>
+                                    <div class="col-xl-8 product__text-payment">
+                                        <span>Bomber De Lemonade Limited Edition</span>
+                                        <span>Warna : Putih</span>
+                                        <span>Size : M</span>
+                                        <span>Jumlah : 1</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex-event">
+                                    <div class="pricing">
+                                        <span>Subtotal</span>
+                                        <strong><span>Total</span></strong>
+                                    </div>
+
+                                    <div class="value__pricing">
+                                        <span>Rp. <span class="value">624000</span></span>
+                                        <strong><span>Rp. <span class="value">624000</span></span></strong>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- modal 2  -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Pemberitahuan</h5>
+                        <!-- <img src="scss/assets/img/pardon.webp" width="30px" height="30px" alt="Sorry For Inconvinient"> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="lead">Terimakasih telah membeli catalog kami.</span><br><br>
+                        <span class="lead"> Harap tunggu pesan dari admin football badboys beberapa saat lagi. <br><br>
+                            More
+                            info
+                            hubungi kami
+                            <span class="text-danger"> 081229000151</span></span><br><br>
+                        <span class="small"><small> Hati-hati penipuan megatasnamakan FootballBadboys nomor
+                                Footballbadboys
+                                resmi
+                                hanya pada nomor tersebut. Terimakasih</small></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal 2 -->
+
+        <!-- CART SECTION -->
+        <aside class="sidecart text-center">
+
+            <ul class="flex-column">
+                <div class="d-inline coba" onclick="toggleCart()">
+                    <img class="cart__closeBtn float-left" src="scss/assets/img/back.svg" alt="">
+                </div>
+                <div class="cart__head text-light h4 text-center">
+
+                    <a class="navbar-brand" style="margin-right: 4rem;" href="#">
+                        <img class="shake" src="scss/assets/img/cart.svg" width="40" height="40" alt="">
+                    </a>
+
+                </div>
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- ini kalo gaada produk posisinya -->
+                    <!-- <div class="col-12 text-light h5 text-center p-0"><span class="status-product">Maaf anda belum
+                                            memilih produk sama
+                                            sekali</span> </div> -->
+                    <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
+                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
+                            src="scss/assets/img/peace.svg" alt="">
+                        <hr class="cart__hr">
+                    </div>
+                </li>
+                <!-- tinggal matiin komentarnya -->
+
+                <li class="d-flex flex-wrap flex-row">
+                    <!-- product image -->
+                    <div class="col-4 p-0">
+                        <img class="img-fluid hvr-bounce-in" src="scss/assets/img/produknya.svg" alt="Product Image">
+                    </div>
+                    <!-- end product image -->
+
+                    <!-- product props -->
+                    <div class="col-8 justify-content-around d-flex flex-column">
+
+                        <div class="items">
+                            <span class="productName">Skuda T-Shirt</span>
+                            <span class="productType">White grey motive</span>
+                            <span class="size">Size : <span class="size__value">M</span> </span>
+                            <div class="operator">
+                                <form action="">
+                                    <button class="btn__operator">-</button>
+                                    <input class="operator__input" value="1" type="text">
+                                    <button class="btn__operator">+</button>
+                                </form>
+                            </div>
+                            <span class="total">Rp <span class="total__value">156.000</span></span>
+
+                        </div>
+                    </div>
+
+                    <!-- end product props -->
+                    <hr class="li__hr">
+                </li>
+                <div class="flex-end">
+                    <div class="sub">
+                        <span>Sub Total</span>
+                        <span>Total</span>
+                    </div>
+                    <div class="total__div">
+                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
+                        <span class="total">Rp <span class="total__value">156.000</span></span>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary btn__checkout w-50">CHECKOUT</button>
+                </div>
+                <li>
+                    <div class="iklan">
+                        <img class="adv__img" src="scss/assets/img/gmbar1.svg" alt="advertisement image 1">
+                        <img class="adv__img mt-2" src="scss/assets/img/gmbar2.svg" alt="advertisement image 2">
+                    </div>
+                </li>
+            </ul>
+
+
+        </aside>
+        <!-- END CART SECTION -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="footer__flex">
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>ABOUT COMPANY</h3>
+                            <hr class="footer__hr hr-1">
+                        </div>
+
+                        <div class="footer__item--body1">
+                            <p>Footballbadboys merupakan distro clothing yang berada di yogyakarta yang merupakan produk
+                                local buatan sendiri...</p>
+                            <div class="social">
+                                <img class="address__img" src="assets/address.svg" alt="icon-alamat">
+                                <span class="body__span">Jl turi km 3.7 pondok idaman A2 Kadisobo trimuyo sleman </span>
+                                <br>
+                                <img class="phone__img" src="assets/telfon.svg" alt="icon-alamat">
+                                <span class="body__span">+628 777 111 </span>
+                                <br>
+                                <img class="email__img" src="assets/email.svg" alt="icon-alamat">
+                                <span class="body__span">footballbadboys@cs.com </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>FEATURED</h3>
+                            <hr class="footer__hr hr-2">
+                        </div>
+
+                        <div class="footer__item--body2">
+                            <ul class="body__ul">
+                                <li class="body__li"><a href="#"><span class="body__span">New Arrivals</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Spring Summer</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Weekend Offender </span></a>
+                                </li>
+                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Special Offers </span></a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>KOLEKSI</h3>
+                            <hr class="footer__hr hr-3">
+                        </div>
+
+                        <div class="footer__item--body3">
+                            <ul class="body__ul">
+                                <li class="body__li"><a href="#"><span class="body__span">Accesories</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span"> Classics</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span"> Specials </span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Outlet</span> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__item--head">
+                            <h3>TRACK US ON</h3>
+                            <hr class="footer__hr hr-4">
+                        </div>
+
+
+                        <div class="footer__item--body4">
+                            <div class="social">
+                                <img class="fb__img" src="assets/fb.svg" alt="icon-fb">
+                                <a href="#"><span class="body__span">footballbadboys</span></a>
+                                <br>
+                                <img class="ig__img" src="assets/ig.svg" alt="icon-ig">
+                                <a href="#"><span class="body__span">@Footballbadboys </span></a>
+                                <br>
+                                <img class="twitter__img" src="assets/twitter.svg" alt="icon-twitter">
+                                <a href="#"><span class="body__span">footballbadboys@cs.com </span></a>
+                                <br>
+
+
+                                <div class="box">
+                                    <span class="box__text">Bayar Dengan</span>
+                                    <img class="box__img" src="assets/visa.svg" alt="visa">
+                                    <img class="box__img" src="assets/paypal.svg" alt="paypal">
+                                    <img class="box__img" src="assets/mastercard.svg" alt="mastercard">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__item special">
+                        <div class="footer__item--flex">
+                            <ul class="">
+                                Sitemaps </li>
+                                <li>SearchUs </li>
+                                <li>Advance </li>
+                                <li>Contact us </li>
+                                <li>Subscribe us </li>
+                            </ul>
+                            <div class="box2">
+                                <span class="copy">2020 FootballBadboys
+                                </span>
+                                <span class="copy">Designed and Developed By OneCode.id
+                                </span>
+                                <span class="copy"> &copy All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+
+</html>

@@ -372,6 +372,7 @@
 
 <script src="/js/main.js"></script>
 <script>
+
     $("#checkAll").click(function () {
         $(".check").prop('checked', $(this).prop('checked'));
     });
@@ -388,6 +389,7 @@
             container.find('.search-input').val('');
         }
     }
+
 </script>
 
 </html>

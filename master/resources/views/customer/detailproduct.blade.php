@@ -1,4 +1,4 @@
-@extends('layout.customer')
+ @extends('layout.customer')
 
 @section('title','Detail Product - FootballBadboys')
 
@@ -245,6 +245,7 @@
     <!-- CART SECTION -->
 
     <script>
+    <script>
         var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         slidesPerView: 5,
@@ -268,5 +269,5 @@
         },
     });
     </script>
-
+    </script>
 @endsection
