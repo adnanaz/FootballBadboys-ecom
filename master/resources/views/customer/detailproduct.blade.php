@@ -1,4 +1,4 @@
-@extends('layout.customer')
+ @extends('layout.customer')
 
 @section('title','Detail Product - FootballBadboys')
 
@@ -244,4 +244,29 @@
     </section>
     <!-- CART SECTION -->
 
+    <script>
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        speed: 900,
+        freeMode: false,
+        loopedSlides: 1, //looped slides should be the same
+
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        freeMode: false,
+        speed: 900,
+        loopedSlides: 1, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+    </script>
+    
 @endsection
