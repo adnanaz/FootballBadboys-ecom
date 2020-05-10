@@ -43,6 +43,7 @@
 
                                     <figcaption>{{ $discount->name }}</figcaption>
                                     <span class="price">Rp. <span>{{ $discount->price }}</span></span>
+                                    <span class="price">Rp. <span>{{ $discount->price_discount }}</span></span>
                                     <div class="properti hvr-bounce-to-top">
                                     <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
                                         src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
@@ -59,7 +60,6 @@
                     </div>
 
                     {{ $discounts->links() }}
-                    </a>
                 </div>
 
 
