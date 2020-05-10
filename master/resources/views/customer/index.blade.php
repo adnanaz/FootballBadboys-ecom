@@ -161,7 +161,7 @@
     </section>
 
     <script>
-          var swiper = new Swiper('.swiper-container', {
+   var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
         // init: false,

@@ -245,7 +245,8 @@
     <!-- CART SECTION -->
 
     <script>
-            var galleryThumbs = new Swiper('.gallery-thumbs', {
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         slidesPerView: 5,
         speed: 900,
@@ -268,5 +269,5 @@
         },
     });
     </script>
-    
+    </script>
 @endsection

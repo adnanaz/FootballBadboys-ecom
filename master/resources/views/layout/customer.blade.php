@@ -58,7 +58,7 @@
 
             <li class="nav__menu--item active">
                 <a href="/" class="hvr-underline-from-center nav__menu--link">
-                    NEW ARRIVAL
+                    NEW ARRIVALLLL
                 </a>
             </li>
             <li class="nav__menu--item custom nav-item dropdown">
@@ -390,73 +390,6 @@
         }
     }
 
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        // init: false,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        speed: 900,
-        loop: true,
-        autoplay: {
-            delay: 1500,
-
-            disableOnInteraction: true,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            1400: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-            1600: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-            },
-        }
-    });
-   
-
-    function searchToggle(obj, evt) {
-        var container = $(obj).closest('.search-wrapper');
-        if (!container.hasClass('active')) {
-            container.addClass('active');
-            evt.preventDefault();
-        }
-        else if (container.hasClass('active') && $(obj).closest('.input-holder').length == 0) {
-            container.removeClass('active');
-            // clear input
-            container.find('.search-input').val('');
-        }
-    }
 </script>
 
 </html>
