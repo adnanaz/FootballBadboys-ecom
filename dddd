@@ -1,0 +1,59 @@
+* [33med09cb5[m[33m ([m[1;36mHEAD -> [m[1;32mbackend[m[33m)[m Komentar
+[31m|[m * [33mc06c70b[m[33m ([m[1;32mmaster[m[33m)[m index
+[31m|[m [32m|[m *   [33m06710a2[m[33m ([m[1;31marfiandimas/master[m[33m)[m Merge pull request #8 from Arfiandimas/backend
+[31m|[m [32m|[m [33m|[m[31m\[m  
+[31m|[m [32m|[m[31m_[m[33m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m [33m|[m   
+* [32m|[m [33m|[m [33m0c26fe0[m[33m ([m[1;31morigin/backend[m[33m)[m Javascript
+[34m|[m [32m|[m *   [33mec25566[m Merge pull request #7 from Arfiandimas/backend
+[34m|[m [32m|[m [35m|[m[34m\[m  
+[34m|[m [32m|[m[34m_[m[35m|[m[34m/[m  
+[34m|[m[34m/[m[32m|[m [35m|[m   
+* [32m|[m [35m|[m [33mc644b2d[m Coba
+* [32m|[m [35m|[m [33m9101a89[m add database
+* [32m|[m [35m|[m [33m1ad31fc[m layouting view customer
+[32m|[m[32m/[m [35m/[m  
+[32m|[m * [33mb2ae80c[m adding new page Checkout and Payment
+[32m|[m[32m/[m  
+* [33m978fd39[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m done halaman admin
+*   [33me921cee[m Merge pull request #5 from Arfiandimas/backend
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m63a8b96[m Fix Update Banner
+[1;31m|[m *   [33mc91cf08[m Merge remote-tracking branch 'arfiandimas/master' into backend
+[1;31m|[m [1;33m|[m[1;31m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m   
+* [1;33m|[m [33m429e3c0[m updating admin views on content promotion and cart
+* [1;33m|[m   [33m408daaf[m Merge pull request #3 from Arfiandimas/backend
+[1;35m|[m[1;36m\[m [1;33m\[m  
+* [1;36m|[m [1;33m|[m [33m41d0468[m updating admin views,homepage which last day unresponsive
+[1;36m|[m [1;36m|[m * [33m79da3da[m Create category and content promotion admin
+[1;36m|[m [1;36m|[m[1;36m/[m  
+[1;36m|[m * [33ma3640fd[m CRUD Product
+[1;36m|[m * [33m0c73042[m Merge pull request #2 from Arfiandimas/backend
+[1;36m|[m[1;36m/[m[32m|[m 
+[1;36m|[m * [33m3671754[m Layouting
+[1;36m|[m[1;36m/[m  
+* [33m5b76c57[m Admin Page Done
+* [33m76af49e[m adding template admin
+* [33mb591212[m updating new page Detail product
+* [33m5f756bc[m updating new page All-Product, cart tidak responsive dan kurang size responsive 350px
+* [33ma76de38[m adding ADMIN PAGE (kurang Responsive dkit dan add product)
+* [33me37840f[m landing-page DONE
+*   [33m7f03eb4[m Merge pull request #1 from Arfiandimas/backend
+[33m|[m[34m\[m  
+[33m|[m * [33m381b22c[m Add project laravel
+[33m|[m *   [33me7e536e[m fix conflict
+[33m|[m [35m|[m[36m\[m  
+[33m|[m * [36m|[m [33m6067551[m updating Readme.md
+[33m|[m * [36m|[m [33me569bc4[m updating Readme.md
+* [36m|[m [36m|[m [33m59a2ca6[m update some views on landing-page
+[36m|[m [36m|[m[36m/[m  
+[36m|[m[36m/[m[36m|[m   
+* [36m|[m [33mea2ef49[m editing readme.md - 2
+* [36m|[m [33m67cc133[m editing readme.md - 2
+* [36m|[m [33m771dafd[m editing readme.md
+* [36m|[m [33m92fb59d[m updating views and responsive on index
+[36m|[m[36m/[m  
+* [33m257f5a2[m first init repository this job GOODLUCK :)
+* [33m9feecc4[m Initial commit
