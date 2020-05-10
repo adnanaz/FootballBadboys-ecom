@@ -30,6 +30,7 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 <!-- EXTERNAL CSS -->
 <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/scss/admin/assets/css/mainAdmin.css">
 <link rel="stylesheet" href="/css/hover-min.css">
 <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -84,8 +85,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview menu-open">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link active">
+        <li class="nav-item has-treeview">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link {{ Request::is('admin') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
                 Dashboard
@@ -96,7 +97,7 @@
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
-            <span class="badge badge-info right">3</span>
+            <span class="badge badge-info right">4</span>
             <p>
                 Invetory
                 <i class="fas fa-angle-left right"></i>
@@ -104,28 +105,34 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{{ route('admin.product') }}" class="nav-link">
+                <a href="{{ route('admin.product') }}" class="nav-link {{ Request::is('admin/product') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>All Product</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('category.index') }}" class="nav-link">
+                <a href="{{ route('category.index') }}" class="nav-link {{ Request::is('admin/product/category') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Category</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('discount.index') }}" class="nav-link">
+                <a href="{{ route('discount.index') }}" class="nav-link {{ Request::is('admin/product/discount') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Diskon</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('adminclearancesell.index') }}" class="nav-link {{ Request::is('admin/product/clearancesell') ? 'active' : '' }}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Clearance Sell</p>
                 </a>
             </li>
 
             </ul>
         </li>
         <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.order') }}" class="nav-link {{ Request::is('admin/order') ? 'active' : '' }}">
             <i class="nav-icon fas fa-shopping-cart"></i>
             <p>
                 Orders
@@ -135,7 +142,7 @@
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-rss-square"></i>
-            <span class="badge badge-info right">3</span>
+            <span class="badge badge-info right">2</span>
             <p>
                 Promotion
                 <i class="fas fa-angle-left right"></i>
@@ -143,21 +150,15 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{{ route('admin.banner') }}" class="nav-link">
+                <a href="{{ route('admin.banner') }}" class="nav-link {{ Request::is('admin/product/promotion/banner') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Banner</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.contentpromotion') }}" class="nav-link">
+                <a href="{{ route('admin.contentpromotion') }}" class="nav-link {{ Request::is('admin/product/promotion/contentpromotion') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Content Promotion</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="media-patner.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Media Patner</p>
                 </a>
             </li>
 
@@ -270,6 +271,45 @@
         "responsive": true,
         });
     });
+
+    function previewImage() {
+        document.getElementById("image-preview").style.display = "block";
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("image-preview").src = oFREvent.target.result;
+        };
+    };
+    function previewImage2() {
+        document.getElementById("image-preview2").style.display = "block";
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("image-source2").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("image-preview2").src = oFREvent.target.result;
+        };
+    };
+
+    function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0;i < files.length;i++) {
+            var file = files[i];
+            var imageType = /image.*/;
+            if (!file.type.match(imageType)) {
+                continue;
+            }
+            var img = document.getElementById("thumbnil");
+            img.file = file;
+            var reader = new FileReader();
+            reader.onload = (function (aImg) {
+                return function (e) {
+                    aImg.src = e.target.result;
+                };
+            })(img);
+            reader.readAsDataURL(file);
+        }
+    }
     </script>
     </body>
 

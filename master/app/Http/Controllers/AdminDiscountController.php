@@ -15,12 +15,6 @@ class AdminDiscountController extends Controller
      */
     public function index()
     {
-        // $discounts = Product::all();
-        // $discounts->categories()->where('name', 'discount');
-        // $categories = Category::get();
-        // foreach ($categories as $category) {
-        //     $discounts = Product::where('category_id', $category->name)->orderBy('id', 'DESC')->paginate(12);
-        // }   
         $discounts = Product::where('category_id', 10)->orderBy('id', 'DESC')->paginate(12);
 
         return view('admin.discount', compact('discounts'));

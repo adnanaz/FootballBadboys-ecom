@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('admin.index');
 // });
+Route::get('/','LandingController@index')->name('landing.index');
+Route::get('/product','AllProductController@index')->name('allproduct.index');
+Route::get('/onsale','OnSaleController@index')->name('onsale.index');
+Route::get('/clearancesell','ClearanceSellController@index')->name('clearancesell.index');
+Route::get('/product/{product}','AllProductController@show')->name('product.show');
 
 
 Route::group(['prefix'=>'admin'] , function(){
@@ -23,8 +28,6 @@ Route::group(['prefix'=>'admin'] , function(){
 
     Route::group(['prefix' => 'product'], function () {
         Route::get('/','AdminProductController@index')->name('admin.product');
-        Route::get('/show/{category}','AdminProductController@index_by_kategory')->name('product.bycategory');
-        Route::get('/show/{size}','AdminProductController@index_by_size')->name('product.bysize');
         Route::get('/add','AdminProductController@create')->name('admin.addproduct');
         Route::post('/add','AdminProductController@store')->name('addproduct.store');
         Route::get('/{id}/edit','AdminProductController@edit')->name('editproduct.edit');
@@ -40,6 +43,10 @@ Route::group(['prefix'=>'admin'] , function(){
 
         Route::group(['prefix' => 'discount'], function () {
             Route::get('/','AdminDiscountController@index')->name('discount.index');
+        });
+
+        Route::group(['prefix' => 'clearancesell'], function () {
+            Route::get('/','AdminClearanceSellController@index')->name('adminclearancesell.index');
         });
 
         Route::group(['prefix' => 'promotion'], function () {

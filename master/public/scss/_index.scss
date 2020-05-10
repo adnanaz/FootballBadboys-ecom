@@ -2,7 +2,12 @@ header {
     position: fixed;
     z-index: 99;
     width: 100%;
-    
+  }
+
+  #header-wrap {
+    .flex {
+      width: 100%;
+    }
   }
   
   main {
@@ -25,6 +30,7 @@ header {
     .dropdown-item {
       display: flex;
       flex-wrap: wrap;
+      background-color: transparent !important;
       ul {
         margin: 1rem 0;
       }
@@ -32,6 +38,7 @@ header {
       li {
         margin: 0 1rem;
       }
+
 
       .adv__img {
         width: 32vh;
@@ -137,7 +144,7 @@ header {
   width: 42.5px;
   height: 42.5px;
   position: absolute;
-  top: 0;
+  top: 9px;
   right: 0;
   border-radius: 50%;
   color: #07051a;
@@ -197,19 +204,19 @@ header {
   }
 
   .steps {
-    background: url('../img/bgSec2.svg') center top;
-    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: url('../img/bgSec2.svg') center top;
+    background-size: cover;
     padding: 4rem 0;
     position: relative;
     z-index: 1;
     top:-6%;
 
-
+&__item {
     .airplane {
       
       &__img {
@@ -260,6 +267,7 @@ header {
      
   }
 }
+}
 
 .imgBanner {
   display: flex;
@@ -290,6 +298,7 @@ header {
 
 
   &__text {
+    width: 100%;
     text-align: center;
     padding: 1rem 0;
     h1 {
@@ -300,7 +309,6 @@ header {
     p {
       color: $secondary-color;
       padding: 0 1rem;
-      margin-top: -1%;
       font-size: 1.1rem;
     }
   }
@@ -360,6 +368,15 @@ header {
   top: -7%;
   display: block !important;
 
+  &__img {
+    width: 12vh;
+  }
+
+  .latina {
+    font-family: 'Alex Brush', cursive;
+    font-size: 1.2rem;
+  }
+
   &__text {
     text-align: center;
     padding: 1rem;
@@ -375,6 +392,7 @@ header {
       text-align: center;
 
     }
+
   }
 
   &__item {
@@ -407,6 +425,7 @@ header {
 
   &__flex {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
    

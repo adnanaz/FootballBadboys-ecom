@@ -22,19 +22,19 @@ class AdminProductController extends Controller
     public function index()
     {
         if(request()->category){
-            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::where('category_id',request()->category)->orderBy('id', 'DESC')->paginate(12);
         } elseif (request()->size){
-            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::with('sizes')->whereHas('sizes', function ($query){
                 $query->where('slug', request()->size);
-            })->whereNotIn('category_id', [10])->orderBy('id', 'DESC')->paginate(12);
+            })->whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(12);
         } else {
-            $categories = Category::whereNotIn('id', [10])->orderBy('id', 'DESC')->get();
+            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
-            $products = Product::whereNotIn('category_id', [10])->orderBy('id', 'DESC')->paginate(12);
+            $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(12);
         }
 
         return view('admin.allproduct', compact('categories', 'sizes', 'products'));
@@ -191,7 +191,7 @@ class AdminProductController extends Controller
         $products->material = $request->material?$request->material : $products->material;
         $products->link_video = $request->link_video?$request->link_video : $products->link_video;
         $products->price = $request->price?$request->price : $products->price;
-        $products->price_discount = $request->price_discount?$request->price_discount : $products->price_discount;
+        $products->price_discount = $request->price_discount?$request->price_discount : null;
         $products->image = $request->file('uploadFile')?$insert : $products->image;
         $products->category_id = $request->category_id?$request->category_id : $products->category_id;
 

@@ -35,50 +35,57 @@
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 bg">
                         <div class="container">
                             <div class="promotion">
                                 <div class="promotion__main">
 
-                                    <div style="text-align: center;">
-                                        <h3>{{ $banners->year }}</h3>
-                                        <h3>{{ $banners->text1 }}</h3>
-                                        <h3>{{ $banners->text2 }}</h3>
-                                        <h3>{{ $banners->text3 }}</h3>
-                                    </div>
                                     <div class="promotion__main-preview">
-                                        <figure><img src="{{ asset('storage/banner/'.$banners->model) }}" alt="preview gambar"></figure>
+                                        <h5 class="text-center">PREVIEW</h5>
+                                        <div class="preview__text text-center">
+                                            <h2>{{ $banners->year }}</h2>
+                                            <h1>{{ $banners->text1 }}</h1>
+                                            <h5 class="h5__left">{{ $banners->text2 }}</h5>
+                                            <h5 class="h5__center">{{ $banners->text3 }}</h5>
+                                        </div>
                                     </div>
 
                                     <div class="promotion__main-change">
                                         <h5 class="text-center">CHANGE BANNER</h5>
+                                        <div class="preview-banner text-center">
+                                            <img id="thumbnil" style="width:80%; margin: 0 auto;" src="{{ asset('storage/banner/'.$banners->model) }}" alt="image" />
+                                        </div>
                                         <form action="{{ route('banner.update', $banners) }}" method="POST" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                             <div class="form-group">
                                                 <label for="text-1">Year</label>
-                                                <input type="text" class="form-control" id="year" name="year" placeholder="2020" value="{{ $banners->year }}">
+                                                <input type="text" class="form-control" id="text-1" name="year" placeholder="2020" value="{{ $banners->year }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="text-2">Teks 1</label>
-                                                <input type="text" class="form-control" id="text-1" name="text1"
+                                                <input type="text" class="form-control" id="text-2" name="text1"
                                                     placeholder="NEW ARRIVAL" value="{{ $banners->text1 }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="text-3">Teks 2</label>
-                                                <input type="text" class="form-control" name="text2" id="text-2"
+                                                <input type="text" class="form-control" id="text-3" name="text2"
                                                     placeholder="on the street" value="{{ $banners->text2 }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="text-4">Teks 3</label>
-                                                <input type="text" class="form-control" id="text-3" name="text3"
+                                                <input type="text" class="form-control" id="text-4" name="text3"
                                                     placeholder="in the stadium" value="{{ $banners->text3 }}">
                                             </div>
 
-                                            <div class="form-group custom-file mb-3">
-                                                <input type="file" value="Choose File" id="model" name="model">
+                                            <div class="form-group custom-file mt-3 mb-3">
+                                                <input type="file" class="custom-file-input" id="customFile" name="model"
+                                                    accept="image/*" onchange="showMyImage(this)" />
+
+                                                <label class="custom-file-label" for="customFile">Gambar
+                                                </label>
                                             </div>
                                             <div class="save mb-3">
-                                                <button type="submit" class="btn btn-primary w-45 ">Save</button>
+                                                <button type="submit" class="btn btn-primary w-45 ">Simpan</button>
                                             </div>
                                         </form>
                                     </div>
