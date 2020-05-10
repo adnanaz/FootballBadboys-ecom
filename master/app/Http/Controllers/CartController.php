@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Banner;
-use App\ContentPromotion;
-use App\Product;
 use App\Category;
+use App\ContentPromotion;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
-class LandingController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +16,10 @@ class LandingController extends Controller
      */
     public function index()
     {
-        $banner = Banner::findOrFail(1);
-        $contentpromotion = ContentPromotion::findOrFail(1);
-        $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->take(4)->get();
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $contentpromotion = ContentPromotion::findOrFail(1);
 
-        return view('customer.index', compact('banner', 'contentpromotion', 'products', 'categories'));
+        return view('customer.cart', compact('categories', 'contentpromotion'));
     }
 
     /**
@@ -43,7 +40,10 @@ class LandingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cart = Cart::add($request->id, $request->name, 1, $request->price, ['size' => $request->size, 'color' => $request->color, 'image' => $request->image])
+            ->associate('App\Product');
+        
+        return redirect()->route('cart.index')->with('success', 'Product Berhasil Ditambahkan ke Cart!');
     }
 
     /**
@@ -77,7 +77,10 @@ class LandingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Cart::update($id, $request->quantity);
+
+        session()->flash('success','Jumlah berhasil diupdate!');
+        return response()->json(['success' => true]);
     }
 
     /**
@@ -88,6 +91,8 @@ class LandingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+
+        return back()->with('success', 'Product Berhasil Dihapus dari cart!');;
     }
 }

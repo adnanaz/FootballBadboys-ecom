@@ -74,8 +74,10 @@ class AllProductController extends Controller
         $contentpromotion = ContentPromotion::findOrFail(1);
 
         $product = Product::where('slug', $slug)->firstOrFail();
+        
+        $rekomendasi = Product::where('slug', '!=', $slug)->whereNotIn('category_id', [10, 12])->inRandomOrder()->take(4)->get();
 
-        return view('customer.detailproduct', compact('categories', 'contentpromotion', 'product'));
+        return view('customer.detailproduct', compact('categories', 'contentpromotion', 'product', 'rekomendasi'));
     }
 
     /**
