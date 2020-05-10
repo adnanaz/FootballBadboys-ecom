@@ -46,7 +46,7 @@
                         </figure>
 
                     @endforeach
-                    <!-- end item produknya -->
+                    <!-- end item produknyaa -->
 
 
                 </div>
