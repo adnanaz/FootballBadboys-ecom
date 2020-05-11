@@ -234,10 +234,9 @@
     </section>
     <!-- CART SECTION -->
 
-<script src="/node_modules/swiper/js/swiper.js"></script>
-<script src="/node_modules/swiper/js/swiper.min.js"></script>
     <script>
-       var galleryThumbs = new Swiper('.gallery-thumbs', {
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         slidesPerView: 5,
         speed: 900,
@@ -259,5 +258,6 @@
             swiper: galleryThumbs,
         },
     });
+    </script>
     </script>
 @endsection

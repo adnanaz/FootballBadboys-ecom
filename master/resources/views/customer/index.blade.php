@@ -127,8 +127,6 @@
 
     </section>
 
-<script src="/node_modules/swiper/js/swiper.js"></script>
-<script src="/node_modules/swiper/js/swiper.min.js"></script>
     <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
