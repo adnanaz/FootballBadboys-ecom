@@ -155,6 +155,7 @@
 <body>
     <main class="main">
 
+        
         @yield('content')
 
 
@@ -278,7 +279,7 @@
         </footer>
 
         <!-- CART SECTION -->
-        <aside class="sidecart text-center">
+        {{-- <aside class="sidecart text-center">
 
             <ul class="flex-column">
                 <div class="d-inline coba" onclick="toggleCart()">
@@ -341,7 +342,7 @@
                     </div>
                 </div>
                 <div class="p-2">
-                    <button type="button" class="btn btn-primary btn__checkout w-50">CHECKOUT</button>
+                    <button type="button" class="btn btn-primary btn__checkout w-50">CART</button>
                 </div>
                 <li>
                     <div class="iklan">
@@ -351,8 +352,7 @@
                 </li>
             </ul>
 
-
-        </aside>
+        </aside> --}}
         <!-- END CART SECTION -->
     </main>
 </body>
@@ -369,6 +369,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="/js/main.js"></script>
 <script>

@@ -1,4 +1,4 @@
- @extends('layout.customer')
+@extends('layout.customer')
 
 @section('title','Detail Product - FootballBadboys')
 
@@ -49,50 +49,50 @@
                         <p class="desc">
                             {!! $product->description !!}
                         </p>
-                        <div class="size__form form-group">
-                            <span class="jdl">Pilih Warna : </span>
-                            <hr>
-                            <ul class="size__ul">
-                                <form action="#" class="size__form2">
-                                    @foreach($product->colors as $color)
-                                    <li class="size__li">
-                                        <input type="radio" class="size__radio" id="input1" for="{{ $color->name }}" value="{{ $color->name }}">
-                                        <label class="btn btn-outline-dark warna" style="background-color: {{ $color->name_html }};" for="{{ $color->name }}">
-                                        </label>
-                                    </li>
-                                    @endforeach
-                                </form>
-                            </ul>
 
-                            <div class="size form-group">
-                                <span class="jdl">Size</span>
+                        <form action="{{ route('cart.store') }}" method="POST">
+                            {{ csrf_field() }}
+                            <div class="size__form form-group">
+                                <span class="jdl">Pilih Warna </span>
                                 <hr>
-
-                                <ul class="size__ul ">
-                                    <form action="#" class="size__form2">
-                                        @foreach($product->sizes as $size)
+                                <ul class="size__ul">
+                                    <div class="size__form2">
+                                        @foreach($product->colors as $color)
                                         <li class="size__li">
-                                            <input type="radio" class="size__radio" for="{{ $size->name }}">
-                                            <label class="btn btn-outline-info" for="{{ $size->name }}">
-                                                {{ $size->name }}
+                                            <input type="radio" id="{{ $color->id }}" name="color" value="{{ $color->name }}">
+                                            <label class="btn btn-outline-dark warna" style="background-color: {{ $color->name_html }};" for="{{ $color->name }}">
                                             </label>
                                         </li>
                                         @endforeach
-                                    </form>
+                                    </div>
                                 </ul>
-                            </div>
+                                
+                                <div class="size form-group">
+                                    <span class="jdl">Size</span>
+                                    <hr>
 
-                            <span>Jumlah</span>
-                            <hr>
-                            <div class="operator">
-                                <form action="">
-                                    <button class="btn__operator">-</button>
-                                    <input class="operator__input" value="1" type="text">
-                                    <button class="btn__operator">+</button>
-                                </form>
+                                    <ul class="size__ul ">
+                                        <div class="size__form2">
+                                            @foreach($product->sizes as $size)
+                                            <li class="size__li">
+                                                <input type="radio" id="{{ $size->id }}" name="size" value="{{ $size->name }}">
+                                                <label class="btn btn-outline-info" for="{{ $size->name }}">
+                                                    {{ $size->name }}
+                                                </label>
+                                            </li>
+                                            @endforeach
+                                        </div>
+                                    </ul>
+                                </div>
+                                
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="image" value="{{ json_decode($product->image)[0] }}">
+                                    <input type="hidden" name="price" value="<?php if($product->price_discount == 0){ echo $product->price; }else{echo $product->price_discount;}?>">
+        
+                                    <button type="submit" class="w-100 btn btn-dark mb-5">Add To Cart</button>
                             </div>
-                        </div>
-                        <button type="submit" class="w-100 btn btn-dark mb-5">Add To Cart</button>
+                        </form>
 
 
                     </div>
@@ -129,32 +129,22 @@
                 <div class="col-md-12">
                     <h5>REKOMENDASI UNTUK ANDA</h5>
                     <div class="recom">
-                        <a href="all-product.html">
-                            <figure>
-                                <img src="/scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
-                            </figure>
-                        </a>
-                        <a href="all-product.html">
-                            <figure>
-                                <img src="/scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
-                            </figure>
-                        </a>
-                        <a href="all-product.html">
-                            <figure>
-                                <img src="/scss/assets/img/recom-1.svg" alt="Recomendation Product 1">
-                            </figure>
-                        </a>
-                        <a href="all-product.html">
-                            <figure>
-                                <img src="/scss/assets/img/recom-2.svg" alt="Recomendation Product 1">
-                            </figure>
-                        </a>
+
+                        @foreach ($rekomendasi as $rekom)
+                            <a href="all-product.html">
+                                <figure>
+                                    <?php $image = json_decode($rekom->image)[0]; ?>
+                                    <img src="{{ asset('storage/products/'.$image) }}" alt="{{ $rekom->name }}">
+                                </figure>
+                            </a>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
 
             <!-- modal 2  -->
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+            {{-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -238,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- end modal 2 -->
         </div>
     </section>

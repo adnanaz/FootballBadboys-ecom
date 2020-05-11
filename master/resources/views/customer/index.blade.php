@@ -81,55 +81,22 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <article class="product__item">
-                            <a href="all-product.html" class="product__hover hvr-grow-shadow">
-                                <img class="product__item--img" src="/assets/model1.svg" alt="model 1">
-                                <div class="productDesc">
-                                    <span class="product__name">Maroon 3</span>
-                                    <span class="product__brand">Nike Air Jordan</span>
-                                    <span class="product__price">Rp. <span>120000</span> </span>
-                                </div>
-                        </article>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="product__item">
-                            <a href="all-product.html" class="product__hover hvr-grow-shadow">
-                                <img class="product__item--img" src="/assets/model4.svg" alt="model 2">
-                                <div class="productDesc">
-                                    <span class="product__name">Maroon 3</span>
-                                    <span class="product__brand">Nike Air Jordan</span>
-                                    <span class="product__price">Rp. <span>120000</span></span>
-                                </div>
-                        </article>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="product__item">
-                            <a href="all-product.html" class="product__hover hvr-grow-shadow">
-                                <img class="product__item--img" src="/assets/model5.svg" alt="model 3">
-                                <div class="productDesc">
-                                    <span class="product__name">Maroon 3</span>
-                                    <span class="product__brand">Nike Air Jordan</span>
-                                    <span class="product__price">Rp. <span>120000</span></span>
-                                </div>
 
-                        </article>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="product__item">
-                            <a href="all-product.html" class="product__hover hvr-grow-shadow">
-                                <img class="product__item--img" src="/assets/model1.svg" alt="model 4">
-                                <div class="productDesc">
-                                    <span class="product__name">Maroon 3</span>
-                                    <span class="product__brand">Nike Air Jordan</span>
-                                    <span class="product__price">Rp. <span>120000</span></span>
-                                </div>
-                        </article>
-                        </a>
-                    </div>
+                    @foreach ($products as $product)
+                        <div class="swiper-slide">
+                            <article class="product__item">
+                                <a href="{{ route('product.show', $product->slug) }}" class="product__hover hvr-grow-shadow">
+                                    <?php $image = json_decode($product->image)[0]; ?>
+                                    <img class="product__item--img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
+                                    <div class="productDesc">
+                                        <span class="product__name">{{ $product->name }}</span>
+                                        <span class="product__price">Rp. <span>{{ $product->price }}</span> </span>
+                                    </div>  
+                                </a>
+                            </article>
+                        </div>
+                    @endforeach
+                    
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -163,7 +130,7 @@
 <script src="/node_modules/swiper/js/swiper.js"></script>
 <script src="/node_modules/swiper/js/swiper.min.js"></script>
     <script>
-   var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
         // init: false,
