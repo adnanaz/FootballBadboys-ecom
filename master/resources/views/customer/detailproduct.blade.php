@@ -53,26 +53,54 @@
                         <form action="{{ route('cart.store') }}" method="POST">
                             {{ csrf_field() }}
                             <div class="size__form form-group">
-                                <span class="jdl">Pilih Warna </span>
+                                <span class="jdl" id="results">Pilih Warna </span>
                                 <hr>
                                 <ul class="size__ul">
-                                    <div class="size__form2">
+                                    <div class="size__form2" id="searchForm">
                                         @foreach($product->colors as $color)
                                         <li class="size__li">
-                                            <input type="radio" id="{{ $color->id }}" name="color" value="{{ $color->name }}">
+                                            <input type="radio" id="{{ $color->id }}" name="radio" value="{{ $color->name }}">
                                             <label class="btn btn-outline-dark warna" style="background-color: {{ $color->name_html }};" for="{{ $color->name }}">
                                             </label>
                                         </li>
                                         @endforeach
                                     </div>
+                                    <!-- <span id="results" class="jdl"></span> -->
                                 </ul>
                                 
+ <script>
+//  USING AJAX
+function validateForm() {
+  // if valid
+  return true;
+  // else return false
+}
+
+function performSearch() {
+  const radioValue = $("input:radio[name=radio]:checked").val();
+  // What you'd actually do here is an AJAX call to get the search results
+  // and pass all the values defined above in the request
+  $("#results").html("Pilih Warna: " + radioValue);
+}
+
+function onChange() {
+  if (validateForm()) {
+    performSearch();
+  }
+}
+
+$(document).ready(function() {
+  $("#searchForm input, #searchForm select").change(function() {
+    onChange();
+  });
+});
+</script>
                                 <div class="size form-group">
-                                    <span class="jdl">Size</span>
+                                    <span class="jdl" id="result__size">Size : </span>
                                     <hr>
 
                                     <ul class="size__ul ">
-                                        <div class="size__form2">
+                                        <div class="size__form2" id="size__form">
                                             @foreach($product->sizes as $size)
                                             <li class="size__li">
                                                 <input type="radio" id="{{ $size->id }}" name="size" value="{{ $size->name }}">
@@ -84,7 +112,35 @@
                                         </div>
                                     </ul>
                                 </div>
-                                
+    
+                                <script>
+//  USING AJAX
+function validateFormSize() {
+  // if valid
+  return true;
+  // else return false
+}
+
+function performSearchSize() {
+  const radioValue2 = $("input:radio[name=size]:checked").val();
+  // What you'd actually do here is an AJAX call to get the search results
+  // and pass all the values defined above in the request
+  $("#result__size").html("Size : " + radioValue2);
+}
+
+function onChangeSize() {
+  if (validateFormSize()) {
+    performSearchSize();
+  }
+}
+
+$(document).ready(function() {
+  $("#size__form input, #size__form select").change(function() {
+    onChangeSize();
+  });
+});
+</script>
+
                                     <input type="hidden" name="id" value="{{ $product->id }}">
                                     <input type="hidden" name="name" value="{{ $product->name }}">
                                     <input type="hidden" name="image" value="{{ json_decode($product->image)[0] }}">

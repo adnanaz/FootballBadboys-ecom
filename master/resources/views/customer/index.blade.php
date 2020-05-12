@@ -112,8 +112,8 @@
     <section class="media">
         <div class="cotaniner-fluid">
             <div class="media__text">
-                <h1>Filosofi </h1>
-                <img src="/scss/assets/img/hh.png" width="200px" alt="Philosophy logo FootballBadboys" class="mb-3">
+                <h1>FILOSOFI </h1>
+                <img src="/scss/assets/img/hh.png" width="150px" alt="Philosophy logo FootballBadboys" class="mb-3">
                 <p>Starting from a love of foreign and domestic football this name was born when thinking about the
                     development of football therefore, ballboys will never be for from the scope of foreign and
                     domestic football its own pride can give birth to you in the arena of worldy football </p>

@@ -60,7 +60,7 @@
 
             <li class="nav__menu--item active">
                 <a href="/" class="hvr-underline-from-center nav__menu--link">
-                    NEW ARRIVALLLL
+                    NEW ARRIVAL
                 </a>
             </li>
             <li class="nav__menu--item custom nav-item dropdown">
@@ -174,17 +174,18 @@
                         </div>
 
                         <div class="footer__item--body1">
-                            <p>Footballbadboys merupakan distro clothing yang berada di yogyakarta yang merupakan produk
-                                local buatan sendiri...</p>
+                            <p>Starting from a love of foreign and domestic football this name was born when thinking about the
+                    development of football therefore, ballboys will never be for from the scope of foreign and
+                    domestic football its own pride can give birth to you in the arena of worldy football </p>
                             <div class="social">
                                 <img class="address__img" src="/assets/address.svg" alt="icon-alamat">
-                                <span class="body__span">Jl turi km 3.7 pondok idaman A2 Kadisobo trimuyo sleman </span>
+                                <span class="body__span">Jl Nologaten No.135, Caturtunggal,Depok Sleman, Yogyakarta 55281 Indonesia</span>
                                 <br>
                                 <img class="phone__img" src="/assets/telfon.svg" alt="icon-alamat">
-                                <span class="body__span">+628 777 111 </span>
+                                <span class="body__span">+628176741908</span>
                                 <br>
                                 <img class="email__img" src="/assets/email.svg" alt="icon-alamat">
-                                <span class="body__span">footballbadboys@cs.com </span>
+                                <span class="body__span">Footballbadboysyk@gmail.com </span>
                             </div>
 
 
@@ -200,11 +201,16 @@
                         <div class="footer__item--body2">
                             <ul class="body__ul">
                                 <li class="body__li"><a href="#"><span class="body__span">New Arrivals</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Spring Summer</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Weekend Offender </span></a>
+                                <li class="body__li"><a href="#"><span class="body__span">Shop Online</span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Clearance Sell </span></a>
                                 </li>
-                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Special Offers </span></a>
+                                <li class="body__li"><a href="#"><span class="body__span">On Sale </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Merchandise </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Uncategorized </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Crewneck </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Shortpants </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Polo T-Shirt </span></a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">T-Shirt </span></a></li>
                                 </li>
                             </ul>
 
@@ -220,11 +226,15 @@
 
                         <div class="footer__item--body3">
                             <ul class="body__ul">
-                                <li class="body__li"><a href="#"><span class="body__span">Accesories</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span"> Classics</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span"> Specials </span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Cuci Gudang</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Outlet</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Hoodie</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Half Zip</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Caps</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Cagoule</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Waistbag</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Overshirt</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Jersey</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Jacket</span> </a></li>
+                                <li class="body__li"><a href="#"><span class="body__span">Shoes</span> </a></li>
                             </ul>
                         </div>
                     </div>
