@@ -29,7 +29,7 @@
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 <!-- EXTERNAL CSS -->
-<link rel="stylesheet" href="/css/main.css">
+<!-- <link rel="stylesheet" href="/css/main.css"> -->
 <link rel="stylesheet" href="/scss/admin/assets/css/mainAdmin.css">
 <link rel="stylesheet" href="/css/hover-min.css">
 <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>

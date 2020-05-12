@@ -103,13 +103,12 @@
                     </div>
 
                     <div class="child2__item2">
-
                         @foreach ($products as $product)
                             <figure class="border hvr-grow-shadow">
                                 <a href="#">
                                     <h5>{{ $product->kode_product }}</h5>
                                     <?php $image = json_decode($product->image)[0]; ?>
-                                        <img style="max-width:130px;" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
+                                        <img id="rubah" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
 
                                     <figcaption>{{ $product->name }}</figcaption>
                                     <span class="price">Rp. <span>{{ $product->price }}</span></span>

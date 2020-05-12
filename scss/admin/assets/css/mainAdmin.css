@@ -40,6 +40,7 @@ a {
 
 .msg, .card-title {
   font-size: 2rem;
+  color: red !important;
 }
 
 .card-title {
@@ -52,6 +53,7 @@ a {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  background-color: red;
 }
 
 .parent .child2 {
@@ -71,6 +73,7 @@ a {
 .parent .child2 .child2__item2 figure {
   margin: 1rem;
   padding: 2rem;
+  background-color: red;
 }
 
 .parent .child2 .child2__item2 figure a {
@@ -79,6 +82,10 @@ a {
   justify-content: start;
   align-items: center;
   color: #000000;
+}
+
+.parent .child2 .child2__item2 figure a .tesGambar {
+  width: 50%;
 }
 
 .parent .child2 .child2__item2 figure .img__produk {
@@ -97,6 +104,10 @@ a {
 
 .parent .child2 .child2__item2 figure .properti__img {
   width: 4vh;
+}
+
+#rubah {
+  width: 50%;
 }
 
 .btn-link, .card-header {

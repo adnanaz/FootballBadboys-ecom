@@ -30,19 +30,19 @@
             <div class="col-12">
                 <div class="parent">
 
-                <div class="child2 col-10">
+                <div class="child2 col-12">
 
                     <div class="child2__item2">
 
                         @foreach ($clearancesells as $clearancesell)
-                            <figure class="border hvr-grow-shadow">
+                            <figure class=" border hvr-grow-shadow">
                                 <a href="#">
                                     <h5>{{ $clearancesell->kode_product }}</h5>
                                     <?php $image = json_decode($clearancesell->image)[0]; ?>
-                                        <img style="max-width:130px;" src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
+                                        <img id="rubah"  src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
 
                                     <figcaption>{{ $clearancesell->name }}</figcaption>
-                                    <span class="price">Rp. <span>{{ $clearancesell->price }}</span></span>
+                                    <span class="price strike discount__price"> Rp. <span>{{ $clearancesell->price }}</span></span>
                                     <span class="price">Rp. <span>{{ $clearancesell->price_discount }}</span></span>
                                     <div class="properti hvr-bounce-to-top">
                                     <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
@@ -58,9 +58,11 @@
 
                     </div>
                     </div>
-
-                    {{ $clearancesells->links() }}
                 </div>
+                
+                <nav class="d-flex justify-content-center pt-5 page" aria-label="...">
+                    {{ $clearancesells->links() }}
+                </nav>
 
 
 

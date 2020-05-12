@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="row ">
+            <div class="row push-top">
                 <!-- YOUTUBE -->
                 <div class="col-lg-6 video__preview">
                     <iframe width="100%" height="100%" src="{{ $product->link_video }}"
@@ -234,7 +234,8 @@
     </section>
     <!-- CART SECTION -->
 
-    <script>
+<script src="/node_modules/swiper/js/swiper.js"></script>
+<script src="/node_modules/swiper/js/swiper.min.js"></script>
     <script>
         var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
@@ -248,7 +249,11 @@
         spaceBetween: 10,
         slidesPerView: 1,
         freeMode: false,
-        speed: 900,
+        speed: 1500,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
         loopedSlides: 1, //looped slides should be the same
         navigation: {
             nextEl: '.swiper-button-next',
@@ -259,5 +264,5 @@
         },
     });
     </script>
-    </script>
+
 @endsection

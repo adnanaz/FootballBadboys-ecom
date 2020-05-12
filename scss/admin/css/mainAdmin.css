@@ -11,17 +11,17 @@ ul, li {
 
 @font-face {
   font-family: ambitBlack;
-  src: url(../../Ambit/Ambit-Black.ttf);
+  src: url(../../../Ambit/Ambit-Black.ttf);
 }
 
 @font-face {
   font-family: ambitReguler;
-  src: url(../../Ambit/Ambit-Regular.ttf);
+  src: url(../../../Ambit/Ambit-Regular.ttf);
 }
 
 @font-face {
   font-family: ambitBold;
-  src: url(../../Ambit/Ambit-Bold.ttf);
+  src: url(../../../Ambit/Ambit-Bold.ttf);
 }
 
 body {
@@ -40,6 +40,7 @@ a {
 
 .msg, .card-title {
   font-size: 2rem;
+  color: red !important;
 }
 
 .card-title {
@@ -52,6 +53,7 @@ a {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  background-color: red;
 }
 
 .parent .child2 {
@@ -71,6 +73,7 @@ a {
 .parent .child2 .child2__item2 figure {
   margin: 1rem;
   padding: 2rem;
+  background-color: red;
 }
 
 .parent .child2 .child2__item2 figure a {
@@ -79,6 +82,10 @@ a {
   justify-content: start;
   align-items: center;
   color: #000000;
+}
+
+.parent .child2 .child2__item2 figure a .tesGambar {
+  width: 50%;
 }
 
 .parent .child2 .child2__item2 figure .img__produk {
@@ -97,6 +104,10 @@ a {
 
 .parent .child2 .child2__item2 figure .properti__img {
   width: 4vh;
+}
+
+#rubah {
+  width: 50%;
 }
 
 .btn-link, .card-header {
@@ -253,6 +264,8 @@ img.portimg {
 .promotion__main-preview {
   width: 100%;
   height: auto;
+  background: url("../assets/img/bgHeader2.svg") center;
+  background-size: cover;
 }
 
 .promotion__main-preview figure {
@@ -283,6 +296,25 @@ img.portimg {
 
 .promotion__main-change2 .form__promotion {
   width: 100vh;
+}
+
+.preview__text {
+  margin: 2rem auto;
+  background: url("../../../assets/img/bgHeader2.svg") center;
+  background-size: cover;
+  padding: 2rem 0;
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+}
+
+.preview__text img {
+  width: 100%;
+  height: 100%;
+}
+
+.preview__text h2, .preview__text h1, .preview__text h5 {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 321px) and (max-width: 602px) {
@@ -399,6 +431,6 @@ img.portimg {
 
 .promotion__main-preview2 figure img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=mainAdmin.css.map */

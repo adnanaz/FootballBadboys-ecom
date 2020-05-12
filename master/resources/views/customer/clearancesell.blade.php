@@ -29,13 +29,13 @@
                     <!-- item produknya -->
                     @foreach ($clearancesells as $clearancesell)
 
-                    <figure>
+                    <figure class="clearance__sell">
                         <div class="hvr-grow-shadow">
                             <?php $image = json_decode($clearancesell->image)[0]; ?>
-                            <img src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
+                            <img class="clearance__img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
                             <figcaption>
                                 <h5 class="namaProduk">{{ $clearancesell->name }}</h5>
-                                <h5 class="harga">Rp. <span class="value">{{ $clearancesell->price }}</span></h5>
+                                <h5 class="harga" id="strike">Rp. <span class="value">{{ $clearancesell->price }}</span></h5>
                                 <h5 class="harga">Rp. <span class="value">{{ $clearancesell->price_discount }}</span></h5>
                                 <div class="button">
                                     <a href="{{ route('product.show', $clearancesell->slug) }}" class="btn btn-outline-info">Detail</a>
@@ -52,21 +52,9 @@
                 </div>
             </div>
 
-            {{ $clearancesells->links() }}
+
             <nav class="pt-5 page" aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item " aria-current="page">
-                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
+            {{ $clearancesells->links() }}
             </nav>
         </section>
     </div>

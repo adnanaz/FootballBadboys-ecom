@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/node_modules/swiper/css/swiper.css">
 
     <link rel="stylesheet" href="/scss/assets/css/main.css">
+
+    <!--     <link rel="stylesheet" href="/scss/scss/admin/assets/css/main.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 

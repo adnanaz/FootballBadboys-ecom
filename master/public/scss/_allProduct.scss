@@ -2,6 +2,7 @@
     margin-top: 5rem;
     margin-bottom: 10rem;
     padding: 0 1rem;
+    width: 100%;
 }
 
 .main__product {
@@ -96,9 +97,20 @@
         }
 
         figure {
-            img {
-               width: 25vh;
-                margin-bottom: 1rem;
+            // img {
+            //    width: 25vh;
+            //     margin-bottom: 1rem;
+            // }
+
+            .clearance__img,.allProduct__img, .onSale__img {
+              width: 100%;
+              height: 100%;
+              max-width: 251.34px;
+              max-height: 251.34px;
+              min-width: 251.34px;
+              min-height: 251.34px;
+              margin-bottom: 1rem;
+
             }
             
             h5 {
@@ -109,7 +121,13 @@
                 text-align: center;
             }
 
+            h5#strike {
+              text-decoration: line-through !important;
+              color: #888 !important;
+            }
+
             .button {
+              padding: 1rem 0;
                 text-align: center;
             }
          
@@ -192,3 +210,8 @@
     padding: 0 0.5rem;
 }
 
+@media screen and (min-width: 734px) and (max-width:767px) {
+  .product__figure, .onSale, .clearance__sell {
+    margin: 0 0.5rem 2rem;
+}
+}
