@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../../master/resources/sass/app.scss"
-    ],
-    "names": [],
-    "file": "app.css"
-}
