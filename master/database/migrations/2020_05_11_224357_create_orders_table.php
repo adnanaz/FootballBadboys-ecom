@@ -17,13 +17,12 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->nullable();
-            $table->text('complete_address');
-            $table->string('city');
-            $table->string('province');
-            $table->integer('postal_code');
             $table->string('phone');
-            $table->string('courier');
-            $table->integer('ongkir');
+            $table->string('province');
+            $table->string('city');
+            $table->text('address');
+            $table->integer('kodepos');
+            $table->string('payment_method');
             $table->integer('subtotal');
             $table->integer('total_harga');
             $table->boolean('shipped')->default(false);

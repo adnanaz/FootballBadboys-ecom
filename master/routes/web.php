@@ -22,10 +22,15 @@ Route::get('/product','AllProductController@index')->name('allproduct.index');
 Route::get('/onsale','OnSaleController@index')->name('onsale.index');
 Route::get('/clearancesell','ClearanceSellController@index')->name('clearancesell.index');
 Route::get('/product/{product}','AllProductController@show')->name('product.show');
+Route::get('/search','AllProductController@search')->name('consumenproduct.search');
+
 Route::get('/cart','CartController@index')->name('cart.index');
 Route::post('/cart','CartController@store')->name('cart.store');
 Route::delete('/cart/{product}','CartController@destroy')->name('cart.destroy');
 Route::patch('/cart/{product}','CartController@update')->name('cart.update');
+
+Route::get('/checkout','CheckoutController@index')->name('checkout.index');
+Route::post('/checkout','CheckoutController@store')->name('checkout.store');
 
 Route::get('empty', function(){
     Cart::destroy();

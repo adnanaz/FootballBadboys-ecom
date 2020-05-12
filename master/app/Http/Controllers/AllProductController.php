@@ -41,6 +41,18 @@ class AllProductController extends Controller
         return view('customer.allproduct', compact('contentpromotion', 'categories', 'sizes', 'products'));
     }
 
+    public function search(Request $request)
+    {
+        $cari = $request->search;
+        $contentpromotion = ContentPromotion::findOrFail(1);
+        $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $sizes = Size::orderBy('id', 'DESC')->get();
+        $products = Product::search($cari)->orderBy('id', 'DESC')->paginate(12);
+        $products->appends($request->only('search'));
+
+        return view('customer.allproduct', compact('categories', 'sizes', 'products', 'contentpromotion'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
