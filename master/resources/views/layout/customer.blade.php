@@ -97,9 +97,11 @@
 
             </li>
             <li class="nav__menu--item special">
-                <form action="" class="formSearch">
-                    <input class="navSearch" type="search" placeholder="Cari sesuatu?">
-                    <img class=" fa search__img rounded-circle" src="/scss/assets/img/search.png" alt="">
+                <form action="{{ route('consumenproduct.search') }}" method="GET" class="formSearch">
+                    <input class="navSearch" type="search" name="search" placeholder="Cari sesuatu?">
+                    <button type="submit">
+                        <img class=" fa search__img rounded-circle" src="/scss/assets/img/search.png" alt="">
+                    </button>
                 </form>
             </li>
 
@@ -279,7 +281,7 @@
         </footer>
 
         <!-- CART SECTION -->
-        {{-- <aside class="sidecart text-center">
+        <aside class="sidecart text-center">
 
             <ul class="flex-column">
                 <div class="d-inline coba" onclick="toggleCart()">
@@ -302,47 +304,45 @@
                 </li>
                 <!-- tinggal matiin komentarnya -->
 
-                <li class="d-flex flex-wrap flex-row">
-                    <!-- product image -->
-                    <div class="col-4 p-0">
-                        <img class="img-fluid hvr-bounce-in" src="/scss/assets/img/produknya.svg" alt="">
-                    </div>
-                    <!-- end product image -->
+                @foreach (Cart::content() as $item)
+                    <li class="d-flex flex-wrap flex-row">
+                        <!-- product image -->
+                        <div class="col-4 p-0">
+                            <img class="img-fluid hvr-bounce-in" src="{{ asset('storage/products/'. json_decode($item->model->image)[0]) }}" alt="">
+                        </div>
+                        <!-- end product image -->
 
-                    <!-- product props -->
-                    <div class="col-8 justify-content-around d-flex flex-column">
+                        <!-- product props -->
+                        <div class="col-8 justify-content-around d-flex flex-column">
 
-                        <div class="items">
-                            <span class="productName">Skuda T-Shirt</span>
-                            <span class="productType">White grey motive</span>
-                            <span class="size">Size : <span class="size__value">M</span> </span>
-                            <div class="operator">
-                                <form action="">
-                                    <button class="btn__operator">-</button>
-                                    <input class="operator__input" value="1" type="text">
-                                    <button class="btn__operator">+</button>
-                                </form>
+                            <div class="items">
+                                <span class="productName">{{ $item->model->name }}t</span>
+                                <span class="size">Color : <span class="size__value">{{ $item->options->color }}</span> </span>
+                                <span class="size">Size : <span class="size__value">{{ $item->options->size }}</span> </span>
+                                <span class="total">Rp <span class="total__value"><?php if($item->model->price_discount == 0){ echo $item->subtotal; }else{echo $item->subtotal;}?></span></span>
                             </div>
-                            <span class="total">Rp <span class="total__value">156.000</span></span>
+                            
 
                         </div>
-                    </div>
 
-                    <!-- end product props -->
-                    <hr class="li__hr">
-                </li>
+                        <!-- end product props -->
+                        <hr class="li__hr">
+                    </li>
+                @endforeach
+
+                
                 <div class="flex-end">
                     <div class="sub">
                         <span>Sub Total</span>
                         <span>Total</span>
                     </div>
                     <div class="total__div">
-                        <span class="subTotal total">Rp <span class="total__value">156.000</span></span>
-                        <span class="total">Rp <span class="total__value">156.000</span></span>
+                        <span class="subTotal total">Rp <span class="total__value">{{ Cart::subtotal() }}</span></span>
+                        <span class="total">Rp <span class="total__value">{{ Cart::total() }}</span></span>
                     </div>
                 </div>
                 <div class="p-2">
-                    <button type="button" class="btn btn-primary btn__checkout w-50">CART</button>
+                    <a href="{{ route('cart.index') }}" type="button" class="btn btn-primary btn__checkout w-50">CART</a>
                 </div>
                 <li>
                     <div class="iklan">
@@ -352,7 +352,7 @@
                 </li>
             </ul>
 
-        </aside> --}}
+        </aside>
         <!-- END CART SECTION -->
     </main>
 </body>

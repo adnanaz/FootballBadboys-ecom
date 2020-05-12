@@ -10,6 +10,7 @@ use App\Category;
 use App\Size;
 use App\Color;
 
+use Image;
 use DB;
 
 class AdminProductController extends Controller
@@ -43,7 +44,7 @@ class AdminProductController extends Controller
     public function search(Request $request)
     {
         $cari = $request->search;
-        $categories = Category::orderBy('id', 'DESC')->get();
+        $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
         $sizes = Size::orderBy('id', 'DESC')->get();
         $products = Product::search($cari)->orderBy('id', 'DESC')->paginate(12);
         $products->appends($request->only('search'));
@@ -86,9 +87,21 @@ class AdminProductController extends Controller
         
         if ($image = $request->file('uploadFile')) {
             foreach ($image as $files) {
+            $dates = date('YmdHis');
+            $random = str_random(10);
             $destinationPath = storage_path('app/public/products'); // upload path
-            $profileImage = $files->getClientOriginalName();
-            $files->move($destinationPath, $profileImage);
+            $profileImage = $dates . $random . "." . $files->getClientOriginalExtension();
+
+            if($files->getClientOriginalExtension() != 'svg'){
+                $resize_image = Image::make($files->getRealPath());
+
+                $resize_image->resize(1500, 1500, function($constraint){
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $profileImage);
+            } else {
+                $files->move($destinationPath, $profileImage);
+            }
+
             $insert[] = $profileImage;
             }
         }
@@ -177,11 +190,36 @@ class AdminProductController extends Controller
         
         if ($image = $request->file('uploadFile')) {
             foreach ($image as $files) {
+            $dates = date('YmdHis');
+            $random = str_random(10);
             $destinationPath = storage_path('app/public/products'); // upload path
-            $profileImage = $files->getClientOriginalName();
-            $files->move($destinationPath, $profileImage);
+            $profileImage = $dates . $random . "." . $files->getClientOriginalExtension();
+
+            if($files->getClientOriginalExtension() != 'svg'){
+                $resize_image = Image::make($files->getRealPath());
+
+                $resize_image->resize(1500, 1500, function($constraint){
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $profileImage);
+            } else {
+                $files->move($destinationPath, $profileImage);
+            }
+            
+
             $insert[] = $profileImage;
             }
+
+            $images = json_decode($products->image);
+            if (is_array($images) || is_object($images))
+            {
+                foreach ($images as $image) {
+                    $path = storage_path("app/public/products/{$image}");
+                    if (file_exists($path)) {
+                        unlink($path);
+                    }
+                }
+            }
+
         }
 
         $products->kode_product = $request->kode_product?$request->kode_product : $products->kode_product;
@@ -244,6 +282,6 @@ class AdminProductController extends Controller
             return redirect()->route('admin.product')->with('success', 'Product Tidak Berhasil Di Hapus!');
         }
 
-        return redirect()->route('admin.product')->with('success', 'Product Berhasil Di Hapus!');
+        return back()->with('success', 'Product Berhasil Di Hapus!');
     }
 }

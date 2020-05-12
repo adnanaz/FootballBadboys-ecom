@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="btn__submit">
-            <a href="payment.html"> <button type="submit" class="w-100 btn btn-dark mb-5">Bayar
+            <a href="{{ route('checkout.index') }}"> <button type="submit" class="w-100 btn btn-dark mb-5">Bayar
                     Sekarang</button></a>
         </div>
     </div>
