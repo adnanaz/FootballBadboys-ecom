@@ -192,7 +192,7 @@ class AdminProductController extends Controller
             foreach ($image as $files) {
             $dates = date('YmdHis');
             $random = str_random(10);
-            $destinationPath = storage_path('app/public/products'); // upload path
+            $destinationPath = storage_path('app/public/products'); // upload pathh
             $profileImage = $dates . $random . "." . $files->getClientOriginalExtension();
 
             if($files->getClientOriginalExtension() != 'svg'){
