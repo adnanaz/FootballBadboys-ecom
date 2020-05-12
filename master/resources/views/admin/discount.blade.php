@@ -30,7 +30,7 @@
             <div class="col-12">
                 <div class="parent">
 
-                <div class="child2 col-10">
+                <div class="child2 col-12">
 
                     <div class="child2__item2">
 
@@ -42,7 +42,7 @@
                                         <img style="max-width:130px;" src="{{ asset('storage/products/'.$image) }}" alt="{{ $discount->name }}">
 
                                     <figcaption>{{ $discount->name }}</figcaption>
-                                    <span class="price">Rp. <span>{{ $discount->price }}</span></span>
+                                    <span class="price strike">Rp. <span>{{ $discount->price }}</span></span>
                                     <span class="price">Rp. <span>{{ $discount->price_discount }}</span></span>
                                     <div class="properti hvr-bounce-to-top">
                                     <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
@@ -59,7 +59,10 @@
                     </div>
                     </div>
 
+                    <nav class="d-flex justify-content-center pt-5 page" aria-label="...">
                     {{ $discounts->links() }}
+                </nav>
+                   
                 </div>
 
 

@@ -114,6 +114,12 @@
 
     .child2 {
         padding-left: 0 !important;
+
+        &__item2 {
+            .discount__price {
+                text-decoration: line-through;
+            }
+        }
     }
 
     .size__ul {

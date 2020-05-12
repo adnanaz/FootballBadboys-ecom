@@ -586,6 +586,10 @@
         .sort {
             padding-top: 5rem;
         }
+
+        .product__figure, .clearance__sell, .onSale {
+            margin: 0 0.5rem 2rem;
+        }
         // end all product page
 
 }
@@ -668,7 +672,13 @@
         display: none;
     }
 
-    
+    .push-top {
+        padding-top: 2rem;
+    }
+
+.product__figure, .clearance__sell, .onSale {
+    margin: 0 0.5rem 2rem;
+}
     // end all product page
 }
 
@@ -812,6 +822,7 @@
         }
     }
 
+
     // admin
     .promotion {
         &__main {
@@ -854,8 +865,9 @@
    }
     
     .steps .imgBanner__img {
-        width: 55vh;
-        margin: 1.5rem;
+        width: 100%;
+    margin: 1.5rem;
+    max-width: 50vh;
     }
     .admin__content {
         width: 100%;
@@ -950,24 +962,10 @@
     .allP {
         display: block !important;
     }
+
+    .product__figure, .clearance__sell,  .onSale {
+        margin: 0 1rem 2rem;
+    }
 }
 
-// // detail produk
-// .detail {
-//     &__flex {
-//         display: flex;
-//         flex-flow:column;
-//     }
 
-//     .parent__img {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         width: 100%;
-//     }
-
-//     .child__img {
-//         width: 10vh;
-//     }
-// }
-// // end detail produk

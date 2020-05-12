@@ -72,10 +72,10 @@
 
                     @foreach ($products as $product)
 
-                        <figure>
+                        <figure class="product__figure">
                             <div class="hvr-grow-shadow">
                                 <?php $image = json_decode($product->image)[0]; ?>
-                                <img src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
+                                <img class="allProduct__img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
                                 <figcaption>
                                     <h5 class="namaProduk">{{ $product->name }}</h5>
                                     <h5 class="harga">Rp. <span class="value">{{ $product->price }}</span></h5>
@@ -94,8 +94,13 @@
                 </div>
             </div>
 
-            {{ $products->links() }}
+           
+
             <nav class="pt-5 page" aria-label="...">
+            {{ $products->links() }}
+            </nav>
+          
+            <!-- <nav class="pt-5 page" aria-label="...">
                 <ul class="pagination">
                     <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -109,7 +114,7 @@
                         <a class="page-link" href="#">Next</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </section>
     </div>
     <!-- CART SECTION -->
