@@ -30,7 +30,7 @@
             <div class="search lg-on">
                 <form action="" class="formSearch">
                     <input class="navSearch" type="search" placeholder="Cari sesuatu?">
-                    <img class="fa rounded-circle" src="/scss/assets/img/search.png" width="40" height="40" alt="">
+                    <img class="fa rounded-circle" src="/scss/assets/img/search.png" width="40" height="40" alt="search">
                 </form>
             </div>
             <div class="brand ">
@@ -100,7 +100,7 @@
                 <form action="{{ route('consumenproduct.search') }}" method="GET" class="formSearch">
                     <input class="navSearch" type="search" name="search" placeholder="Cari sesuatu?">
                     <button type="submit">
-                        <img class=" fa search__img rounded-circle" src="/scss/assets/img/search.png" alt="">
+                        <img class=" fa search__img rounded-circle" src="/scss/assets/img/search.png" alt="search">
                     </button>
                 </form>
             </li>
