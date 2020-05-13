@@ -35,11 +35,10 @@
                                 <img class="onSale__img" src="{{ asset('storage/products/'.$image) }}" alt="foto produk Bomber">
                                 <figcaption>
                                     <h5 class="namaProduk">{{ $discount->name }}</h5>
-                                    <h5 class="harga"  id="strike">Rp. <span class="value">{{ $discount->price }}</span></h5>
-                                    <h5 class="harga">Rp. <span class="value">{{ $discount->price_discount }}</span></h5>
+                                    <h5 class="harga"  id="strike">Rp. <span class="value">{{ format_uang($discount->price) }}</span></h5>
+                                    <h5 class="harga">Rp. <span class="value">{{ format_uang($discount->price_discount) }}</span></h5>
                                     <div class="button">
                                         <a href="{{ route('product.show', $discount->slug) }}" class="btn btn-outline-info">Detail</a>
-                                        <a href="" class="btn btn-outline-primary">Add to Cart</a>
                                     </div>
                                 </figcaption>
                             </div>

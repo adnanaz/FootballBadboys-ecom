@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Order;
 
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class AdminOrderController extends Controller
      */
     public function index()
     {
+
         return view('admin.index');
     }
 
@@ -79,11 +81,43 @@ class AdminOrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Order::findOrFail($id);
+
+        $order->products()->detach();
+
+        $order->delete();
+
+        return back()->with('danger', 'Order berhasil dihapus!');
     }
 
     public function order()
     {
-        return view('admin.order');
+        $orders = Order::orderBy('id', 'DESC')->paginate(10);
+
+        return view('admin.order', compact('orders'));
+    }
+
+    public function dikirim(Request $request, $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->name = $request->name?$request->name : $order->name;
+        $order->email = $request->email?$request->email : $order->email;
+        $order->phone = $request->phone?$request->phone : $order->phone;
+        $order->province = $request->province?$request->province : $order->province;
+        $order->city = $request->city?$request->city : $order->city;
+        $order->address = $request->address?$request->address : $order->address;
+        $order->kodepos = $request->kodepos?$request->kodepos : $order->kodepos;
+        $order->payment_method = $request->payment_method?$request->payment_method : $order->payment_method;
+        $order->subtotal = $request->subtotal?$request->subtotal : $order->subtotal;
+        $order->total_harga = $request->total_harga?$request->total_harga : $order->total_harga;
+        if($order->shipped == 0){
+            $order->shipped = true;
+        } else {
+            $order->shipped = false;
+        }
+        
+        $order->update();
+
+        return back()->with('success', 'Pengiriman di Update!');
     }
 }

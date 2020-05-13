@@ -15,6 +15,20 @@
             </ol>
         </nav>
         <!--END Breadcrumb -->
+        <ul>
+            <li>
+                @include('layout.partials._alert')
+            </li>
+        </ul>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <h4>FORM PEMBAYARAN</h4>
         <div class="row">
             <div class="col-xl-8">
@@ -37,22 +51,18 @@
                         </div>
                         <div class="form-group">
                             <label for="provinsi">Provinsi</label>
-                            <select class="form-control" name="province" id="exampleFormControlSelect1" required>
-                                <option>Jawa Tengah</option>
-                                <option>Jawa Barat</option>
-                                <option>Jawa Timur</option>
-                                <option>Yogyakarta</option>
-                                <option>Papua</option>
+                            <select class="form-control" name="province" id="province" required>
+                                @foreach ($provinces as $province)
+                                    <option value="{{ $province->name }}">{{ $province->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="kota">Kota/Kabupaten</label>
-                            <select class="form-control" name="city" id="exampleFormControlSelect1" required>
-                                <option>Sleman</option>
-                                <option>Kulon Progo</option>
-                                <option>Gunung Kidul</option>
-                                <option>Bntul</option>
-                                <option>Kota</option>
+                            <select class="form-control" name="city" id="city" required>
+                                @foreach ($cities as $city)
+                                    <option value="{{ $city->name }}">{{ $city->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
@@ -64,7 +74,7 @@
                         </div>
                         <div class="form-group">
                             <label for="kodepos">Kode Pos</label>
-                            <input type="text" class="form-control" name="kodepos" id="kodepos" required>
+                            <input type="number" class="form-control" name="kodepos" id="kodepos" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Metode Pembayaran</label>
@@ -77,13 +87,11 @@
                             </select>
                         </div>
                         <div class="form-group form-check ">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                             <label class="form-check-label" for="exampleCheck1" required>Dengan ini saya
                                 menyetujui <a href="#"> syarat</a> dan <a href="#">ketentuan</a>
                                 FootballBadboys</label>
                         </div>
-                        {{-- <button type="button" class="btn btn-primary bg-dark w-100" data-toggle="modal"
-                            data-target="#staticBackdrop">SUBMIT FORM</button> --}}
                         <button type="submit" class="btn btn-primary bg-dark w-100">SUBMIT FORM</button>
                     </form>
                 </div>
@@ -116,7 +124,7 @@
             <div class="col-xl-4 ">
                 <aside class="preorder border shadow">
                     <div class="preorder__first">
-                        <span><span class="number__value"> 3 </span> Item</span>
+                        <span><span class="number__value"> {{ Cart::count() }}</span> Item</span>
                         <span><a href="{{ route('cart.index') }}">Edit</a></span>
                     </div>
 
@@ -145,8 +153,8 @@
                             </div>
 
                             <div class="value__pricing">
-                                <span>Rp. <span class="value">{{ Cart::subtotal() }}</span></span>
-                                <strong><span>Rp. <span class="value">{{ Cart::total() }}</span></span></strong>
+                                <span>Rp. <span class="value">{{ format_uang(Cart::subtotal()) }}</span></span>
+                                <strong><span>Rp. <span class="value">{{ format_uang(Cart::total()) }}</span></span></strong>
                             </div>
                         </div>
                     </div>
@@ -158,36 +166,28 @@
     </section>
 </div>
 
-<!-- modal 2  -->
-{{-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Pemberitahuan</h5>
-                <!-- <img src="scss/assets/img/pardon.webp" width="30px" height="30px" alt="Sorry For Inconvinient"> -->
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <span class="lead">Terimakasih telah membeli catalog kami.</span><br><br>
-                <span class="lead"> Harap tunggu pesan dari admin football badboys beberapa saat lagi. <br><br>
-                    More
-                    info
-                    hubungi kami
-                    <span class="text-danger"> 081229000151</span></span><br><br>
-                <span class="small"><small> Hati-hati penipuan megatasnamakan FootballBadboys nomor
-                        Footballbadboys
-                        resmi
-                        hanya pada nomor tersebut. Terimakasih</small></span>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Tutup</button>
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- end modal 2 -->
+{{-- <script type="text/javascript">
+    $('#province').change(function(){
+        var sid = $(this).val();
+        if(sid){
+        $.ajax({
+            type:"get",
+            url:"/getCities/"+sid,
+            success:function(res)
+            {       
+                if(res)
+                {
+                    $("#city").empty();
+                    $("#city").append('<option>Pilih Kota/Kabupaten</option>');
+                    $.each(res,function(key,value){
+                        $("#city").append('<option value="'+key+'">'+value+'</option>');
+                    });
+                }
+            }
+
+        });
+        }
+    }); 
+</script> --}}
 
 @endsection

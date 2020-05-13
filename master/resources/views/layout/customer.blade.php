@@ -321,7 +321,7 @@
                                 <span class="productName">{{ $item->model->name }}t</span>
                                 <span class="size">Color : <span class="size__value">{{ $item->options->color }}</span> </span>
                                 <span class="size">Size : <span class="size__value">{{ $item->options->size }}</span> </span>
-                                <span class="total">Rp <span class="total__value"><?php if($item->model->price_discount == 0){ echo $item->subtotal; }else{echo $item->subtotal;}?></span></span>
+                                <span class="total">Rp <span class="total__value"><?php if($item->model->price_discount == 0){ echo format_uang($item->subtotal); }else{echo format_uang($item->subtotal);}?></span></span>
                             </div>
                             
 
@@ -339,8 +339,8 @@
                         <span>Total</span>
                     </div>
                     <div class="total__div">
-                        <span class="subTotal total">Rp <span class="total__value">{{ Cart::subtotal() }}</span></span>
-                        <span class="total">Rp <span class="total__value">{{ Cart::total() }}</span></span>
+                        <span class="subTotal total">Rp <span class="total__value">{{ format_uang(Cart::subtotal()) }}</span></span>
+                        <span class="total">Rp <span class="total__value">{{ format_uang(Cart::total()) }}</span></span>
                     </div>
                 </div>
                 <div class="p-2">

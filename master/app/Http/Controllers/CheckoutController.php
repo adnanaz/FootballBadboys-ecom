@@ -8,6 +8,7 @@ use App\ContentPromotion;
 use App\Order;
 use App\OrderProduct;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use DB;
 
 class CheckoutController extends Controller
 {
@@ -18,10 +19,25 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
-        $contentpromotion = ContentPromotion::findOrFail(1);
+        if (Cart::content()->isEmpty()) {
+            return redirect()->route('cart.index')->with('danger', 'Cart masih kosong, silahkan belanja terlebih dahulu sebelum checkout!');
+        } else {
+            $provinces = \Indonesia::allProvinces();
+            $cities = \Indonesia::allCities();
+            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $contentpromotion = ContentPromotion::findOrFail(1);
 
-        return view('customer.checkout', compact('categories', 'contentpromotion'));
+            return view('customer.checkout', compact('categories', 'contentpromotion', 'provinces', 'cities'));
+        }
+    }
+
+    public function getCities($id)
+    {
+        $cities= DB::table("indonesia_cities")
+                    ->where("province_id",$id)
+                    ->pluck("name","id");
+
+        return response()->json($cities);
     }
 
     /**
@@ -42,31 +58,52 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|max:200',
+            'email' => 'required|max:200',
+            'phone' => 'required|max:200',
+            'province' => 'required|max:200',
+            'city' => 'required|max:200',
+            'address' => 'required',
+            'kodepos' => 'required|max:10',
+            'payment_method' => 'required',
+        ]);      
 
         $order = new Order;
-
-        $order->name = $request->name;
-        $order->email = $request->email;
-        $order->phone = $request->phone;
-        $order->province = $request->province;
-        $order->city = $request->city;
-        $order->address = $request->address;
-        $order->kodepos = $request->kodepos;
-        $order->payment_method = $request->payment_method;
-        $order->subtotal = Cart::subtotal();
-        $order->total_harga = Cart::total();
         
-        $order->save();
+        if (Cart::content()->isEmpty()) {
+            return redirect()->route('cart.index')->with('danger', 'Transaksi gagal karena cart sudah kosong, silahkan belanja kembali!');
+        } else {
+            $order->name = $request->name;
+            $order->email = $request->email;
+            $order->phone = $request->phone;
+            $order->province = $request->province;
+            $order->city = $request->city;
+            $order->address = $request->address;
+            $order->kodepos = $request->kodepos;
+            $order->payment_method = $request->payment_method;
+            $order->subtotal = Cart::subtotal();
+            $order->total_harga = Cart::total();
+            
+            $order->save();
 
-        foreach (Cart::content() as $item) {
-            $items = OrderProduct::create([
-                'order_id' => $order->id,
-                'product_id' => $item->model->id,
-                'quantity' => $item->qty,
-                'size' => $item->options->size,
-                'color' => $item->options->color
-            ]);
+            foreach (Cart::content() as $item) {
+                $items = OrderProduct::create([
+                    'order_id' => $order->id,
+                    'product_id' => $item->model->id,
+                    'quantity' => $item->qty,
+                    'size' => $item->options->size,
+                    'color' => $item->options->color
+                ]);
+            }
+
+            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $contentpromotion = ContentPromotion::findOrFail(1);
+
+            Cart::destroy();
+            return view('customer.successpayment', compact('categories', 'contentpromotion'));
         }
+        
     }
 
     /**

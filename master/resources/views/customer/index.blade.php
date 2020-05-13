@@ -90,7 +90,7 @@
                                     <img class="product__item--img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
                                     <div class="productDesc">
                                         <span class="product__name">{{ $product->name }}</span>
-                                        <span class="product__price">Rp. <span>{{ $product->price }}</span> </span>
+                                        <span class="product__price">Rp. <span>{{ format_uang($product->price) }}</span> </span>
                                     </div>  
                                 </a>
                             </article>

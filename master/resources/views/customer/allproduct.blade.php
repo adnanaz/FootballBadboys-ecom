@@ -78,10 +78,9 @@
                                 <img class="allProduct__img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $product->name }}">
                                 <figcaption>
                                     <h5 class="namaProduk">{{ $product->name }}</h5>
-                                    <h5 class="harga">Rp. <span class="value">{{ $product->price }}</span></h5>
+                                    <h5 class="harga">Rp. <span class="value">{{ format_uang($product->price) }}</span></h5>
                                     <div class="button">
                                         <a href="{{ route('product.show', $product->slug) }}" class="btn btn-outline-info">Detail</a>
-                                        <a href="" class="btn btn-outline-primary">Add to Cart</a>
                                     </div>
                                 </figcaption>
                             </div>
@@ -94,27 +93,11 @@
                 </div>
             </div>
 
-           
 
             <nav class="pt-5 page" aria-label="...">
             {{ $products->links() }}
             </nav>
-          
-            <!-- <nav class="pt-5 page" aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item " aria-current="page">
-                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav> -->
+
         </section>
     </div>
     <!-- CART SECTION -->

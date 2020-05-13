@@ -142,9 +142,11 @@ class AdminProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $product = Product::where('slug', $slug)->firstOrFail();
+
+        return view('admin.adminshowproduct', compact('product'));
     }
 
     /**
