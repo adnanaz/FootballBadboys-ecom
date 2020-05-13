@@ -113,7 +113,7 @@
                                     <figcaption>{{ $product->name }}</figcaption>
                                     <span class="price">Rp. <span>{{ $product->price }}</span></span>
                                     <div class="properti hvr-bounce-to-top">
-                                    <a href="#" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
+                                    <a href="{{ route('adminproduct.show', $product->slug) }}" class="hvr-icon-pulse"> <img class="hvr-icon properti__img"
                                         src="/scss/assets/img/admin/invisble.png" alt="ikon lihat produk"></a>
                                     <a href="{{ route('editproduct.edit', $product) }}" class="hvr-icon-pulse"><img class="hvr-icon properti__img"
                                         src="/scss/assets/img/admin/pencil.png" alt="ikon edit produk"></a>

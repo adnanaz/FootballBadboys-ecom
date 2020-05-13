@@ -49,7 +49,7 @@
                     </form>
                 </div>
                 <div class="product__price-checkout">
-                    <span>Rp. <span class="value"><?php if($item->model->price_discount == 0){ echo $item->subtotal; }else{echo $item->subtotal;}?></span></span>
+                    <span>Rp. <span class="value"><?php if($item->model->price_discount == 0){ echo format_uang($item->subtotal); }else{echo format_uang($item->subtotal);}?></span></span>
                 </div>
             </div>
         </div>
@@ -63,8 +63,8 @@
             </div>
 
             <div class="value__pricing">
-                <span>Rp. <span class="value">{{ Cart::subtotal() }}</span></span>
-                <strong><span>Rp. <span class="value">{{ Cart::total() }}</span></span></strong>
+                <span>Rp. <span class="value">{{ format_uang(Cart::subtotal()) }}</span></span>
+                <strong><span>Rp. <span class="value">{{ format_uang(Cart::total()) }}</span></span></strong>
             </div>
         </div>
         <div class="btn__submit">

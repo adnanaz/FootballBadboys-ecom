@@ -375,21 +375,6 @@
                         <td>Yogyakarta Ina</td>
                     </tr>
                     <tr>
-                        <td>Adnan Aziz D</td>
-                        <td>
-                        <ul>
-                            <li>T-Shirt</li>
-                            <li>Hoodie</li>
-                            <li>Jacket Man</li>
-                        </ul>
-                        </td>
-                        <td>
-                        Rp. <span class="Value">150000</span>
-                        </td>
-                        <td>Jl Kadisobo Trimulyo Sleman</td>
-                        <td>Yogyakarta Ina</td>
-                    </tr>
-                    <tr>
                         <td>Arfian Dimas A P</td>
                         <td>
                         <ul>

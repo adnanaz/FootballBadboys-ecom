@@ -3,7 +3,6 @@
 @section('title','Order')
 
 @section('content')
-
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -33,11 +32,7 @@
                             </div>
 
                             <div class="print">
-                                <button class="btn btn-outline-info">Copy</button>
-                                <button class="btn btn-outline-info">CSV</button>
                                 <button class="btn btn-outline-info">Excell</button>
-                                <button class="btn btn-outline-info">PDF</button>
-                                <button class="btn btn-outline-info">Print</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -46,385 +41,55 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Order Product</th>
-                                            <th>Price</th>
+                                            <th>Phone/WA</th>
+                                            <th>Email</th>
+                                            <th>Provinsi</th>
+                                            <th>Kota/Kabupaten</th>
                                             <th>Address</th>
-                                            <th>City</th>
+                                            <th>Kode Pos</th>
+                                            <th>Payment Method</th>
+                                            <th>Sub Total</th>
+                                            <th>Total Harga</th>
+                                            <th>Dikirim</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">120000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adnan Aziz D</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl Kadisobo Trimulyo Sleman</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arfian Dimas A P</td>
-                                            <td>
-                                                <ul>
-                                                    <li>T-Shirt</li>
-                                                    <li>Hoodie</li>
-                                                    <li>Jacket Man</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                Rp. <span class="Value">150000</span>
-                                            </td>
-                                            <td>Jl adoh omahe Kulon Progo</td>
-                                            <td>Yogyakarta Ina</td>
-                                        </tr>
+                                        @foreach ($orders as $order)
+                                            
+                                            <tr class="">
+                                                <td>{{ $order->name }}</td>
+                                                <td>
+                                                    <ul>
+                                                        @foreach ($order->products as $item)
+                                                        <li><span class="font-weight-bold">{{ $item->kode_product }}</span> &nbsp; {{ $item->name }} &nbsp; {{ $item->pivot->quantity }} &nbsp; {{ $item->pivot->size }} &nbsp; {{ $item->pivot->color }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </td>
+                                                <td>{{ $order->phone }}</td>
+                                                <td>{{ $order->email }}</td>
+                                                <td>{{ $order->province }}</td>
+                                                <td>{{ $order->city }}</td>
+                                                <td>{{ $order->address }}</td>
+                                                <td>{{ $order->kodepos }}</td>
+                                                <td>{{ $order->payment_method }}</td>
+                                                <td>{{ $order->subtotal }}</td>
+                                                <td>{{ $order->total_harga }}</td>
+                                                <td>
+                                                    <form action="{{ route('order.dikirim', $order) }}" method="post">
+                                                        {{ csrf_field() }}
+                                                        <?php if($order->shipped == 0){ echo "<button type='submit' class='btn btn-warning btn-sm'>No</button>"; }else{echo "<button type='submit' class='btn btn-success btn-sm'>Yes</button>";}?>
+                                                    </form>
+                                                </td>
+                                                <td><a href="{{ route('order.delete', $order) }}" class="btn btn-danger btn-sm">Delete</a></td>
+                                            </tr>
+
+                                        @endforeach
 
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Order Product</th>
-                                            <th>Price</th>
-                                            <th>Address</th>
-                                            <th>City</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </div>
+                            {{ $orders->links() }}
                             <!-- /.card-body -->
                         </div>
                         <!-- /.col -->

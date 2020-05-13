@@ -38,7 +38,7 @@
                     <div class="description pt-3">
                         <h5 class="nama-produk">{{ $product->name }}</h5>
                         <h5 class="harga-produk">Rp. <span class="value">
-                            <?php if($product->price_discount == 0){ echo $product->price; }else{echo $product->price_discount;}?>    
+                            <?php if($product->price_discount == 0){ echo format_uang($product->price); }else{echo format_uang($product->price_discount);}?>    
                         </span></h5>
                         <span class="color">Color : 
                             @foreach($product->colors as $color)
@@ -103,7 +103,7 @@ $(document).ready(function() {
                                         <div class="size__form2" id="size__form">
                                             @foreach($product->sizes as $size)
                                             <li class="size__li">
-                                                <input type="radio" id="{{ $size->id }}" name="size" value="{{ $size->name }}">
+                                                <input type="radio" id="{{ $size->id }}" name="size" value="{{ $size->name }}" required>
                                                 <label class="btn btn-outline-info" for="{{ $size->name }}">
                                                     {{ $size->name }}
                                                 </label>

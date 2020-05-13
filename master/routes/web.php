@@ -14,8 +14,8 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.index');
+// Route::get('/blalalalala', function () {
+//     return view('customer.successpayment');
 // });
 Route::get('/','LandingController@index')->name('landing.index');
 Route::get('/product','AllProductController@index')->name('allproduct.index');
@@ -30,7 +30,11 @@ Route::delete('/cart/{product}','CartController@destroy')->name('cart.destroy');
 Route::patch('/cart/{product}','CartController@update')->name('cart.update');
 
 Route::get('/checkout','CheckoutController@index')->name('checkout.index');
+
+Route::get('/getCities/{id}','CheckoutController@getCities');
+
 Route::post('/checkout','CheckoutController@store')->name('checkout.store');
+Route::get('/checkout/success','CheckoutController@coba');
 
 Route::get('empty', function(){
     Cart::destroy();
@@ -48,6 +52,7 @@ Route::group(['prefix'=>'admin'] , function(){
         Route::post('/{id}/update','AdminProductController@update')->name('updateproduct.update');
         Route::get('/{id}/delete','AdminProductController@destroy')->name('deleteproduct.delete');
         Route::get('/search','AdminProductController@search')->name('product.search');
+        Route::get('/{product}/show','AdminProductController@show')->name('adminproduct.show');
 
         Route::group(['prefix' => 'category'], function () {
             Route::get('/','AdminCategoryController@index')->name('category.index');
@@ -73,5 +78,7 @@ Route::group(['prefix'=>'admin'] , function(){
 
     Route::group(['prefix' => 'order'], function () {
         Route::get('/','AdminOrderController@order')->name('admin.order');
+        Route::post('/{id}/order','AdminOrderController@dikirim')->name('order.dikirim');
+        Route::get('/{id}/delete','AdminOrderController@destroy')->name('order.delete');
     });
 });

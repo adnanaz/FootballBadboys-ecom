@@ -35,11 +35,10 @@
                             <img class="clearance__img" src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
                             <figcaption>
                                 <h5 class="namaProduk">{{ $clearancesell->name }}</h5>
-                                <h5 class="harga" id="strike">Rp. <span class="value">{{ $clearancesell->price }}</span></h5>
-                                <h5 class="harga">Rp. <span class="value">{{ $clearancesell->price_discount }}</span></h5>
+                                <h5 class="harga" id="strike">Rp. <span class="value">{{ format_uang($clearancesell->price) }}</span></h5>
+                                <h5 class="harga">Rp. <span class="value">{{ format_uang($clearancesell->price_discount) }}</span></h5>
                                 <div class="button">
                                     <a href="{{ route('product.show', $clearancesell->slug) }}" class="btn btn-outline-info">Detail</a>
-                                    <a href="" class="btn btn-outline-primary">Add to Cart</a>
                                 </div>
                             </figcaption>
                         </div>
