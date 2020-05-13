@@ -41,7 +41,7 @@
                                     <?php $image = json_decode($clearancesell->image)[0]; ?>
                                         <img id="rubah"  src="{{ asset('storage/products/'.$image) }}" alt="{{ $clearancesell->name }}">
 
-                                    <figcaption>{{ $clearancesell->name }}</figcaption>
+                                    <figcaption class="text-center">{{ $clearancesell->name }}</figcaption>
                                     <span class="price strike discount__price"> Rp. <span>{{ $clearancesell->price }}</span></span>
                                     <span class="price">Rp. <span>{{ $clearancesell->price_discount }}</span></span>
                                     <div class="properti hvr-bounce-to-top">

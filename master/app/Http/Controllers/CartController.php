@@ -40,7 +40,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $cart = Cart::add($request->id, $request->name, 1, $request->price, ['size' => $request->size, 'color' => $request->color, 'image' => $request->image])
+        $cart = Cart::add($request->id, $request->name, 1, $request->price, ['size' => $request->size, 'color' => $request->radio, 'image' => $request->image])
             ->associate('App\Product');
         
         return redirect()->route('cart.index')->with('success', 'Product Berhasil Ditambahkan ke Cart!');
