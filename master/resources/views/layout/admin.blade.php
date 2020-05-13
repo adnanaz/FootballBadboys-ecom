@@ -33,7 +33,10 @@
 <link rel="stylesheet" href="/scss/admin/assets/css/mainAdmin.css">
 <link rel="stylesheet" href="/css/hover-min.css">
 <script src="https://kit.fontawesome.com/f45723ccd1.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
 <title>@yield('title')</title>
@@ -213,9 +216,10 @@
     <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    <!-- Sparkline -->
+    <script src="/js/sparkline.js"></script>
+    <!-- jQuery error -->
 
-    <!-- jQuery -->
-    <script src="/js/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="/js/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -226,8 +230,7 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
     <script src="/js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="/js/sparkline.js"></script>
+
     <!-- JQVMap -->
     <script src="/js/jquery.vmap.min.js"></script>
     <script src="/js/jquery.vmap.usa.js"></script>
@@ -246,16 +249,21 @@
     <script src="/js/adminlte.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="/js/dashboard.js"></script>
-    <script src="/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/js/demo.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap4.min.js"></script>
     <script src="/js/dataTables.responsive.min.js"></script>
     <script src="/js/responsive.bootstrap4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+    <script src="/js/jquery.min.js"></script>  
 
     <script>
+$.noConflict();
+jQuery( document ).ready(function( $ ) {
+    $('#example1').DataTable();
+    
+});
+
     $(function () {
         $("#example1").DataTable({
         "responsive": true,
