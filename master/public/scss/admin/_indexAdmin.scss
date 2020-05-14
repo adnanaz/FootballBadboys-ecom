@@ -12,8 +12,6 @@
     margin-top: 2rem;
     display: flex;
     justify-content: space-between; 
-   
-
 
 
 .child2 {
@@ -26,12 +24,16 @@
 
     .child2__item2 {
         padding: 1rem;
+        justify-content: center;
         display: flex;
         flex-wrap: wrap;
 
         figure {
             margin : 1rem;
             padding: 2rem;
+            width: 100%;
+            max-width: 269px;
+            max-height: 500px;
             a {
                 display: flex;
                 flex-flow: column wrap;
@@ -98,6 +100,14 @@
     padding: 1.5rem 0;
 }
 
+#rubah {
+    width: 20vh;
+    width: 100%;
+    height: 100%;
+    max-width: 20vh;
+    max-height: 20vh;
+}
+
 // responsive style 
 @include media-xs-admin {
 
@@ -122,18 +132,18 @@
         }
     }
 
-    .size__ul {
+    .size__ul { 
 
         width: 30vh;
     }
 
     .add {
         text-align: center;
-        height: 100px;
+        height: 160px;
     }
 
     .form-inline {
-        margin-top: 2rem;
+       margin: 2rem 0;
     }
 
 }

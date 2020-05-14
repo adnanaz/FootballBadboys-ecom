@@ -425,4 +425,81 @@ img.portimg {
   width: 100%;
   height: auto;
 }
+
+.detail__flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.detail .parent__img--show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 845px;
+  height: 100%;
+}
+
+.detail .child__img--show {
+  width: 10vh;
+}
+
+.detail .size__form2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail .size__form--show {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.detail .size__form--show .size__li--show {
+  margin: 1rem;
+}
+
+.detail .size__form--show .size__li--show .size__radio {
+  display: none;
+}
+
+.detail .size__form--show .size__li--show label {
+  width: 100px;
+}
+
+.detail .size__form--show .size__li--show .warna {
+  width: 40px;
+  height: 40px;
+}
+
+.detail .size__form--show .size__li--show .red {
+  background: red;
+}
+
+.detail .size__form--show .size__li--show .grey {
+  background: grey;
+}
+
+.detail .size__form--show .size__li--show .purple {
+  background: purple;
+}
+
+.detail .size__form--show .size__li--show .black {
+  background: black;
+}
+
+.detail .size__form--show .size__li--show .yellow {
+  background: yellow;
+}
+
+.detail .size__form--show .size__li--show .blue {
+  background: blue;
+}
+
+.detail .size__form--show .size__li--show .green {
+  background: green;
+}
+
+.detail .size__form--show .size__li--show .pink {
+  background: pink;
+}
 /*# sourceMappingURL=mainAdmin.css.map */

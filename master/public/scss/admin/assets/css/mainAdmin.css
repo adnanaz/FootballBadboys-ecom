@@ -64,6 +64,7 @@ a {
 
 .parent .child2 .child2__item2 {
   padding: 1rem;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -71,7 +72,9 @@ a {
 .parent .child2 .child2__item2 figure {
   margin: 1rem;
   padding: 2rem;
-  width: 300px;
+  width: 100%;
+  max-width: 269px;
+  max-height: 500px;
 }
 
 .parent .child2 .child2__item2 figure a {
@@ -80,17 +83,6 @@ a {
   justify-content: start;
   align-items: center;
   color: #000000;
-}
-
-.parent .child2 .child2__item2 figure a #rubah {
-  width: 100%;
-  height: 100%;
-  max-width: 20vh;
-  max-height: 20vh;
-}
-
-.parent .child2 .child2__item2 figure figcaption {
-  margin-top: 1rem;
 }
 
 .parent .child2 .child2__item2 figure .img__produk {
@@ -142,9 +134,12 @@ a {
   padding: 1.5rem 0;
 }
 
-.strike {
-  text-decoration: line-through !important;
-  color: #888;
+#rubah {
+  width: 20vh;
+  width: 100%;
+  height: 100%;
+  max-width: 20vh;
+  max-height: 20vh;
 }
 
 @media screen and (min-width: 321px) and (max-width: 602px) {
@@ -159,15 +154,18 @@ a {
   .child2 {
     padding-left: 0 !important;
   }
+  .child2__item2 .discount__price {
+    text-decoration: line-through;
+  }
   .size__ul {
     width: 30vh;
   }
   .add {
     text-align: center;
-    height: 100px;
+    height: 160px;
   }
   .form-inline {
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 }
 
@@ -438,5 +436,92 @@ img.portimg {
 .promotion__main-preview2 figure img {
   width: 100%;
   height: auto;
+}
+
+.detail__flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.detail .parent__img--show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 845px;
+  height: 100%;
+}
+
+.detail .child__img--show {
+  width: 10vh;
+}
+
+.detail .size__form2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail .size__form--show {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.detail .size__form--show .size__li--show {
+  margin: 1rem;
+}
+
+.detail .size__form--show .size__li--show .size__radio {
+  display: none;
+}
+
+.detail .size__form--show .size__li--show label {
+  width: 100px;
+}
+
+.detail .size__form--show .size__li--show .warna {
+  width: 40px;
+  height: 40px;
+}
+
+.detail .size__form--show .size__li--show .red {
+  background: red;
+}
+
+.detail .size__form--show .size__li--show .grey {
+  background: grey;
+}
+
+.detail .size__form--show .size__li--show .purple {
+  background: purple;
+}
+
+.detail .size__form--show .size__li--show .black {
+  background: black;
+}
+
+.detail .size__form--show .size__li--show .yellow {
+  background: yellow;
+}
+
+.detail .size__form--show .size__li--show .blue {
+  background: blue;
+}
+
+.detail .size__form--show .size__li--show .green {
+  background: green;
+}
+
+.detail .size__form--show .size__li--show .pink {
+  background: pink;
+}
+
+.detail .iframe--show {
+  min-height: 450px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .detail .child__img--show {
+    width: 5vh !important;
+  }
 }
 /*# sourceMappingURL=mainAdmin.css.map */

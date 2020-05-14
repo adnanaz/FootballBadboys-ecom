@@ -4,9 +4,26 @@
 
 @section('content')
 
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+            <div class="col-sm-6">
+                <span class="msg">Detail Product</span>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard Admin</li>
+                </ol>
+            </div>
+            </div>
+        </div><!-- /.container-fluid -->
+        </section>
 <main class="main">
     <!-- all product -->
-    <section class="detail border">
+    <section class="content detail border">
         <div class="">
             <div class="row">
                 <div class="col-lg-6 detail__flex">
@@ -15,7 +32,7 @@
                             <div class="swiper-wrapper">
                                 <?php foreach (json_decode($product->image)as $picture) { ?>
                                 <div class="swiper-slide">
-                                    <img src="{{ asset('storage/products/'.$picture) }}" class="parent__img" alt="{{ $product->name }}">
+                                    <img src="{{ asset('storage/products/'.$picture) }}" class="parent__img--show" alt="{{ $product->name }}">
                                 </div>
                                 <?php } ?>
                             </div>
@@ -24,10 +41,10 @@
                             <div class="swiper-button-prev swiper-button-white"></div>
                         </div>
                         <div class="swiper-container gallery-thumbs">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper my-4">
                                 <?php foreach (json_decode($product->image)as $picture) { ?>
                                 <div class="swiper-slide">
-                                    <img class="child__img" src="{{ asset('storage/products/'.$picture) }}" alt="{{ $product->name }}">
+                                    <img class="child__img--show" src="{{ asset('storage/products/'.$picture) }}" alt="{{ $product->name }}">
                                 </div>
                                 <?php } ?>
                             </div>
@@ -36,7 +53,7 @@
                 </div>
 
                 <div class="col-lg-6 detail-wrap">
-                    <div class="description pt-3">
+                    <div class="description p-3">
                         <h5 class="nama-produk">{{ $product->name }}</h5>
                         <h5 class="harga-produk">Rp. <span class="value">
                             <?php if($product->price_discount == 0){ echo $product->price; }else{echo $product->price_discount;}?>    
@@ -51,13 +68,13 @@
                             {!! $product->description !!}
                         </p>
 
-                        <div class="size__form form-group">
+                        <div class="size__form--show form-group">
                             <span class="jdl">Pilih Warna </span>
                             <hr>
                             <ul class="size__ul">
                                 <div class="size__form2">
                                     @foreach($product->colors as $color)
-                                    <li class="size__li">
+                                    <li class="size__li--show">
                                         <label class="btn btn-outline-dark warna" style="background-color: {{ $color->name_html }};" for="{{ $color->name }}">
                                         </label>
                                     </li>
@@ -90,7 +107,7 @@
             <div class="row push-top">
                 <!-- YOUTUBE -->
                 <div class="col-lg-6 video__preview">
-                    <iframe width="100%" height="100%" src="{{ $product->link_video }}"
+                    <iframe class="iframe--show" width="100%" height="100%" src="{{ $product->link_video }}"
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -99,7 +116,7 @@
 
 
                 <div class="col-lg-6">
-                    <div class="product__desc">
+                    <div class="product__desc p-3">
                         <h5>MATERIAL</h5>
                         {!! $product->material !!}
                     </div>
@@ -110,6 +127,7 @@
     </section>
     <!-- CART SECTION -->
 </main>
+</div>
 
 <script src="/node_modules/swiper/js/swiper.js"></script>
 <script src="/node_modules/swiper/js/swiper.min.js"></script>

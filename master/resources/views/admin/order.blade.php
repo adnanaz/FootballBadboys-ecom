@@ -62,7 +62,14 @@
                                                 <td>
                                                     <ul>
                                                         @foreach ($order->products as $item)
-                                                        <li><span class="font-weight-bold">{{ $item->kode_product }}</span> &nbsp; {{ $item->name }} &nbsp; {{ $item->pivot->quantity }} &nbsp; {{ $item->pivot->size }} &nbsp; {{ $item->pivot->color }}</li>
+                                                        <li>
+                                                        <ol style="list-style:number; list-style-type: number;">
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->kode_product }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->name }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->size }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->color }}</span></li>
+                                                        </ol>
+                                                        <!-- <span class="font-weight-bold">{{ $item->kode_product }}</span> &nbsp; {{ $item->name }} &nbsp; {{ $item->pivot->quantity }} &nbsp; {{ $item->pivot->size }} &nbsp; {{ $item->pivot->color }}</li> -->
                                                         @endforeach
                                                     </ul>
                                                 </td>
