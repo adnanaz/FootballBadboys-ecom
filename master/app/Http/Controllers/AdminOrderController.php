@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Order;
+use Carbon\Carbon;
+use App\Exports\OrderExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
@@ -14,8 +18,9 @@ class AdminOrderController extends Controller
      */
     public function index()
     {
+        $orders = Order::whereDate('created_at', Carbon::today())->orderBy('id', 'DESC')->get();
 
-        return view('admin.index');
+        return view('admin.index', compact('orders'));
     }
 
     /**
@@ -120,4 +125,9 @@ class AdminOrderController extends Controller
 
         return back()->with('success', 'Pengiriman di Update!');
     }
+
+    public function export_excel()
+	{
+		return Excel::download(new OrderExport, 'order.xlsx');
+	}
 }

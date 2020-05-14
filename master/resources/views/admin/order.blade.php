@@ -32,7 +32,7 @@
                             </div>
 
                             <div class="print">
-                                <button class="btn btn-outline-info">Excell</button>
+                                <a href="{{ route('admin.export_excel') }}" class="btn btn-outline-info">Excel</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -50,6 +50,7 @@
                                             <th>Payment Method</th>
                                             <th>Sub Total</th>
                                             <th>Total Harga</th>
+                                            <th>Ordered</th>
                                             <th>Dikirim</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -68,8 +69,9 @@
                                                             <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->name }}</span></li>
                                                             <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->size }}</span></li>
                                                             <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->color }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->quantity }}</span></li>
                                                         </ol>
-                                                        <!-- <span class="font-weight-bold">{{ $item->kode_product }}</span> &nbsp; {{ $item->name }} &nbsp; {{ $item->pivot->quantity }} &nbsp; {{ $item->pivot->size }} &nbsp; {{ $item->pivot->color }}</li> -->
+                                                        <hr style="border: 1px solid #707070;">
                                                         @endforeach
                                                     </ul>
                                                 </td>
@@ -80,8 +82,9 @@
                                                 <td>{{ $order->address }}</td>
                                                 <td>{{ $order->kodepos }}</td>
                                                 <td>{{ $order->payment_method }}</td>
-                                                <td>{{ $order->subtotal }}</td>
-                                                <td>{{ $order->total_harga }}</td>
+                                                <td>{{ format_uang($order->subtotal) }}</td>
+                                                <td>{{ format_uang($order->total_harga) }}</td>
+                                                <td>{{$order->created_at->format("F j, Y, g:i a")}}</td>
                                                 <td>
                                                     <form action="{{ route('order.dikirim', $order) }}" method="post">
                                                         {{ csrf_field() }}

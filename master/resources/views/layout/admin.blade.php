@@ -182,18 +182,22 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="settings.html" class="nav-link">
+                <a href="{{ route('password.index') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Settings</p>
+                <p>Change Password</p>
                 </a>
             </li>
             <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
+                <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                 <i class="far fa-circle nav-icon"></i>
                 <p>
                     Logout
                 </p>
                 </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </li>
 
             </ul>
@@ -271,8 +275,13 @@ jQuery( document ).ready(function( $ ) {
 
     $(function () {
         $("#example1").DataTable({
-        "responsive": true,
+        "paging": false,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": false,
+        "info": true,
         "autoWidth": false,
+        "responsive": true,
         });
         $('#example2').DataTable({
         "paging": true,

@@ -6,6 +6,15 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <div class="container-fluid">
@@ -31,20 +40,21 @@
             <div class="account border rounded p-5">
             <div class="leftside">
                 <h5>Change Your Password </h5>
-                <form action="#" class="account__form">
-                <div class="form-group">
-                    <label for="old-pwd">Password Lama</label>
-                    <input type="password" class="form-control" id="old-pwd" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="new-pwd">Password Baru</label>
-                    <input type="password" class="form-control" id="new-pwd" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="confim-pwd">Confirm Password Baru</label>
-                    <input type="password" class="form-control" id="confirm-pwd" placeholder="">
-                </div>
-                <button type="submit" class="btn btn-primary mt-3 mb-3 w-100 text-center">Simpan</button>
+                <form action="{{ route('password.changePassword') }}" method="post" class="account__form">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="old-pwd">Password Lama</label>
+                        <input type="password" class="form-control" id="current_password" name="current_password" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-pwd">Password Baru</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="confim-pwd">Confirm Password Baru</label>
+                        <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3 mb-3 w-100 text-center">Simpan</button>
                 </form>
             </div>
             <div class="rightside">
