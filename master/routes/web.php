@@ -41,8 +41,13 @@ Route::get('empty', function(){
 });
 
 
-Route::group(['prefix'=>'admin'] , function(){
+Route::group(['prefix'=>'adminfootballbadboys', 'middleware'=>'auth'] , function(){
     Route::get('/','AdminOrderController@index')->name('admin.dashboard');
+
+    Route::group(['prefix' => 'account'], function () {
+        Route::get('/password','AdminAccountController@index')->name('password.index');
+        Route::post('/password','AdminAccountController@changePassword')->name('password.changePassword');
+    }); 
 
     Route::group(['prefix' => 'product'], function () {
         Route::get('/','AdminProductController@index')->name('admin.product');
@@ -80,5 +85,11 @@ Route::group(['prefix'=>'admin'] , function(){
         Route::get('/','AdminOrderController@order')->name('admin.order');
         Route::post('/{id}/order','AdminOrderController@dikirim')->name('order.dikirim');
         Route::get('/{id}/delete','AdminOrderController@destroy')->name('order.delete');
+        Route::get('/export_excel','AdminOrderController@export_excel')->name('admin.export_excel');
     });
 });
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');
