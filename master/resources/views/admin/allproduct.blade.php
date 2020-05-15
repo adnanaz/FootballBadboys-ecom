@@ -43,24 +43,24 @@
                                         </div>
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <table class="table table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col"> <a href="{{ route('admin.product') }}" class="hvr-underline-from-center">All Category</a></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-
-                                                @foreach ($categories as $category)
+                                            <div class="card-body">
+                                                <table class="table table-borderless">
+                                                <thead>
                                                     <tr>
-                                                        <th scope="row"><a href="{{ route('admin.product', ['category' => $category->id]) }}" class="hvr-underline-from-center"> {{$category->name}} </a></th>
+                                                        <th scope="col"> <a href="{{ route('admin.product') }}" class="hvr-underline-from-center">All Category</a></th>
                                                     </tr>
-                                                @endforeach
+                                                </thead>
+                                                <tbody>
 
-                                            </tbody>
-                                            </table>
-                                        </div>
+                                                    @foreach ($categories as $category)
+                                                        <tr>
+                                                            <th scope="row"><a href="{{ route('admin.product', ['category' => $category->id]) }}" class="hvr-underline-from-center"> {{$category->name}} </a></th>
+                                                        </tr>
+                                                    @endforeach
+
+                                                </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
 

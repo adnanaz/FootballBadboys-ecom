@@ -200,18 +200,9 @@
 
                         <div class="footer__item--body2">
                             <ul class="body__ul">
-                                <li class="body__li"><a href="#"><span class="body__span">New Arrivals</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Shop Online</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Clearance Sell </span></a>
-                                </li>
-                                <li class="body__li"><a href="#"><span class="body__span">On Sale </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Merchandise </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Uncategorized </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Crewneck </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Shortpants </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Polo T-Shirt </span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">T-Shirt </span></a></li>
-                                </li>
+                                @foreach ($categories as $category)
+                                    <li class="body__li"><a href="#={{ route('allproduct.index', ['category' => $category->id]) }}"><span class="body__span">{{ $category->name }}</span></a></li>
+                                @endforeach
                             </ul>
 
 
@@ -226,15 +217,9 @@
 
                         <div class="footer__item--body3">
                             <ul class="body__ul">
-                                <li class="body__li"><a href="#"><span class="body__span">Hoodie</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Half Zip</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Caps</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Cagoule</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Waistbag</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Overshirt</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Jersey</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Jacket</span> </a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Shoes</span> </a></li>
+                                @foreach ($categories as $category)
+                                    <li class="body__li"><a href="{{ route('allproduct.index', ['category' => $category->id]) }}"><span class="body__span">{{ $category->name }}</span> </a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -309,7 +294,7 @@
 
                 <li class="d-flex flex-wrap flex-row">
                     <div class="col-12 text-dark h5 text-center p-0"><span class="status-product">
-                            Selamat anda menambahkan item baru </span> <img class="peace__img shake"
+                            Hai, ini daftar belanjaan anda </span> <img class="peace__img shake"
                             src="/scss/assets/img/peace.svg" alt="">
                         <hr class="cart__hr">
                     </div>

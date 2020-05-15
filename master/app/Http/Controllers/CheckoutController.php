@@ -37,7 +37,11 @@ class CheckoutController extends Controller
                     ->where("province_id",$id)
                     ->pluck("name","id");
 
-        return response()->json($cities);
+        $provinces= DB::table("indonesia_provinces")
+                    ->where("id",$id)
+                    ->pluck("name","id");
+
+        return response()->json(array($provinces, $cities));
     }
 
     /**

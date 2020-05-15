@@ -65,11 +65,11 @@
                                                         @foreach ($order->products as $item)
                                                         <li>
                                                         <ol style="list-style:number; list-style-type: number;">
-                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->kode_product }}</span></li>
-                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->name }}</span></li>
-                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->size }}</span></li>
-                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->color }}</span></li>
-                                                            <li style="list-style-type: circle;  list-style-position: inside;" ><span class="font-weight-bold"> {{ $item->pivot->quantity }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" >kode : <span class="font-weight-bold"> {{ $item->kode_product }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" >product: <span class="font-weight-bold"> {{ $item->name }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" >size : <span class="font-weight-bold"> {{ $item->pivot->size }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" >color : <span class="font-weight-bold"> {{ $item->pivot->color }}</span></li>
+                                                            <li style="list-style-type: circle;  list-style-position: inside;" >qty : <span class="font-weight-bold"> {{ $item->pivot->quantity }}</span></li>
                                                         </ol>
                                                         <hr style="border: 1px solid #707070;">
                                                         @endforeach

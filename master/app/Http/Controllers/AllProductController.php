@@ -25,17 +25,11 @@ class AllProductController extends Controller
         if(request()->category){
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
-            $products = Product::where('category_id',request()->category)->orderBy('id', 'DESC')->paginate(12);
-        } elseif (request()->size){
-            $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
-            $sizes = Size::orderBy('id', 'DESC')->get();
-            $products = Product::with('sizes')->whereHas('sizes', function ($query){
-                $query->where('slug', request()->size);
-            })->whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(12);
+            $products = Product::where('category_id',request()->category)->orderBy('id', 'DESC')->paginate(24);
         } else {
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
-            $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(12);
+            $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(24);
         }
 
         return view('customer.allproduct', compact('contentpromotion', 'categories', 'sizes', 'products'));

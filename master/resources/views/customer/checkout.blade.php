@@ -53,7 +53,7 @@
                             <label for="provinsi">Provinsi</label>
                             <select class="form-control" name="province" id="province" required>
                                 @foreach ($provinces as $province)
-                                    <option value="{{ $province->name }}">{{ $province->name }}</option>
+                                    <option value="{{ $province->id }}">{{ $province->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -166,7 +166,7 @@
     </section>
 </div>
 
-{{-- <script type="text/javascript">
+<script type="text/javascript">
     $('#province').change(function(){
         var sid = $(this).val();
         if(sid){
@@ -175,19 +175,25 @@
             url:"/getCities/"+sid,
             success:function(res)
             {       
-                if(res)
-                {
-                    $("#city").empty();
-                    $("#city").append('<option>Pilih Kota/Kabupaten</option>');
-                    $.each(res,function(key,value){
-                        $("#city").append('<option value="'+key+'">'+value+'</option>');
-                    });
-                }
+                var response = res[1];
+                var response2 = res[0];
+
+                $("#city").empty();
+                $("#city").append('<option>Pilih Kota/Kabupaten</option>');
+                $.each(response,function(key,value){
+                    $("#city").append('<option id="'+key+'" value="'+value+'">'+value+'</option>');
+                });
+
+                $("#province").empty();
+                $.each(response2,function(key,value){
+                    $("#province").append('<option id="'+key+'" value="'+value+'">'+value+'</option>');
+                });
+                
             }
 
         });
         }
     }); 
-</script> --}}
+</script>
 
 @endsection
