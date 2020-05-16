@@ -8,6 +8,8 @@ use App\ContentPromotion;
 use App\Product;
 use App\Category;
 
+use DB;
+
 class LandingController extends Controller
 {
     /**
@@ -22,7 +24,11 @@ class LandingController extends Controller
         $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->take(4)->get();
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
 
-        return view('customer.index', compact('banner', 'contentpromotion', 'products', 'categories'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.index', compact('banner', 'contentpromotion', 'products', 'categories', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**

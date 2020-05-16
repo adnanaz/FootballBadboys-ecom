@@ -87,10 +87,10 @@
 
                         <ul class="child ">
                             <li>
-                                <img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="">
+                                <a href="{{ route('allproduct.index') }}"><img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="contentpromotion1"></a>
                             </li>
                             <li>
-                                <img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="">
+                                <a href="{{ route('allproduct.index') }}"><img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="contentpromotion2"></a>
                             </li>
                         </ul>
 
@@ -200,7 +200,7 @@
 
                         <div class="footer__item--body2">
                             <ul class="body__ul">
-                                @foreach ($categories as $category)
+                                @foreach ($categoriesfooter as $category)
                                     <li class="body__li"><a href="#={{ route('allproduct.index', ['category' => $category->id]) }}"><span class="body__span">{{ $category->name }}</span></a></li>
                                 @endforeach
                             </ul>
@@ -217,7 +217,7 @@
 
                         <div class="footer__item--body3">
                             <ul class="body__ul">
-                                @foreach ($categories as $category)
+                                @foreach ($categoriesfooter2 as $category)
                                     <li class="body__li"><a href="{{ route('allproduct.index', ['category' => $category->id]) }}"><span class="body__span">{{ $category->name }}</span> </a></li>
                                 @endforeach
                             </ul>
@@ -343,8 +343,8 @@
                 </div>
                 <li>
                     <div class="iklan">
-                        <img class="adv__img" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="advertisement image 1">
-                        <img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="advertisement image 2">
+                        <a href="{{ route('allproduct.index') }}"><img class="adv__img" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="advertisement image 1"></a>
+                        <a href="{{ route('allproduct.index') }}"><img class="adv__img mt-2" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="advertisement image 2"></a>
                     </div>
                 </li>
             </ul>

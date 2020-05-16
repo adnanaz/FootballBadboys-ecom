@@ -29,7 +29,7 @@
             <div class="col-12" style="overflow:scroll !important;">
             <div class="card">
                 <div class="card-header">
-                <span class="card-title">Hai Admin Olshop, This is your sale today..</span>
+                <span class="card-title">Hai Admin, This is your sale today..</span>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">

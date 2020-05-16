@@ -7,6 +7,8 @@ use App\Category;
 use App\ContentPromotion;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
+use DB;
+
 class CartController extends Controller
 {
     /**
@@ -19,7 +21,11 @@ class CartController extends Controller
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
         $contentpromotion = ContentPromotion::findOrFail(1);
 
-        return view('customer.cart', compact('categories', 'contentpromotion'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.cart', compact('categories', 'contentpromotion', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**

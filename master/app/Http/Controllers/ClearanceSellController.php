@@ -7,6 +7,8 @@ use App\ContentPromotion;
 use App\Product;
 use App\Category;
 
+use DB;
+
 class ClearanceSellController extends Controller
 {
     /**
@@ -20,7 +22,11 @@ class ClearanceSellController extends Controller
         $clearancesells = Product::where('category_id', 12)->orderBy('id', 'DESC')->paginate(24);
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
 
-        return view('customer.clearancesell', compact('contentpromotion', 'clearancesells', 'categories'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.clearancesell', compact('contentpromotion', 'clearancesells', 'categories', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**

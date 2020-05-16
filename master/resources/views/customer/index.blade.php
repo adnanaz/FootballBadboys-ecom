@@ -57,14 +57,14 @@
 
         <div class="imgBanner">
             <figure>
-                <a href="all-product.html" class="hvr-grow-shadow">
+                <a href="{{ route('allproduct.index') }}" class="hvr-grow-shadow">
                     <img class="imgBanner__img" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image1) }}" alt="gambar iklan 1">
                 </a>
             </figure>
         </div>
 
         <figure>
-            <a href="all-product.html" class="hvr-grow-shadow">
+            <a href="{{ route('allproduct.index') }}" class="hvr-grow-shadow">
                 <img class="imgBanner__img" src="{{ asset('storage/contentpromotion/'.$contentpromotion->image2) }}" alt="gambar iklan 2">
             </a>
         </figure>
