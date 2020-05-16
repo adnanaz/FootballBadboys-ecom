@@ -7,6 +7,8 @@ use App\ContentPromotion;
 use App\Product;
 use App\Category;
 
+use DB;
+
 class OnSaleController extends Controller
 {
     /**
@@ -20,7 +22,11 @@ class OnSaleController extends Controller
         $discounts = Product::where('category_id', 10)->orderBy('id', 'DESC')->paginate(24);
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
 
-        return view('customer.onsale', compact('contentpromotion', 'discounts', 'categories'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.onsale', compact('contentpromotion', 'discounts', 'categories', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**

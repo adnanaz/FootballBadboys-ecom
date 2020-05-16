@@ -26,25 +26,38 @@ class AllProductController extends Controller
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::where('category_id',request()->category)->orderBy('id', 'DESC')->paginate(24);
+
+            $totalRow = DB::table('categories')->count();
+            $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
         } else {
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $sizes = Size::orderBy('id', 'DESC')->get();
             $products = Product::whereNotIn('category_id', [10, 12])->orderBy('id', 'DESC')->paginate(24);
+
+            $totalRow = DB::table('categories')->count();
+            $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
         }
 
-        return view('customer.allproduct', compact('contentpromotion', 'categories', 'sizes', 'products'));
+        return view('customer.allproduct', compact('contentpromotion', 'categories', 'sizes', 'products', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     public function search(Request $request)
     {
         $cari = $request->search;
+        
         $contentpromotion = ContentPromotion::findOrFail(1);
         $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
         $sizes = Size::orderBy('id', 'DESC')->get();
         $products = Product::search($cari)->orderBy('id', 'DESC')->paginate(12);
         $products->appends($request->only('search'));
 
-        return view('customer.allproduct', compact('categories', 'sizes', 'products', 'contentpromotion'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.allproduct', compact('categories', 'sizes', 'products', 'contentpromotion', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**
@@ -83,7 +96,11 @@ class AllProductController extends Controller
         
         $rekomendasi = Product::where('slug', '!=', $slug)->whereNotIn('category_id', [10, 12])->inRandomOrder()->take(4)->get();
 
-        return view('customer.detailproduct', compact('categories', 'contentpromotion', 'product', 'rekomendasi'));
+        $totalRow = DB::table('categories')->count();
+        $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+        $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+        return view('customer.detailproduct', compact('categories', 'contentpromotion', 'product', 'rekomendasi', 'categoriesfooter', 'categoriesfooter2'));
     }
 
     /**

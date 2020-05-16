@@ -8,6 +8,7 @@ use App\ContentPromotion;
 use App\Order;
 use App\OrderProduct;
 use Gloudemans\Shoppingcart\Facades\Cart;
+
 use DB;
 
 class CheckoutController extends Controller
@@ -27,7 +28,11 @@ class CheckoutController extends Controller
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $contentpromotion = ContentPromotion::findOrFail(1);
 
-            return view('customer.checkout', compact('categories', 'contentpromotion', 'provinces', 'cities'));
+            $totalRow = DB::table('categories')->count();
+            $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
+
+            return view('customer.checkout', compact('categories', 'contentpromotion', 'provinces', 'cities', 'categoriesfooter', 'categoriesfooter2'));
         }
     }
 
@@ -103,9 +108,12 @@ class CheckoutController extends Controller
 
             $categories = Category::whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
             $contentpromotion = ContentPromotion::findOrFail(1);
+            $totalRow = DB::table('categories')->count();
+            $categoriesfooter = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'DESC')->get();
+            $categoriesfooter2 = DB::table('categories')->offset(0)->limit($totalRow/2)->whereNotIn('id', [10, 12])->orderBy('id', 'ASC')->get();
 
             Cart::destroy();
-            return view('customer.successpayment', compact('categories', 'contentpromotion'));
+            return view('customer.successpayment', compact('categories', 'contentpromotion', 'categoriesfooter', 'categoriesfooter2'));
         }
         
     }
