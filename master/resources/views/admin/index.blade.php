@@ -26,7 +26,7 @@
         <!-- Main content -->
         <section class="content">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" style="overflow:scroll !important;">
             <div class="card">
                 <div class="card-header">
                 <span class="card-title">Hai Admin Olshop, This is your sale today..</span>

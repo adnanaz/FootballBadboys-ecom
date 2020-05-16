@@ -113,14 +113,14 @@
         <div class="cotaniner-fluid">
             <div class="media__text">
                 <h1>FILOSOFI </h1>
-                <img src="/scss/assets/img/hh.png" width="150px" alt="Philosophy logo FootballBadboys" class="mb-3">
+                <img src="/scss/assets/img/filosofi-logo.png" width="170px" alt="Philosophy logo FootballBadboys" class="mb-3">
                 <p>Starting from a love of foreign and domestic football this name was born when thinking about the
-                    development of football therefore, ballboys will never be for from the scope of foreign and
+                    development of football therefore, badboys will never be for from the scope of foreign and
                     domestic football its own pride can give birth to you in the arena of worldy football </p>
                 <h5>BORN ON 13th NOVEMBER 2017</h5>
                 <span class="latina">Founder : Rachel Aditya Nosfandika</span>
                 <br>
-                <img src="/scss/assets/img/bear4.png" alt="logo-bear" width="50px" height="30px">
+               
 
             </div>
         </div>

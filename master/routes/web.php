@@ -41,7 +41,7 @@ Route::get('empty', function(){
 });
 
 
-Route::group(['prefix'=>'adminfootballbadboys', 'middleware'=>'auth'] , function(){
+Route::group(['prefix'=>'adminfootballbadboys'] , function(){
     Route::get('/','AdminOrderController@index')->name('admin.dashboard');
 
     Route::group(['prefix' => 'account'], function () {

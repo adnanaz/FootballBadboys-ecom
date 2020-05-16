@@ -1,0 +1,527 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+
+ul, li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: ambitBlack;
+  src: url(../../../Ambit/Ambit-Black.ttf);
+}
+
+@font-face {
+  font-family: ambitReguler;
+  src: url(../../../Ambit/Ambit-Regular.ttf);
+}
+
+@font-face {
+  font-family: ambitBold;
+  src: url(../../../Ambit/Ambit-Bold.ttf);
+}
+
+body {
+  font-family: ambitReguler;
+  height: 100% !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: AmbitBlack;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.msg, .card-title {
+  font-size: 2rem;
+}
+
+.card-title {
+  float: none;
+  text-align: center;
+  display: block;
+}
+
+.parent {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.parent .child2 {
+  padding-left: 6rem;
+}
+
+.parent .child2 .add .add__img {
+  width: 4vh;
+}
+
+.parent .child2 .child2__item2 {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.parent .child2 .child2__item2 figure {
+  margin: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 269px;
+  max-height: 500px;
+}
+
+.parent .child2 .child2__item2 figure a {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  align-items: center;
+  color: #000000;
+}
+
+.parent .child2 .child2__item2 figure .img__produk {
+  width: 180px;
+  height: 180px;
+}
+
+.parent .child2 .child2__item2 figure .properti {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  background: whitesmoke;
+  align-items: center;
+}
+
+.parent .child2 .child2__item2 figure .properti__img {
+  width: 4vh;
+}
+
+.btn-link, .card-header {
+  padding: .5rem 0;
+}
+
+.size__ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.size__ul .size__li {
+  text-align: center;
+  padding: 0.5rem;
+  margin: .1rem;
+}
+
+.size__ul .size__li button {
+  width: 60px;
+}
+
+.add__img {
+  width: 4vh;
+}
+
+.jdl {
+  padding: .5rem 0;
+}
+
+.sizes {
+  padding: 1.5rem 0;
+}
+
+#rubah {
+  width: 20vh;
+  width: 100%;
+  height: 100%;
+  max-width: 20vh;
+  max-height: 20vh;
+}
+
+@media screen and (min-width: 321px) and (max-width: 602px) {
+  .child1__item {
+    width: 25vh;
+  }
+  .parent {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: wrap column;
+  }
+  .child2 {
+    padding-left: 0 !important;
+  }
+  .child2__item2 .discount__price {
+    text-decoration: line-through;
+  }
+  .size__ul {
+    width: 30vh;
+  }
+  .add {
+    text-align: center;
+    height: 160px;
+  }
+  .form-inline {
+    margin: 2rem 0;
+  }
+}
+
+.add {
+  padding: 1rem 0;
+}
+
+img.portimg {
+  display: none;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.jdl {
+  font-weight: 700;
+  display: block;
+}
+
+.add__cat {
+  display: flex;
+  width: 100%;
+}
+
+.size__form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.size__form .size__li {
+  margin: .5rem;
+}
+
+.size__form .size__li .size__radio {
+  position: relative;
+  left: 2rem;
+}
+
+.size__form .size__li label {
+  width: 100px;
+}
+
+.size__form .size__li .warna {
+  width: 50px;
+  height: 50px;
+}
+
+.size__form .size__li .red {
+  background: red;
+}
+
+.size__form .size__li .grey {
+  background: grey;
+}
+
+.size__form .size__li .purple {
+  background: purple;
+}
+
+.size__form .size__li .black {
+  background: black;
+}
+
+.size__form .size__li .yellow {
+  background: yellow;
+}
+
+.size__form .size__li .blue {
+  background: blue;
+}
+
+.size__form .size__li .green {
+  background: green;
+}
+
+.size__form .size__li .pink {
+  background: pink;
+}
+
+.print {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.print button {
+  margin: 0 .5rem;
+}
+
+@media screen and (min-width: 321px) and (max-width: 602px) {
+  .print button {
+    margin: .5rem .5rem;
+  }
+}
+
+.promotion__main-change {
+  width: 100%;
+  height: auto;
+}
+
+.promotion__main-preview {
+  width: 100%;
+  height: auto;
+  background: url("../assets/img/bgHeader2.svg") center;
+  background-size: cover;
+}
+
+.promotion__main-preview figure {
+  text-align: center;
+}
+
+.promotion__main-preview img {
+  width: 55vh;
+}
+
+.promotion__main-preview2 {
+  display: flex;
+}
+
+.promotion__main-preview2 figure {
+  margin: 2.5rem;
+}
+
+.promotion__main-preview2 figure img {
+  width: 60vh;
+}
+
+.promotion__main-change2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.promotion__main-change2 .form__promotion {
+  width: 100vh;
+}
+
+.preview__text {
+  margin: 2rem auto;
+  background: url("../../../assets/img/bgHeader2.svg") center;
+  background-size: cover;
+  padding: 2rem 0;
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+}
+
+.preview__text img {
+  width: 100%;
+  height: 100%;
+}
+
+.preview__text h2, .preview__text h1, .preview__text h5 {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 321px) and (max-width: 602px) {
+  .promotion__main-preview figure img {
+    width: 30vh;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .promotion__main-preview2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .promotion__main-preview2 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.promotion__main-change {
+  width: 100%;
+  height: auto;
+}
+
+.promotion__main-preview {
+  width: 100%;
+  height: auto;
+}
+
+.promotion__main-preview figure {
+  text-align: center;
+}
+
+.promotion__main-preview img {
+  width: 55vh;
+}
+
+.promotion__main-preview2 {
+  display: flex;
+}
+
+.promotion__main-preview2 figure {
+  margin: 2.5rem;
+}
+
+.promotion__main-preview2 figure img {
+  width: 25vh;
+  height: 20vh;
+}
+
+.promotion__main-change2 {
+  display: flex;
+  flex-wrap: wrap !important;
+  justify-content: center;
+}
+
+.promotion__main-change2 .form__promotion {
+  width: 100vh;
+}
+
+@media screen and (min-width: 321px) and (max-width: 602px) {
+  .promotion__main-preview figure img {
+    width: 30vh;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .promotion__main-preview2 {
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .promotion__main-preview2 {
+    display: flex;
+    flex-wrap: nowrap !important;
+  }
+}
+
+.account {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.account .leftside {
+  flex-basis: 50%;
+}
+
+.account .rightside {
+  flex-basis: 30%;
+}
+
+@media screen and (min-width: 321px) and (max-width: 602px) {
+  .account {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .account .leftside {
+    flex-basis: 50%;
+  }
+  .account .rightside {
+    flex-basis: 30%;
+  }
+}
+
+.promotion__main-preview2 figure img {
+  width: 100%;
+  height: auto;
+}
+
+.detail__flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.detail .parent__img--show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 845px;
+  height: 100%;
+}
+
+.detail .child__img--show {
+  width: 10vh;
+}
+
+.detail .size__form2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail .size__form--show {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.detail .size__form--show .size__li--show {
+  margin: 1rem;
+}
+
+.detail .size__form--show .size__li--show .size__radio {
+  display: none;
+}
+
+.detail .size__form--show .size__li--show label {
+  width: 100px;
+}
+
+.detail .size__form--show .size__li--show .warna {
+  width: 40px;
+  height: 40px;
+}
+
+.detail .size__form--show .size__li--show .red {
+  background: red;
+}
+
+.detail .size__form--show .size__li--show .grey {
+  background: grey;
+}
+
+.detail .size__form--show .size__li--show .purple {
+  background: purple;
+}
+
+.detail .size__form--show .size__li--show .black {
+  background: black;
+}
+
+.detail .size__form--show .size__li--show .yellow {
+  background: yellow;
+}
+
+.detail .size__form--show .size__li--show .blue {
+  background: blue;
+}
+
+.detail .size__form--show .size__li--show .green {
+  background: green;
+}
+
+.detail .size__form--show .size__li--show .pink {
+  background: pink;
+}
+
+.detail .iframe--show {
+  min-height: 450px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .detail .child__img--show {
+    width: 5vh !important;
+  }
+}
+/*# sourceMappingURL=mainAdmin.css.map */

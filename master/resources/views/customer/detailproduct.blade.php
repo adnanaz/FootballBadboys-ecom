@@ -14,7 +14,7 @@
                             <div class="swiper-wrapper">
                                 <?php foreach (json_decode($product->image)as $picture) { ?>
                                 <div class="swiper-slide">
-                                    <img src="{{ asset('storage/products/'.$picture) }}" class="parent__img" alt="{{ $product->name }}">
+                                    <img src="{{ asset('storage/products/'.$picture) }}" id="parent__img"  class="parent__img" alt="{{ $product->name }}">
                                 </div>
                                 <?php } ?>
                             </div>

@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- modal 2  -->
-<div class="mt-5 mb-5">
+<div class="mt-5 mb-5 p-5">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -20,14 +20,14 @@
                     More
                     info
                     hubungi kami
-                    <span class="text-danger"> 081229000151</span></span><br><br>
-                <span class="small"><small> Hati-hati penipuan megatasnamakan FootballBadboys nomor
+                    <span class="text-danger"><a href="https://wa.me/628176741908">628176741908</a></span><br><br>
+                <span class="small"><small> Hati-hati penipuan megatas-namakan FootballBadboys nomor
                         Footballbadboys
                         resmi
                         hanya pada nomor tersebut. Terimakasih</small></span>
             </div>
             <div class="modal-footer">
-                <a href="/" class="btn btn-primary">Kembali</a>
+                <a href="https://wa.me/628176741908" class="btn btn-primary">Konfirmasi Pembayaran</a>
             </div>
         </div>
     </div>

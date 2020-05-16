@@ -37,7 +37,7 @@
             </div>
             <div class="brand ">
                 <a class="navbar-brand" href="#">
-                    <img class="" src="/scss/assets/img/hh.png" width="65" height="40" alt="">
+                    <img class="" src="/scss/assets/img/header-logo.png" width="40" height="40" alt="">
                 </a>
             </div>
             <div class="cuciGudang lg-on">
@@ -109,12 +109,12 @@
 
             <li class="brand nav__menu--item">
                 <a class="navbar-brand" href="/">
-                    <img class="nav__img" src="/scss/assets/img/hh.png" alt="logo FootballBadboys">
+                    <img class="nav__img" src="/scss/assets/img/header-logo.png" alt="logo FootballBadboys">
                 </a>
             </li>
             <li class="nav__menu--item">
                 <a href="{{ route('clearancesell.index') }}" class="nav__menu--link hvr-underline-from-center">
-                    CLEARANCE SELL
+                    CLEARANCE SALE
                 </a>
             </li>
             <li class="nav__menu--item ">
@@ -175,7 +175,7 @@
 
                         <div class="footer__item--body1">
                             <p>Starting from a love of foreign and domestic football this name was born when thinking about the
-                    development of football therefore, ballboys will never be for from the scope of foreign and
+                    development of football therefore, badboys will never be for from the scope of foreign and
                     domestic football its own pride can give birth to you in the arena of worldy football </p>
                             <div class="social">
                                 <img class="address__img" src="/assets/address.svg" alt="icon-alamat">
@@ -234,13 +234,13 @@
                         <div class="footer__item--body4">
                             <div class="social">
                                 <img class="fb__img" src="/assets/fb.svg" alt="icon-fb">
-                                <a href="#"><span class="body__span">footballbadboys</span></a>
+                                <a href="#"><span class="body__span">ballboys</span></a>
                                 <br>
                                 <img class="ig__img" src="/assets/ig.svg" alt="icon-ig">
                                 <a href="#"><span class="body__span">@Footballbadboys </span></a>
                                 <br>
                                 <img class="twitter__img" src="/assets/twitter.svg" alt="icon-twitter">
-                                <a href="#"><span class="body__span">footballbadboys@cs.com </span></a>
+                                <a href="#"><span class="body__span">@ftbadboys</span></a>
                                 <br>
 
 
