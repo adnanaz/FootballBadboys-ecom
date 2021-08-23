@@ -21,6 +21,3 @@
   <a href="https://www.algolia.com/support" target="_blank">Support</a>
 </p>
 
-## 📄 License
-
-Football Badboys is licensed under the [MIT license](LICENSE.md).
